@@ -1,6 +1,6 @@
 import '../common/generall.scss';
 import '../common/reset.scss';
 const Wrapper = () => {
-	return <div>hui maksa v mene v jopi</div>;
+	return <div>Привіт світ</div>;
 };
 export default Wrapper;
