@@ -1,13 +1,13 @@
 import { Link } from 'react-router-dom';
-import { ImasObjLinks } from '../../types/CommonInterface';
+import { IsubRoutes } from '../../types/CommonInterface';
 import styles from './NavHeader.module.scss';
 
 interface NavHeaderProps {
-	navLinks: ImasObjLinks[];
+	navLinks: IsubRoutes[];
 }
 
 export const NavHeader = ({ navLinks }: NavHeaderProps) => {
-	const links = navLinks.map((item: ImasObjLinks, index: number) => {
+	const links = navLinks.map((item: IsubRoutes, index: number) => {
 		if (item.link.includes('http')) {
 			return (
 				<li key={index} className={styles.navHeader__link}>
@@ -17,7 +17,7 @@ export const NavHeader = ({ navLinks }: NavHeaderProps) => {
 						target='_blank'
 						className={styles.navHeader__link}
 					>
-						<span>{item.title}</span>
+						<span>{item.name}</span>
 					</a>
 				</li>
 			);
@@ -25,7 +25,7 @@ export const NavHeader = ({ navLinks }: NavHeaderProps) => {
 			return (
 				<li key={index} className={styles.navHeader__link}>
 					<Link to={item.link}>
-						<span>{item.title}</span>
+						<span>{item.name}</span>
 					</Link>
 				</li>
 			);
