@@ -1,0 +1,16 @@
+@import '../../common/generall';
+
+.navHeader__title {
+	@include color;
+}
+.navHeader__links {
+	@include df-centr;
+	gap: 1rem;
+	justify-content: space-between;
+}
+.navHeader__link span {
+	display: block;
+	@include color;
+	font-size: 0.9rem;
+	padding-bottom: 2px;
+}

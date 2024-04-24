@@ -1,33 +1,39 @@
-import Hamburger from 'hamburger-react';
-import { useState } from 'react';
+import { ImasObjLinks } from '../../types/CommonInterface';
+import { NavHeader } from '../NavHeader';
 import styles from './Header.module.scss';
 
-interface HeaderProps {}
+// interface HeaderProps {}
 
-export const Header = ({}: HeaderProps) => {
-	const [isOpen, setOpen] = useState(false);
-
-	const handlerBurger = () => {
-		setOpen(isOpen => !isOpen);
-	};
-
+export const Header = () => {
+	const masObjLinks: ImasObjLinks[] = [
+		{
+			title: 'Публічне обговорення',
+			link: '/publichne-obhovorennia',
+		},
+		{
+			title: 'Aкредетація ОП',
+			link: '/acredetation-op',
+		},
+		{
+			title: 'Структурні підрозділи',
+			link: '/pidrozdily',
+		},
+		{
+			title: 'Розклад',
+			link: '/rozklad',
+		},
+		{
+			title: 'Навчальні Матеріали',
+			link: 'https://mdl.chpt.edu.ua/',
+		},
+		{
+			title: 'Вхід',
+			link: '/login',
+		},
+	];
 	return (
 		<header className={styles.header}>
-			<div className='row'>
-				<div className={styles.header__logo}></div>
-				<div className={styles.header__title}>Your Title</div>
-			</div>
-
-			<div>
-				{isOpen && (
-					<div className={styles.header__burger}>
-						<div className={styles.header__burger_content}>
-							<Hamburger toggled={isOpen} toggle={handlerBurger} />
-						</div>
-					</div>
-				)}
-			</div>
-			<Hamburger toggled={isOpen} toggle={handlerBurger} />
+			<NavHeader navLinks={masObjLinks} />
 		</header>
 	);
 };
