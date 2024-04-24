@@ -1,0 +1,134 @@
+// $clgreyText-2: #949494;
+$ffPlayfair-Display: 'Playfair Display', sans-serif;
+$ffLato: 'Lato', serif;
+
+#root {
+	height: 100%;
+	width: 100%;
+}
+html[data-theme='dark'] {
+	--button-text-color: #1abc9c;
+	--button-text-color-hover: #ffffff;
+	--button-background-color: #ffffff;
+	--button-background-color-hover: #8ed1b2;
+
+	--button-border-color: #1abc9c;
+
+	--background-color: #e2e2e2;
+	--second-background-color: #ffffff;
+
+	--text-color: #bbbbbb;
+	--text-color-hover: #8ed1b2;
+
+	--yellow-text-color: #f39c12;
+
+	--brown-text-color: #a5794f;
+	--brown-text-color-hover: #1abc9c;
+}
+
+html[data-theme='light'] {
+	--button-text-color: #1abc9c;
+	--button-text-color-hover: #ffffff;
+	--button-background-color: #ffffff;
+	--button-background-color-hover: #8ed1b2;
+
+	--button-border-color: #1abc9c;
+
+	--background-color: #f7f7f7;
+	--second-background-color: #ffffff;
+
+	--text-color: #bbbbbb;
+	--text-color-hover: #8ed1b2;
+
+	--yellow-text-color: #ffcc66;
+
+	--brown-text-color: #a5794f;
+	--brown-text-color-hover: #1abc9c;
+}
+@mixin df-centr {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+@mixin color {
+	color: var(--text-color);
+	transition: all 200ms linear;
+}
+@mixin color-hover {
+	color: var(--text-color-hover);
+	transition: all 200ms linear;
+}
+
+@mixin brown-color {
+	color: var(--brown-text-color);
+	letter-spacing: 1px;
+	transition: all 200ms linear;
+}
+@mixin brown-color-hover {
+	letter-spacing: 1px;
+	color: var(--brown-text-color-hover);
+	transition: all 200ms linear;
+}
+
+@mixin bg-color {
+	background-color: var(--second-background-color);
+	transition: background-color 200ms linear;
+}
+
+@mixin btn-color {
+	color: var(--button-text-color);
+	background-color: var(--button-background-color);
+	border-color: var(--button-border-color);
+	transition: all 0.3s ease;
+}
+@mixin btn-color-hover {
+	color: var(--button-text-color-hover);
+	background-color: var(--button-background-color-hover);
+	border-color: var(--button-background-color-hover);
+	transition: all 0.3s ease;
+}
+
+.wrapper {
+	min-height: 100%;
+	display: flex;
+	flex-direction: column;
+	font-family: $ffLato;
+	background-color: var(--background-color);
+	transition: background-color 200ms linear;
+}
+.main {
+	flex: 1 0 auto;
+	background-color: #1abc9c;
+}
+.header {
+	background-color: white;
+	background-color: #f39c12;
+}
+.footer {
+	background-color: white;
+	position: relative;
+	z-index: 2;
+	background-color: #ffcc66;
+}
+.row {
+	@include df-centr;
+	justify-content: start;
+	gap: 1rem;
+}
+
+// @media (max-width: 1151.98px) {
+
+// }
+// @media (max-width: 959.98px) {
+
+// }
+// @media (max-width:767.98px) {
+
+// }
+// @media (max-width:539.98px) {
+
+// }
+// @media (max-width:400.98px) {
+
+// }
