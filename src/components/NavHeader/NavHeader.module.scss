@@ -1,4 +1,5 @@
 @import '../../common/generall';
+
 .navHeader__title {
 	@include color;
 }
@@ -9,6 +10,8 @@
 }
 .navHeader__link span {
 	@include df-centr;
+	display: block;
 	@include color;
-	font-size: 0.75rem;
+	font-size: 0.9rem;
+	padding-bottom: 2px;
 }

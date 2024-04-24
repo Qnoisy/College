@@ -13,6 +13,9 @@ import { Main } from './Main';
 const Wrapper = () => {
 	return (
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> Tolik
 		<div className='wrapper'>
 			<div className='header'>
 				<Container>
@@ -37,8 +40,11 @@ const Wrapper = () => {
 				</Container>
 			</div>
 		</div>
+<<<<<<< HEAD
 =======
 		<div>!!!!!! BLack neger its max !!!!!!</div>
+>>>>>>> Tolik
+=======
 >>>>>>> Tolik
 	);
 };
