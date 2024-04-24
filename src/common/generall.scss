@@ -1,50 +1,38 @@
-// $clgreyText-2: #949494;
-$ffPlayfair-Display: 'Playfair Display', sans-serif;
-$ffLato: 'Lato', serif;
+$ffNunito: 'Nunito', sans-serif;
+$ffMontserrat: 'Montserrat', sans-serif;
 
 #root {
 	height: 100%;
 	width: 100%;
 }
-html[data-theme='dark'] {
-	--button-text-color: #1abc9c;
-	--button-text-color-hover: #ffffff;
+// [data-theme='light']
+html {
+	--button-text-color: #448aff;
+	--button-text-color-hover: #64b5f6;
 	--button-background-color: #ffffff;
-	--button-background-color-hover: #8ed1b2;
+	--button-background-color-hover: #e3f2fd;
+	--button-border-color: #448aff;
 
-	--button-border-color: #1abc9c;
-
-	--background-color: #e2e2e2;
+	--background-color: #448aff;
 	--second-background-color: #ffffff;
+	--third-background-color: #64b5f6;
 
-	--text-color: #bbbbbb;
-	--text-color-hover: #8ed1b2;
-
-	--yellow-text-color: #f39c12;
-
-	--brown-text-color: #a5794f;
-	--brown-text-color-hover: #1abc9c;
+	--text-color: #ffffff;
+	--text-color-hover: #e3f2fd;
 }
+// html[data-theme='dark'] {
+// 	--button-text-color: #ffffff;
+// 	--button-text-color-hover: #e3f2fd;
+// 	--button-background-color: #448aff;
+// 	--button-background-color-hover: #64b5f6;
+// 	--button-border-color: #448aff;
 
-html[data-theme='light'] {
-	--button-text-color: #1abc9c;
-	--button-text-color-hover: #ffffff;
-	--button-background-color: #ffffff;
-	--button-background-color-hover: #8ed1b2;
+// 	--background-color: #e3f2fd;
+// 	--second-background-color: #ffffff;
 
-	--button-border-color: #1abc9c;
-
-	--background-color: #f7f7f7;
-	--second-background-color: #ffffff;
-
-	--text-color: #bbbbbb;
-	--text-color-hover: #8ed1b2;
-
-	--yellow-text-color: #ffcc66;
-
-	--brown-text-color: #a5794f;
-	--brown-text-color-hover: #1abc9c;
-}
+// 	--text-color: #333333;
+// 	--text-color-hover: #444444;
+// }
 @mixin df-centr {
 	display: flex;
 	align-items: center;
@@ -59,21 +47,29 @@ html[data-theme='light'] {
 	color: var(--text-color-hover);
 	transition: all 200ms linear;
 }
-
-@mixin brown-color {
-	color: var(--brown-text-color);
-	letter-spacing: 1px;
+@mixin color-second {
+	color: var(--button-text-color);
 	transition: all 200ms linear;
 }
-@mixin brown-color-hover {
-	letter-spacing: 1px;
-	color: var(--brown-text-color-hover);
+@mixin color-hover-second {
+	color: var(--button-text-color-hover);
 	transition: all 200ms linear;
 }
 
 @mixin bg-color {
+	background-color: var(--background-color);
+	transition: background-color 200ms linear;
+	@include color;
+}
+@mixin bg-color-second {
 	background-color: var(--second-background-color);
 	transition: background-color 200ms linear;
+	@include color-second;
+}
+@mixin bg-color-third {
+	background-color: var(--third-background-color);
+	transition: background-color 200ms linear;
+	@include color;
 }
 
 @mixin btn-color {
@@ -93,24 +89,24 @@ html[data-theme='light'] {
 	min-height: 100%;
 	display: flex;
 	flex-direction: column;
-	font-family: $ffLato;
-	background-color: var(--background-color);
+	font-family: $ffMontserrat;
 	transition: background-color 200ms linear;
+	overflow-x: hidden;
 }
+
+.header {
+	@include bg-color;
+}
+
 .main {
 	flex: 1 0 auto;
-	background-color: #1abc9c;
+	@include bg-color-second;
 }
-.header {
-	background-color: white;
-	background-color: #f39c12;
-}
+
 .footer {
-	background-color: white;
-	position: relative;
-	z-index: 2;
-	background-color: #ffcc66;
+	@include bg-color;
 }
+
 .row {
 	@include df-centr;
 	justify-content: start;

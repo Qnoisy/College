@@ -1,5 +1,6 @@
 import Hamburger from 'hamburger-react';
 import { useState } from 'react';
+import { Burger } from '../Burger';
 import styles from './Header.module.scss';
 
 interface HeaderProps {}
@@ -18,15 +19,7 @@ export const Header = ({}: HeaderProps) => {
 				<div className={styles.header__title}>Your Title</div>
 			</div>
 
-			<div>
-				{isOpen && (
-					<div className={styles.header__burger}>
-						<div className={styles.header__burger_content}>
-							<Hamburger toggled={isOpen} toggle={handlerBurger} />
-						</div>
-					</div>
-				)}
-			</div>
+			<div>{isOpen && <Burger />}</div>
 			<Hamburger toggled={isOpen} toggle={handlerBurger} />
 		</header>
 	);
