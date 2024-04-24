@@ -8,6 +8,7 @@
 	justify-content: space-between;
 }
 .navHeader__link span {
+	@include df-centr;
 	@include color;
 	font-size: 0.75rem;
 }
