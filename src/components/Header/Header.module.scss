@@ -9,3 +9,12 @@
 	border-radius: 50%;
 	background-color: white;
 }
+.header__title {
+	@include color;
+}
+.header__links {
+	padding: 1rem;
+}
+.header__link span {
+	@include color;
+}
