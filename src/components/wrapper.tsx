@@ -46,6 +46,7 @@ const Wrapper = () => {
 					<Route path='/contacts' element={<Contacts />} />
 				</Routes>
 			</Container>
+			{/* <VideoPlayer /> */}
 			<Container className='footer'>
 				<Footer />
 			</Container>

@@ -47,6 +47,10 @@ html {
 	color: var(--text-color-hover);
 	transition: all 100ms linear;
 	text-shadow: 0 0 50px white;
+	&,
+	* {
+		color: var(--text-color-hover); // Наследование цвета текста
+	}
 }
 @mixin color-second {
 	color: var(--button-text-color);

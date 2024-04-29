@@ -1,3 +1,4 @@
+import styles from './VideoPlayer.module.scss';
 // interface VideoPlayerProps {}
 
 export const VideoPlayer = () => {
@@ -5,17 +6,11 @@ export const VideoPlayer = () => {
 		'https://drive.google.com/file/d/1QPGiH-Zz_CHOQHjLTd64GdOSghDplsyo/preview'; // Замените ID на ваше
 
 	return (
-		<div className='video-container'>
-			<iframe
-				title='Video Player'
-				src={videoUrl}
-				width='100%'
-				height='500'
-				allow='autoplay'
-				frameBorder='0'
-				style={{ width: '100%', height: '100%' }}
-			></iframe>
-			<div className='video-text'>Черкаський політехнічний фаховий коледж</div>
+		<div className={styles.video__container}>
+			<iframe title='Video Player' src={videoUrl} allow='autoplay'></iframe>
+			<div className={styles.video__text}>
+				Черкаський політехнічний фаховий коледж
+			</div>
 		</div>
 	);
 };
