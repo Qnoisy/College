@@ -1,39 +1,15 @@
-import { ImasObjLinks } from '../../types/CommonInterface';
-import { NavHeader } from '../NavHeader';
+import { headerRoutes } from '../../data/data';
+import { Menu } from '../Menu';
 import styles from './Header.module.scss';
 
 // interface HeaderProps {}
 
 export const Header = () => {
-	const masObjLinks: ImasObjLinks[] = [
-		{
-			title: 'Публічне обговорення',
-			link: '/publichne-obhovorennia',
-		},
-		{
-			title: 'Aкредетація ОП',
-			link: '/acredetation-op',
-		},
-		{
-			title: 'Структурні підрозділи',
-			link: '/pidrozdily',
-		},
-		{
-			title: 'Розклад',
-			link: '/rozklad',
-		},
-		{
-			title: 'Навчальні Матеріали',
-			link: 'https://mdl.chpt.edu.ua/',
-		},
-		{
-			title: 'Вхід',
-			link: '/login',
-		},
-	];
 	return (
-		<header className={styles.header}>
-			<NavHeader navLinks={masObjLinks} />
-		</header>
+		<>
+			<header className={styles.header}>
+				<Menu navLinks={headerRoutes} linkClassName={styles.link__style} />
+			</header>
+		</>
 	);
 };

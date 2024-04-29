@@ -1,7 +1,12 @@
+import { VideoPlayer } from '../VideoPlayer';
 import styles from './Main.module.scss';
 
-interface MainProps {}
+// interface MainProps {}
 
-export const Main = ({}: MainProps) => {
-	return <div className={styles.main}>Основа</div>;
+export const Main = () => {
+	return (
+		<div className={styles.main}>
+			<VideoPlayer />
+		</div>
+	);
 };

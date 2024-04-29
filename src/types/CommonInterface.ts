@@ -1,4 +1,4 @@
-export interface ImasObjLinks {
-	title: string;
+export interface IsubRoutes {
+	name: string;
 	link: string;
 }
