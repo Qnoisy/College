@@ -1,5 +1,5 @@
 import { headerRoutes } from '../../data/data';
-import { NavHeader } from '../NavHeader';
+import { Menu } from '../Menu';
 import styles from './Header.module.scss';
 
 // interface HeaderProps {}
@@ -8,7 +8,7 @@ export const Header = () => {
 	return (
 		<>
 			<header className={styles.header}>
-				<NavHeader navLinks={headerRoutes} />
+				<Menu navLinks={headerRoutes} linkClassName={styles.link__style} />
 			</header>
 		</>
 	);

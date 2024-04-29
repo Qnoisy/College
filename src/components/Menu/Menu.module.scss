@@ -1,14 +1,15 @@
 @import '../../common/generall';
-
-.navHeader__title {
+.menu {
+}
+.menu__title {
 	@include color;
 }
-.navHeader__links {
+.menu__links {
 	@include df-centr;
 	gap: 1rem;
 	justify-content: space-between;
 }
-.navHeader__link span {
+.menu__link span {
 	display: block;
 	@include color;
 	font-size: 0.9rem;

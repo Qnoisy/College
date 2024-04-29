@@ -1,2 +1,16 @@
+@import '../../common/generall';
 .footer {
+	display: flex;
+	justify-content: flex-end;
+}
+.footer__list {
+	@include df-centr;
+	gap: 1rem;
+}
+.footer__item {
+}
+.footer__icon {
+	@include color;
+	width: 1.5625rem;
+	height: 1.5625rem;
 }

@@ -2,23 +2,27 @@ import { IsubRoutes } from '../types/CommonInterface';
 
 export const subRoutes: IsubRoutes[] = [
 	{
-		name: 'НОВИНИ',
+		name: 'Головна',
+		link: '/',
+	},
+	{
+		name: 'Новини',
 		link: '/news',
 	},
 	{
-		name: 'КОЛЕДЖ',
+		name: 'Коледж',
 		link: '/college',
 	},
 	{
-		name: 'СПІВРОБІТНИЦТВО',
+		name: 'Співробітництво',
 		link: '/cooperation',
 	},
 	{
-		name: 'ЯКІСТЬ',
+		name: 'Якість',
 		link: '/quality',
 	},
 	{
-		name: 'КОНТАКТИ',
+		name: 'Контакти',
 		link: '/contacts',
 	},
 ];

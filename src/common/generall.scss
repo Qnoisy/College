@@ -97,6 +97,8 @@ html {
 
 .header {
 	@include bg-color;
+	background-image: url('../../public/img/texture/texture.jpg');
+	background-size: cover;
 }
 
 .main {
@@ -106,6 +108,17 @@ html {
 
 .footer {
 	@include bg-color;
+	background-image: url('../../public/img/texture/texture.jpg');
+	background-size: cover;
+}
+
+.bg {
+	background-image: url('../../public/img/texture/texture.jpg');
+	background-size: cover;
+}
+
+.dark-bg {
+	background-color: rgb(41, 36, 36);
 }
 
 .row {

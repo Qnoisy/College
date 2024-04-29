@@ -10,3 +10,18 @@
 	border-radius: 50%;
 	background-color: white;
 }
+
+.link__style {
+	@include color;
+	padding-bottom: 0.125rem;
+	@media (hover: hover) {
+		&:hover {
+			@include color-hover;
+		}
+	}
+	@media (hover: none) {
+		&:active {
+			@include color-hover;
+		}
+	}
+}
