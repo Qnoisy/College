@@ -18,6 +18,7 @@ import { Footer } from './Footer';
 import { Header } from './Header';
 import { Main } from './Main';
 import { SubMenu } from './SubMenu';
+import { VideoPlayer } from './VideoPlayer';
 
 const Wrapper = () => {
 	return (
@@ -28,6 +29,7 @@ const Wrapper = () => {
 			<Container>
 				<SubMenu />
 			</Container>
+			<VideoPlayer />
 			<Container className='bg'>
 				<BigMenu />
 			</Container>

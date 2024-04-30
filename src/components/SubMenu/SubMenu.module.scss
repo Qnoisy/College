@@ -8,17 +8,16 @@
 .subMenu__logo {
 	@include df-centr;
 	gap: 1rem;
-	justify-content: flex-start;
 }
 .subMenu__logo_img {
-	width: 70px;
-	height: 70px;
+	width: 100px;
+	height: 100px;
 }
 .subMenu__logo_text {
 	@include color-second;
 	font-family: $ffMontserrat;
 	text-transform: uppercase;
-	font-size: 2rem;
+	font-size: 2.5rem;
 	font-weight: 700;
 }
 .link__style {
@@ -28,6 +27,8 @@
 	@include color-second;
 	font-weight: 700;
 	text-transform: uppercase;
+	font-size: 1.1rem;
+	padding: 0.2rem;
 	@media (hover: hover) {
 		&:hover {
 			@include color-hover-second;
