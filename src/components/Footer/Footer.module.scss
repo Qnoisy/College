@@ -13,4 +13,14 @@
 	@include color;
 	width: 1.5625rem;
 	height: 1.5625rem;
+	@media (hover: hover) {
+		&:hover {
+			@include color-hover;
+		}
+	}
+	@media (hover: none) {
+		&:active {
+			@include color-hover;
+		}
+	}
 }

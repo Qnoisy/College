@@ -47,8 +47,4 @@ export const headerRoutes: IsubRoutes[] = [
 		name: 'Навчальні Матеріали',
 		link: 'https://mdl.chpt.edu.ua/',
 	},
-	{
-		name: 'Вхід',
-		link: '/login',
-	},
 ];

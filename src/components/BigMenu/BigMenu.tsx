@@ -26,7 +26,7 @@ export const BigMenu = () => {
 			</li>
 			<li className={styles.bigMenu__item}>
 				<GrGroup className={styles.bigMenu__icon} />
-				<p>Студентьське життя</p>
+				<p>Студентське життя</p>
 			</li>
 			<li className={styles.bigMenu__item}>
 				<GrCatalog className={styles.bigMenu__icon} />
@@ -34,7 +34,7 @@ export const BigMenu = () => {
 			</li>
 			<li className={styles.bigMenu__item}>
 				<GrCli className={styles.bigMenu__icon} />
-				<p>Підтримка та договір</p>
+				<p>Підтримка та довіра</p>
 			</li>
 		</ul>
 	);
