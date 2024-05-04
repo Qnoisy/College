@@ -1,9 +1,22 @@
-@import '../../common/generall';
+@import '../../../common/generall';
 .video__container {
 	position: relative;
 	width: 100%;
-	height: 600px;
+	height: 550px;
 	overflow: hidden;
+	@media (max-width: 1151.98px) {
+	}
+	@media (max-width: 959.98px) {
+		height: 400px;
+	}
+	@media (max-width: 767.98px) {
+		height: 300px;
+	}
+	@media (max-width: 539.98px) {
+		display: none;
+	}
+	@media (max-width: 400.98px) {
+	}
 }
 
 video {
@@ -23,7 +36,7 @@ video {
 	pointer-events: none;
 }
 
-.video__text {
+.video__title {
 	@include color;
 	font-family: $ffMontserrat;
 	text-align: center;

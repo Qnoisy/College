@@ -1,18 +1,13 @@
-@import '../../common/generall';
-.footer {
+@import '../../../common/generall';
+.header {
 	display: flex;
-	justify-content: flex-end;
-}
-.footer__list {
-	@include df-centr;
+	justify-content: space-between;
 	gap: 1rem;
 }
-.footer__item {
-}
-.footer__icon {
+
+.link__style {
 	@include color;
-	width: 1.5625rem;
-	height: 1.5625rem;
+	padding-bottom: 0.125rem;
 	@media (hover: hover) {
 		&:hover {
 			@include color-hover;

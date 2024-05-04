@@ -1,4 +1,5 @@
-import { Route, Routes } from 'react-router-dom';
+// Wrapper.jsx
+import { Route, Routes, useLocation } from 'react-router-dom';
 import '../common/generall.scss';
 import '../common/reset.scss';
 import { Accreditation } from '../routes/header-routes/Accreditation';
@@ -13,14 +14,16 @@ import { Quality } from '../routes/subMenu-routes/Quality';
 import { Contacts } from '../routes/subMenu-routes/Сontacts';
 import { BigMenu } from './BigMenu';
 import { Container } from './Container';
-import { Copyright } from './Copyright';
-import { Footer } from './Footer';
-import { Header } from './Header';
-import { Main } from './Main';
-import { SubMenu } from './SubMenu';
-import { VideoPlayer } from './VideoPlayer';
+import { Copyright } from './sections/Copyright';
+import { Footer } from './sections/Footer';
+import { Header } from './sections/Header';
+import { Main } from './sections/Main';
+import { SubMenu } from './sections/SubMenu';
+import { VideoPlayer } from './sections/VideoPlayer';
 
 const Wrapper = () => {
+	const location = useLocation();
+	const isHomePage = location.pathname === '/';
 	return (
 		<div className='wrapper'>
 			<Container className='header'>
@@ -29,7 +32,7 @@ const Wrapper = () => {
 			<Container>
 				<SubMenu />
 			</Container>
-			<VideoPlayer />
+			{isHomePage && <VideoPlayer />}
 			<Container className='bg'>
 				<BigMenu />
 			</Container>
@@ -37,7 +40,7 @@ const Wrapper = () => {
 				<Routes>
 					<Route path='/' element={<Main />} />
 					<Route path='/publichne-obhovorennia' element={<Publichne />} />
-					<Route path='/acredetation-op' element={<Accreditation />} />
+					<Route path='/accredetation' element={<Accreditation />} />
 					<Route path='/pidrozdily' element={<Unit />} />
 					<Route path='/rozklad' element={<Rozklad />} />
 					<Route path='/login' element={<Login />} />
@@ -48,7 +51,6 @@ const Wrapper = () => {
 					<Route path='/contacts' element={<Contacts />} />
 				</Routes>
 			</Container>
-			{/* <VideoPlayer /> */}
 			<Container className='footer'>
 				<Footer />
 			</Container>

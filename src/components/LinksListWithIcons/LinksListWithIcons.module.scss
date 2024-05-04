@@ -1,0 +1,25 @@
+.linksList {
+	padding: 1rem;
+	border: 1px solid #ccc; // Рамочка вокруг списка
+	display: flex;
+	flex-direction: column;
+}
+
+.linkItem {
+	display: flex;
+	align-items: center;
+	margin-bottom: 0.5rem; // Отступ между элементами списка
+
+	&:last-child {
+		margin-bottom: 0;
+	}
+}
+
+.icon {
+	margin-right: 0.5rem; // Отступ между иконкой и текстом
+}
+
+.link {
+	text-decoration: none;
+	color: #333; // Цвет текста ссылки
+}

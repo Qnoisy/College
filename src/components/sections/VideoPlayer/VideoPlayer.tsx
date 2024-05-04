@@ -1,5 +1,5 @@
+// VideoPlayer.jsx
 import styles from './VideoPlayer.module.scss';
-// interface VideoPlayerProps {}
 
 export const VideoPlayer = () => {
 	return (
@@ -7,14 +7,14 @@ export const VideoPlayer = () => {
 			<video
 				title='Video Player'
 				src='./video/video.mp4'
-				autoPlay // Автоматическое воспроизведение
-				loop // Повторение видео
-				muted // Необходимо добавить для автовоспроизведения в некоторых браузерах
+				autoPlay
+				loop
+				muted
 			></video>
 			<div className={styles.video__overlay}></div>
-			<div className={styles.video__text}>
+			<h1 className={styles.video__title}>
 				Черкаський політехнічний фаховий коледж
-			</div>
+			</h1>
 		</div>
 	);
 };

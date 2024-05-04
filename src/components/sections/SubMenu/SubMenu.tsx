@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
-import { subRoutes } from '../../data/data';
-import { Menu } from '../Menu';
+import { subRoutes } from '../../../data/data';
+import { Menu } from '../../Menu';
 import styles from './SubMenu.module.scss';
 
 // interface SubMenuProps {}

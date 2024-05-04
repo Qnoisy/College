@@ -1,5 +1,5 @@
-import { headerRoutes } from '../../data/data';
-import { Menu } from '../Menu';
+import { headerRoutes } from '../../../data/data';
+import { Menu } from '../../Menu';
 import styles from './Header.module.scss';
 
 // interface HeaderProps {}

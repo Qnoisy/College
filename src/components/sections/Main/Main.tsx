@@ -1,8 +1,8 @@
 import { useRef } from 'react';
 import { AiFillCaretLeft, AiFillCaretRight } from 'react-icons/ai';
 import Slider from 'react-slick';
-import Arrow from '../Arrow/Arrow';
-import { NewsSwiper } from '../NewsSwiper';
+import Arrow from '../../Arrow/Arrow';
+import { NewsSwiper } from '../../NewsSwiper';
 import styles from './Main.module.scss';
 
 const newsItems = [

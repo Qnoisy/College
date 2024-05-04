@@ -1,0 +1,69 @@
+@import '../../common/generall';
+
+.demo-block {
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+	&__icon {
+		margin-right: 0.5rem;
+	}
+}
+
+.demo-block__main-content {
+	display: flex;
+	height: 100%;
+}
+
+.demo-block__text-content {
+	flex: 3;
+	padding: 0 1rem 1rem 1rem;
+}
+
+.demo-block__navigation {
+	flex: 1;
+	padding: 1rem;
+	border-left: 0.0625rem solid #ccc;
+}
+
+.demo-block__nav-item {
+	@include color-second;
+	@media (hover: hover) {
+		&:hover {
+			@include color-hover-second;
+		}
+	}
+	@media (hover: none) {
+		&:active {
+			@include color-hover-second;
+		}
+	}
+}
+
+.demo-block__links {
+	border-top: 0.0625rem solid #ccc;
+	padding: 0.625rem;
+}
+
+.demo-block__nav-item,
+.demo-block__link {
+	display: flex;
+	align-items: center;
+}
+
+.demo-block__link {
+	@include btn-color;
+	padding: 1rem;
+	margin-bottom: 0.5rem;
+	border-radius: 1rem;
+	max-width: 300px;
+	@media (hover: hover) {
+		&:hover {
+			@include btn-color-hover;
+		}
+	}
+	@media (hover: none) {
+		&:active {
+			@include btn-color-hover;
+		}
+	}
+}
