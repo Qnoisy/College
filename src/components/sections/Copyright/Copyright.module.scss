@@ -1,0 +1,6 @@
+@import '../../../common/generall';
+.copyright {
+	@include color;
+	text-align: center;
+	font-size: 0.8rem;
+}

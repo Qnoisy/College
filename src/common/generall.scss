@@ -7,11 +7,11 @@ $ffMontserrat: 'Montserrat', sans-serif;
 }
 // [data-theme='light']
 html {
-	--button-text-color: #1c407e;
-	--button-text-color-hover: #64b5f6;
-	--button-background-color: #ffffff;
+	--button-text-color: #ffffff;
+	--button-text-color-hover: #1c407e;
+	--button-background-color: #1c407e;
 	--button-background-color-hover: #e3f2fd;
-	--button-border-color: #448aff;
+	--button-border-color: #1c407e;
 
 	--background-color: #1c407e;
 	--second-background-color: #ffffff;
@@ -19,6 +19,8 @@ html {
 
 	--text-color: #e3f2fd;
 	--text-color-hover: #ffffff;
+	--text-color-second: #1c407e;
+	--text-color-second-hover: #64b5f6;
 }
 // html[data-theme='dark'] {
 // 	--button-text-color: #ffffff;
@@ -47,13 +49,17 @@ html {
 	color: var(--text-color-hover);
 	transition: all 100ms linear;
 	text-shadow: 0 0 50px white;
+	&,
+	* {
+		color: var(--text-color-hover); // Наследование цвета текста
+	}
 }
 @mixin color-second {
-	color: var(--button-text-color);
+	color: var(--text-color-second);
 	transition: all 200ms linear;
 }
 @mixin color-hover-second {
-	color: var(--button-text-color-hover);
+	color: var(--text-color-second-hover);
 	transition: all 200ms linear;
 }
 
@@ -74,16 +80,27 @@ html {
 }
 
 @mixin btn-color {
-	color: var(--button-text-color);
+	&,
+	* {
+		color: var(--button-text-color); // Наследование цвета текста
+	}
 	background-color: var(--button-background-color);
-	border-color: var(--button-border-color);
+	border: 2px solid var(--button-border-color);
 	transition: all 0.3s ease;
 }
 @mixin btn-color-hover {
 	color: var(--button-text-color-hover);
 	background-color: var(--button-background-color-hover);
-	border-color: var(--button-background-color-hover);
+	border-color: var(
+		--button-border-color-hover
+	); // Добавим изменение цвета границы при наведении
 	transition: all 0.3s ease;
+
+	// Обеспечиваем, что все дочерние элементы также изменяют свой цвет
+	&,
+	* {
+		color: var(--button-text-color-hover);
+	}
 }
 
 .wrapper {

@@ -33,7 +33,7 @@ export const headerRoutes: IsubRoutes[] = [
 	},
 	{
 		name: 'Aкредетація ОП',
-		link: '/accreditation-op',
+		link: '/accredetation',
 	},
 	{
 		name: 'Структурні підрозділи',
@@ -46,9 +46,5 @@ export const headerRoutes: IsubRoutes[] = [
 	{
 		name: 'Навчальні Матеріали',
 		link: 'https://mdl.chpt.edu.ua/',
-	},
-	{
-		name: 'Вхід',
-		link: '/login',
 	},
 ];

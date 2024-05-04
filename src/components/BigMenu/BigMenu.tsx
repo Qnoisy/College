@@ -1,47 +1,41 @@
 import {
-	AiFillBook,
-	AiFillCaretLeft,
-	AiFillCaretRight,
-	AiFillRead,
-	AiOutlineAudit,
-	AiOutlineBulb,
-	AiOutlineCluster,
-} from 'react-icons/ai';
-import { FiCommand } from 'react-icons/fi';
-import {
 	GrBook,
 	GrCatalog,
 	GrCertificate,
 	GrCli,
 	GrCluster,
-	GrFormViewHide,
 	GrGroup,
 } from 'react-icons/gr';
-import { IoLibrary } from 'react-icons/io5';
-import { SiAwsorganizations } from 'react-icons/si';
 import styles from './BigMenu.module.scss';
 // interface BigMenuProps {}
 
 export const BigMenu = () => {
 	return (
-		<div className={styles.bigMenu}>
-			<AiFillBook className={styles.bigMenu__icon} />
-			<AiFillCaretLeft className={styles.bigMenu__icon} />
-			<AiFillCaretRight className={styles.bigMenu__icon} />
-			<AiOutlineCluster className={styles.bigMenu__icon} />
-			<AiOutlineBulb className={styles.bigMenu__icon} />
-			<AiOutlineAudit className={styles.bigMenu__icon} />
-			<AiFillRead className={styles.bigMenu__icon} />
-			<FiCommand className={styles.bigMenu__icon} />
-			<GrBook className={styles.bigMenu__icon} />
-			<GrCatalog className={styles.bigMenu__icon} />
-			<GrCertificate className={styles.bigMenu__icon} />
-			<GrCli className={styles.bigMenu__icon} />
-			<GrCluster className={styles.bigMenu__icon} />
-			<GrGroup className={styles.bigMenu__icon} />
-			<GrFormViewHide className={styles.bigMenu__icon} />
-			<IoLibrary className={styles.bigMenu__icon} />
-			<SiAwsorganizations className={styles.bigMenu__icon} />
-		</div>
+		<ul className={styles.bigMenu}>
+			<li className={styles.bigMenu__item}>
+				<GrCertificate className={styles.bigMenu__icon} />
+				<p>Вступна компанія</p>
+			</li>
+			<li className={styles.bigMenu__item}>
+				<GrCluster className={styles.bigMenu__icon} />
+				<p>Освітні підрозділи</p>
+			</li>
+			<li className={styles.bigMenu__item}>
+				<GrBook className={styles.bigMenu__icon} />
+				<p>Наукова діяльність</p>
+			</li>
+			<li className={styles.bigMenu__item}>
+				<GrGroup className={styles.bigMenu__icon} />
+				<p>Студентське життя</p>
+			</li>
+			<li className={styles.bigMenu__item}>
+				<GrCatalog className={styles.bigMenu__icon} />
+				<p>Бібліотека</p>
+			</li>
+			<li className={styles.bigMenu__item}>
+				<GrCli className={styles.bigMenu__icon} />
+				<p>Підтримка та довіра</p>
+			</li>
+		</ul>
 	);
 };
