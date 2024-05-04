@@ -1,0 +1,18 @@
+@import '../../common/generall';
+.unorderedList {
+	@include color-second;
+	font-size: 1rem;
+	display: flex;
+	flex-direction: column;
+	gap: 0.5rem;
+	margin-bottom: 0.5rem;
+	font-family: $ffNunito;
+}
+.unorderedList__link {
+	padding-left: 1rem;
+
+	&:before {
+		content: '•'; // Добавляет точку перед текстом
+		padding-right: 0.5rem; // Отступ справа от точки до текста
+	}
+}

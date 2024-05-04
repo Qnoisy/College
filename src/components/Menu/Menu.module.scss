@@ -1,0 +1,27 @@
+@import '../../common/generall';
+.menu {
+}
+.menu__title {
+	@include color;
+}
+.menu__links {
+	@include df-centr;
+	gap: 1rem;
+	justify-content: space-between;
+}
+.menu__link span {
+	display: block;
+	@include color;
+	font-size: 0.9rem;
+	padding-bottom: 2px;
+	@media (hover: hover) {
+		&:hover {
+			@include color-hover;
+		}
+	}
+	@media (hover: none) {
+		&:active {
+			@include color-hover;
+		}
+	}
+}
