@@ -12,21 +12,23 @@
 .demo-block__main-content {
 	display: flex;
 	height: 100%;
+	gap: 2rem;
 }
 
 .demo-block__text-content {
-	flex: 3;
-	padding: 0 1rem 1rem 1rem;
+	flex: 5;
 }
 
 .demo-block__navigation {
 	flex: 1;
 	padding: 1rem;
-	border-left: 0.0625rem solid #ccc;
+	border: 0.0625rem solid var(--hr-color);
 }
 
 .demo-block__nav-item {
 	@include color-second;
+	border-bottom: 0.0625rem solid var(--hr-color);
+	margin-bottom: 0.5rem;
 	@media (hover: hover) {
 		&:hover {
 			@include color-hover-second;
@@ -39,15 +41,19 @@
 	}
 }
 
+.demo-block__icon {
+	font-size: 1.5rem;
+}
 .demo-block__links {
-	border-top: 0.0625rem solid #ccc;
-	padding: 0.625rem;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 1rem;
 }
 
 .demo-block__nav-item,
 .demo-block__link {
-	display: flex;
-	align-items: center;
+	@include df-centr;
+	justify-content: flex-start;
 }
 
 .demo-block__link {
@@ -55,7 +61,7 @@
 	padding: 1rem;
 	margin-bottom: 0.5rem;
 	border-radius: 1rem;
-	max-width: 300px;
+	width: 250px;
 	@media (hover: hover) {
 		&:hover {
 			@include btn-color-hover;
@@ -66,4 +72,7 @@
 			@include btn-color-hover;
 		}
 	}
+}
+.demo-block__link-text {
+	@include df-centr;
 }

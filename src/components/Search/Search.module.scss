@@ -1,0 +1,39 @@
+@import '../../common/generall';
+
+.search {
+	display: flex;
+	justify-content: flex-end;
+	height: 1.3rem;
+}
+
+.searchIcon {
+	font-size: 1.3rem;
+}
+
+.searchForm {
+	display: flex;
+	border-radius: 0.3rem;
+	border: 1px solid transparent; // Початково прозорий
+}
+
+.search.active .searchForm {
+	border-color: #ffffff; // Біла рамка коли активний
+}
+
+.searchInput {
+	@include bg-color-second;
+	border: 1px solid #ffffff;
+	max-width: 12.5rem;
+	border-radius: 0.3rem 0 0 0.3rem;
+}
+
+.searchButton {
+	background: none;
+	border: none;
+	color: #ffffff;
+	cursor: pointer;
+	border-radius: 0 0.3125rem 0.3125rem 0;
+	&:active {
+		@include btn-color-hover;
+	}
+}

@@ -9,10 +9,11 @@ interface DropdownMenuItem {
 }
 
 interface DropdownMenuProps {
+	title: string;
 	items: DropdownMenuItem[];
 }
 
-const DropdownMenu: React.FC<DropdownMenuProps> = ({ items }) => {
+const DropdownMenu: React.FC<DropdownMenuProps> = ({ title, items }) => {
 	const [isOpen, setIsOpen] = useState(false);
 
 	const toggleDropdown = () => setIsOpen(!isOpen);
@@ -20,17 +21,17 @@ const DropdownMenu: React.FC<DropdownMenuProps> = ({ items }) => {
 	return (
 		<div className={styles.dropdown}>
 			<button onClick={toggleDropdown} className={styles.dropdownToggle}>
-				Menu
+				{title}
 			</button>
 			{isOpen && (
 				<div className={styles.dropdownMenu}>
 					{items.map((item, index) => (
-						<div key={index} className={styles.dropdownItem}>
-							<Link to={item.path} className={styles.dropdownLink}>
+						<Link to={item.path} className={styles.dropdownItem}>
+							<div key={index} className={styles.dropdownLink}>
 								{item.icon}
 								{item.name}
-							</Link>
-						</div>
+							</div>
+						</Link>
 					))}
 				</div>
 			)}

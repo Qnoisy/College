@@ -8,11 +8,17 @@
 	margin-bottom: 0.5rem;
 	font-family: $ffNunito;
 }
+
 .unorderedList__link {
-	padding-left: 1rem;
+	position: relative; // Задаємо відносне позиціонування для посилання
+	padding-left: 1.5rem; // Загальний відступ зліва для посилання
 
 	&:before {
-		content: '•'; // Добавляет точку перед текстом
-		padding-right: 0.5rem; // Отступ справа от точки до текста
+		content: '•'; // Додає точку перед текстом
+		position: absolute; // Абсолютне позиціонування для точки
+		left: 0; // Розташування точки на початку посилання
+		top: 50%; // Розміщення точки по центру по вертикалі
+		transform: translateY(-50%); // Зміщення точки на половину її висоти вгору
+		padding-right: 0.5rem; // Отступ справа від точки до тексту
 	}
 }

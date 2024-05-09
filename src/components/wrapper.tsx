@@ -13,6 +13,7 @@ import { News } from '../routes/subMenu-routes/News';
 import { Quality } from '../routes/subMenu-routes/Quality';
 import { Contacts } from '../routes/subMenu-routes/Сontacts';
 import { BigMenu } from './BigMenu';
+import Breadcrumbs from './Breadcrumbs/Breadcrumbs';
 import { Container } from './Container';
 import { Copyright } from './sections/Copyright';
 import { Footer } from './sections/Footer';
@@ -36,11 +37,12 @@ const Wrapper = () => {
 			<Container className='bg'>
 				<BigMenu />
 			</Container>
+			<Breadcrumbs />
 			<Container className='main'>
 				<Routes>
 					<Route path='/' element={<Main />} />
 					<Route path='/publichne-obhovorennia' element={<Publichne />} />
-					<Route path='/accredetation' element={<Accreditation />} />
+					<Route path='/accreditation' element={<Accreditation />} />
 					<Route path='/pidrozdily' element={<Unit />} />
 					<Route path='/rozklad' element={<Rozklad />} />
 					<Route path='/login' element={<Login />} />

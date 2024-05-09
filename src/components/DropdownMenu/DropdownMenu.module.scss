@@ -1,13 +1,15 @@
+@import '../../common/generall';
 .dropdown {
 	position: relative;
-	display: inline-block;
+	display: block;
+	margin-bottom: 0.5rem;
 }
 
 .dropdownToggle {
+	@include bg-color;
 	padding: 10px;
 	border: none;
 	border-radius: 0.5rem;
-	background-color: #007bff;
 	color: white;
 	cursor: pointer;
 }
@@ -21,21 +23,23 @@
 }
 
 .dropdownItem {
-	padding: 12px 16px;
-	text-decoration: none;
 	display: block;
-	color: black;
-
-	&:hover {
-		background-color: #f1f1f1;
-	}
+	padding: 0.75rem 1rem;
+	text-decoration: none;
 }
 
 .dropdownLink {
 	text-decoration: none;
-	color: black;
+	@include color-second;
 
-	&:hover {
-		color: blue;
+	@media (hover: hover) {
+		&:hover {
+			@include color-hover-second;
+		}
+	}
+	@media (hover: none) {
+		&:active {
+			@include color-hover-second;
+		}
 	}
 }

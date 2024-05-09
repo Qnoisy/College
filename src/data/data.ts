@@ -32,8 +32,8 @@ export const headerRoutes: IsubRoutes[] = [
 		link: '/publichne-obhovorennia',
 	},
 	{
-		name: 'Aкредетація ОП',
-		link: '/accredetation',
+		name: 'Aкредитація ОП',
+		link: '/accreditation',
 	},
 	{
 		name: 'Структурні підрозділи',

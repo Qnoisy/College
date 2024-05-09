@@ -4,10 +4,35 @@
 	justify-content: space-between;
 	gap: 1rem;
 }
-
+.header__block {
+	display: flex;
+	gap: 1rem;
+}
 .link__style {
 	@include color;
 	padding-bottom: 0.125rem;
+	@media (hover: hover) {
+		&:hover {
+			@include color-hover;
+		}
+	}
+	@media (hover: none) {
+		&:active {
+			@include color-hover;
+		}
+	}
+}
+.header__btn {
+	background-color: rgba(0, 0, 0, 0);
+}
+.header__theme {
+	@include color;
+	display: flex;
+	align-items: center;
+	font-size: 1.3rem;
+	@media (max-width: 959.98px) {
+		display: none;
+	}
 	@media (hover: hover) {
 		&:hover {
 			@include color-hover;
