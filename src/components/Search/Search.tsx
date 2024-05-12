@@ -1,38 +1,45 @@
 import classNames from 'classnames';
 import React, { useState } from 'react';
 import { IoMdSearch } from 'react-icons/io';
+import { useNavigate } from 'react-router-dom';
+import { allRoutes } from '../../data/data';
+import { IsubRoutes } from '../../types/CommonInterface';
 import styles from './Search.module.scss';
 
-interface SearchProps {
-	onSearch: (query: string) => void;
-}
+interface SearchProps {}
 
-export const Search = ({ onSearch }: SearchProps) => {
+export const Search: React.FC<SearchProps> = () => {
 	const [searchTerm, setSearchTerm] = useState('');
 	const [isActive, setIsActive] = useState(false);
+	const [suggestions, setSuggestions] = useState<IsubRoutes[]>([]);
+	const navigate = useNavigate();
 
 	const handleSearchChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-		setSearchTerm(event.target.value);
+		const value = event.target.value;
+		setSearchTerm(value);
+
+		if (value.length > 1) {
+			const searchQuery = value.toLowerCase().trim();
+			const filteredSuggestions = allRoutes.filter(route =>
+				route.name.toLowerCase().includes(searchQuery)
+			);
+			setSuggestions(filteredSuggestions);
+		} else {
+			setSuggestions([]);
+		}
 	};
 
 	const handleSearchSubmit = (event: React.FormEvent<HTMLFormElement>) => {
 		event.preventDefault();
-		if (searchTerm.trim()) {
-			onSearch(searchTerm);
-			setIsActive(false); // Закриваємо поле пошуку після виконання
+		if (suggestions.length === 1) {
+			navigate(suggestions[0].link);
 		}
-	};
-
-	const handleKeyDown = (event: React.KeyboardEvent<HTMLInputElement>) => {
-		if (event.key === 'Enter' && searchTerm.trim()) {
-			event.preventDefault(); // Запобігаємо стандартній поведінці, якщо поле введення не пусте
-			onSearch(searchTerm);
-			setIsActive(false); // Закриваємо поле пошуку після виконання
-		}
+		setSearchTerm(''); // Очищення поля вводу
+		setIsActive(false); // Закриття поля вводу
 	};
 
 	const toggleSearch = () => {
-		setIsActive(current => !current); // Змінюємо стан на протилежний
+		setIsActive(!isActive);
 	};
 
 	return (
@@ -42,19 +49,38 @@ export const Search = ({ onSearch }: SearchProps) => {
 					type='text'
 					value={searchTerm}
 					onChange={handleSearchChange}
-					onKeyDown={handleKeyDown}
 					placeholder='Пошук...'
 					className={styles.searchInput}
-					style={{ opacity: isActive ? 1 : 0 }}
+					style={{ display: isActive ? 'block' : 'none' }} // Показувати або приховувати поле вводу
 				/>
 				<button
-					type='button' // Змінено на type="button" щоб уникнути небажаного сабміта форми
+					type='button'
 					className={styles.searchButton}
-					onClick={toggleSearch}
+					onClick={toggleSearch} // Перемикач активного стану поля вводу
 				>
 					<IoMdSearch className={styles.searchIcon} />
 				</button>
 			</form>
+			{isActive && suggestions.length > 0 && (
+				<ul className={styles.suggestions}>
+					{suggestions.map(suggestion => (
+						<li
+							key={suggestion.link}
+							onClick={() => {
+								navigate(suggestion.link);
+								setSearchTerm(''); // Очищення поля вводу
+								setIsActive(false); // Закриття поля вводу
+							}}
+						>
+							{searchTerm.length != 0 && (
+								<div className={styles.search__suggestion}>
+									{suggestion.name}
+								</div>
+							)}
+						</li>
+					))}
+				</ul>
+			)}
 		</div>
 	);
 };

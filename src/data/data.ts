@@ -1,5 +1,4 @@
 import { IsubRoutes } from '../types/CommonInterface';
-
 export const subRoutes: IsubRoutes[] = [
 	{
 		name: 'Головна',
@@ -29,7 +28,7 @@ export const subRoutes: IsubRoutes[] = [
 export const headerRoutes: IsubRoutes[] = [
 	{
 		name: 'Публічне обговорення',
-		link: '/publichne-obhovorennia',
+		link: '/public-discussion',
 	},
 	{
 		name: 'Aкредитація ОП',
@@ -37,14 +36,41 @@ export const headerRoutes: IsubRoutes[] = [
 	},
 	{
 		name: 'Структурні підрозділи',
-		link: '/pidrozdily',
+		link: '/subdivisions',
 	},
 	{
 		name: 'Розклад',
-		link: '/rozklad',
+		link: '/schedule',
 	},
 	{
 		name: 'Навчальні Матеріали',
 		link: 'https://mdl.chpt.edu.ua/',
 	},
 ];
+export const BigMenuRoutes: IsubRoutes[] = [
+	{
+		name: 'Вступна компанія',
+		link: '/entry-company',
+	},
+	{
+		name: 'Освітні підрозділи',
+		link: '/educational-units',
+	},
+	{
+		name: 'Наукова діяльність',
+		link: '/research-activities',
+	},
+	{
+		name: 'Студентське життя',
+		link: '/student-life',
+	},
+	{
+		name: 'Бібліотека',
+		link: '/library',
+	},
+	{
+		name: 'Підтримка та довіра',
+		link: '/support-and-trust',
+	},
+];
+export const allRoutes = [...subRoutes, ...headerRoutes, ...BigMenuRoutes];

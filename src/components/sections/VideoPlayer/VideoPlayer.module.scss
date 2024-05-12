@@ -38,7 +38,7 @@ video {
 
 .video__title {
 	@include color;
-	font-family: $ffMontserrat;
+	font-family: $ffbtn-text;
 	text-align: center;
 	text-shadow: 0.3125rem 0.3125rem #1c407e;
 	position: absolute;

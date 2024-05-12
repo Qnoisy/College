@@ -1,15 +1,24 @@
 @import '../../common/generall';
 .breadcrumbs {
+	@include color-second;
 	background-color: var(--hr-color);
 	padding: 0.3rem 0.5rem;
-	text-align: center;
 	font-size: 0.9rem;
 	a {
 		@include color-second;
 		text-decoration: none;
-
 		&:hover {
 			text-decoration: underline;
 		}
+	}
+}
+.breadcrumbs__container {
+	width: min(calc(100% - 7.5rem), 80rem);
+	margin-inline: auto;
+	@media (max-width: 1151.98px) {
+		width: calc(100% - 5rem);
+	}
+	@media (max-width: 767.98px) {
+		width: calc(100% - 3.5rem);
 	}
 }

@@ -48,15 +48,13 @@ const DemoBlock: React.FC<DemoBlockProps> = ({
 			</div>
 			<div className={classNames(styles['demo-block__links'])}>
 				{additionalLinks &&
-					additionalLinks.map((link, index) => (
+					additionalLinks.map(link => (
 						<Link
+							key={link.path} // Moved here from the div inside
 							to={link.path}
 							className={classNames(styles['demo-block__link'])}
 						>
-							<div
-								key={index}
-								className={classNames(styles['demo-block__link-text'])}
-							>
+							<div className={classNames(styles['demo-block__link-text'])}>
 								{link.icon && (
 									<span className={classNames(styles['demo-block__icon'])}>
 										{link.icon}

@@ -4,9 +4,9 @@ import '../common/generall.scss';
 import '../common/reset.scss';
 import { Accreditation } from '../routes/header-routes/Accreditation';
 import { Login } from '../routes/header-routes/Login';
-import { Publichne } from '../routes/header-routes/Publichne';
-import { Rozklad } from '../routes/header-routes/Rozklad';
-import { Unit } from '../routes/header-routes/Unit';
+import { PublicDiscussion } from '../routes/header-routes/PublicDiscussion';
+import { Schedule } from '../routes/header-routes/Schedule';
+import { Subdivisions } from '../routes/header-routes/Subdivisions';
 import { College } from '../routes/subMenu-routes/College';
 import { Cooperation } from '../routes/subMenu-routes/Cooperation';
 import { News } from '../routes/subMenu-routes/News';
@@ -41,10 +41,10 @@ const Wrapper = () => {
 			<Container className='main'>
 				<Routes>
 					<Route path='/' element={<Main />} />
-					<Route path='/publichne-obhovorennia' element={<Publichne />} />
+					<Route path='/public-discussion' element={<PublicDiscussion />} />
 					<Route path='/accreditation' element={<Accreditation />} />
-					<Route path='/pidrozdily' element={<Unit />} />
-					<Route path='/rozklad' element={<Rozklad />} />
+					<Route path='/subdivisions' element={<Subdivisions />} />
+					<Route path='/schedule' element={<Schedule />} />
 					<Route path='/login' element={<Login />} />
 					<Route path='/news' element={<News />} />
 					<Route path='/college' element={<College />} />

@@ -1,7 +1,7 @@
 import Page from '../../../Page/Page';
 
-// interface UnitProps {}
+// interface SubdivisionsProps {}
 
-export const Unit = () => {
+export const Subdivisions = () => {
 	return <Page title='Підрозділи - ЧПФК' />;
 };

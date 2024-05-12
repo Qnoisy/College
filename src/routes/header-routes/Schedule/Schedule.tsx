@@ -2,9 +2,9 @@ import Page from '../../../Page/Page';
 import { Button } from '../../../components/Button';
 import DemoBlock from '../../../components/DemoBlock/DemoBlock';
 import Subtitle from '../../../components/Subtitle/Subtitle';
-import style from './Rozklad.module.scss';
+import styles from './Schedule.module.scss';
 
-export const Rozklad = () => {
+export const Schedule = () => {
 	const handleClick = () => {
 		window.open(
 			'https://drive.google.com/drive/folders/1A1agQ-_fHK8XaVhjVit8FE3QtFnFHm4A?usp=drive_link',
@@ -23,7 +23,7 @@ export const Rozklad = () => {
 			<img
 				src='./img/rozklad/Rozklad.png'
 				alt='Расписание'
-				className={style.rozklad__img}
+				className={styles.schedule__img}
 			/>
 			<Subtitle text='Зміни в розкладі' />
 			<Button onClick={handleClick}> Завантажити розклад</Button>

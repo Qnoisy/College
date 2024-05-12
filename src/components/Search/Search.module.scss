@@ -13,16 +13,18 @@
 .searchForm {
 	display: flex;
 	border-radius: 0.3rem;
-	border: 1px solid transparent; // Початково прозорий
+	// border: 1px solid transparent; // Початково прозорий
 }
 
 .search.active .searchForm {
 	border-color: #ffffff; // Біла рамка коли активний
+	border: 1px solid #ffffff;
+	border-radius: 0.3rem;
 }
 
 .searchInput {
 	@include bg-color-second;
-	border: 1px solid #ffffff;
+
 	max-width: 12.5rem;
 	border-radius: 0.3rem 0 0 0.3rem;
 }
@@ -36,4 +38,19 @@
 	&:active {
 		@include btn-color-hover;
 	}
+}
+.suggestions {
+	position: relative;
+}
+.search__suggestion {
+	position: absolute;
+	display: block;
+	gap: 1rem;
+	min-width: 120px;
+	left: 1rem;
+	padding: 0.3rem;
+	border-radius: 0.3rem;
+	font-size: 0.8rem;
+	background-color: var(--second-background-color);
+	color: var(--text-color-second);
 }

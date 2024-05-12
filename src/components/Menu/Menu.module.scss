@@ -1,12 +1,13 @@
 @import '../../common/generall';
 .menu {
+	font-family: $ffbtn-text;
 }
 .menu__title {
 	@include color;
 }
 .menu__links {
 	@include df-centr;
-	gap: 1rem;
+	gap: 1.5rem;
 	justify-content: space-between;
 }
 .menu__link span {

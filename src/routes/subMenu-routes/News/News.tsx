@@ -1,10 +1,11 @@
 import Page from '../../../Page/Page';
+import styles from './News.module.scss';
 
 // interface NewsProps {}
 
 export const News = () => {
 	return (
-		<div>
+		<div className={styles.news}>
 			<Page title='Новини - ЧПФК' />
 			Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium
 			deserunt odio non quibusdam sequi voluptate corrupti repellendus maxime

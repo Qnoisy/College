@@ -1,5 +1,6 @@
-$ffNunito: 'Nunito', sans-serif;
-$ffMontserrat: 'Montserrat', sans-serif;
+$fftext: 'Source Code Pro', sans-serif;
+$ffbtn-text: 'Roboto Mono', monospace;
+$ffsecondtext: 'Lora', serif;
 
 #root {
 	height: 100%;
@@ -7,11 +8,11 @@ $ffMontserrat: 'Montserrat', sans-serif;
 }
 
 html[data-theme='light'] {
-	--button-text-color: #ffffff;
-	--button-text-color-hover: #1c407e;
-	--button-background-color: #1c407e;
-	--button-background-color-hover: #e3f2fd;
-	--button-border-color: #1c407e;
+	--button-text-color: #1c407e;
+	--button-text-color-hover: #ffffff;
+	--button-background-color: #e3f2fd;
+	--button-background-color-hover: #1c407e;
+	--button-border-color: #f4d931;
 
 	--background-color: #1c407e;
 	--second-background-color: #ffffff;
@@ -25,11 +26,11 @@ html[data-theme='light'] {
 	--hr-color: #ccc;
 }
 html[data-theme='dark'] {
-	--button-text-color: #ffffff;
-	--button-text-color-hover: #1c407e;
-	--button-background-color: #1c407e;
-	--button-background-color-hover: #e3f2fd;
-	--button-border-color: #1c407e;
+	--button-text-color: #1c407e;
+	--button-text-color-hover: #ffffff;
+	--button-background-color: #becad3;
+	--button-background-color-hover: #1c407e;
+	--button-border-color: #f4d931;
 
 	--background-color: #1c407e;
 	--second-background-color: #3a3a3a;
@@ -40,7 +41,7 @@ html[data-theme='dark'] {
 	--text-color-second: #ffffff;
 	--text-color-second-hover: #64b5f6;
 
-	--hr-color: #ccc;
+	--hr-color: #676767;
 }
 @mixin df-centr {
 	display: flex;
@@ -99,7 +100,7 @@ html[data-theme='dark'] {
 	color: var(--button-text-color-hover);
 	background-color: var(--button-background-color-hover);
 	border-color: var(
-		--button-border-color-hover
+		--button-border-color
 	); // Добавим изменение цвета границы при наведении
 	transition: all 0.3s ease;
 
@@ -115,7 +116,7 @@ html[data-theme='dark'] {
 	min-height: 100%;
 	display: flex;
 	flex-direction: column;
-	font-family: $ffNunito;
+	font-family: $fftext;
 	transition: background-color 200ms linear;
 	overflow-x: hidden;
 }

@@ -1,7 +1,7 @@
 import Page from '../../../Page/Page';
 
-// interface PublichneProps {}
+// interface PublicDiscussionProps {}
 
-export const Publichne = () => {
+export const PublicDiscussion = () => {
 	return <Page title='Публічне Обговорення - ЧПФК' />;
 };

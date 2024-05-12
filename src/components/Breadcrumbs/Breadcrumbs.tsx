@@ -1,4 +1,6 @@
 import { Link, useLocation } from 'react-router-dom';
+
+import { allRoutes } from '../../data/data';
 import styles from './Breadcrumbs.module.scss'; // Стилі для компонента
 
 const Breadcrumbs = () => {
@@ -9,23 +11,32 @@ const Breadcrumbs = () => {
 		return null; // Не рендеримо компонент для головної сторінки
 	}
 
+	const breadcrumbLinks = pathnames.map((value, index) => {
+		const routePath = `/${pathnames.slice(0, index + 1).join('/')}`;
+		const route = allRoutes.find(r => r.link === routePath);
+		const name = route ? route.name : decodeURIComponent(value);
+		const isLast = index === pathnames.length - 1;
+		return { name, routePath, isLast };
+	});
+
 	return (
 		<div className={styles.breadcrumbs}>
-			<Link to='/'>Головна</Link> {/* Стартовий пункт шляху */}
-			{pathnames.map((value, index) => {
-				const last = index === pathnames.length - 1;
-				const to = `/${pathnames.slice(0, index + 1).join('/')}`;
-
-				return last ? (
-					<span key={to}>
-						{' > '} {decodeURIComponent(value)}
-					</span> // Останній елемент як текст
-				) : (
-					<span key={to}>
-						{' > '} <Link to={to}>{decodeURIComponent(value)}</Link>
-					</span> // Проміжні елементи як посилання
-				);
-			})}
+			<div className={styles.breadcrumbs__container}>
+				<Link to='/'>Головна</Link> {/* Стартовий пункт шляху */}
+				{breadcrumbLinks.map(({ name, routePath, isLast }) =>
+					isLast ? (
+						<span key={routePath}>
+							{' > '}
+							{name}
+						</span>
+					) : (
+						<span key={routePath}>
+							{' > '}
+							<Link to={routePath}>{name}</Link>
+						</span>
+					)
+				)}
+			</div>
 		</div>
 	);
 };

@@ -3,6 +3,7 @@
 	display: flex;
 	justify-content: space-between;
 	gap: 1rem;
+	font-family: $ffbtn-text;
 }
 .header__block {
 	display: flex;
@@ -10,7 +11,6 @@
 }
 .link__style {
 	@include color;
-	padding-bottom: 0.125rem;
 	@media (hover: hover) {
 		&:hover {
 			@include color-hover;

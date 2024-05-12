@@ -3,7 +3,7 @@
 	@include color;
 	@include df-centr;
 	justify-content: space-around;
-	font-family: $ffMontserrat;
+	font-family: $ffbtn-text;
 	gap: 1rem;
 }
 .bigMenu__item {
@@ -23,12 +23,15 @@
 			@include color-hover;
 		}
 	}
+	p {
+		@include color;
+	}
 }
 .bigMenu__icon {
 	@include color;
-	margin-right: 5px;
-	width: 76px;
-	height: 76px;
+	margin-right: 0.3125rem;
+	width: 4.75rem;
+	height: 4.75rem;
 	@media (hover: hover) {
 		&:hover {
 			@include color-hover;
