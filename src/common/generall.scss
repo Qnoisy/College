@@ -1,6 +1,6 @@
-$fftext: 'Source Code Pro', sans-serif;
-$ffbtn-text: 'Roboto Mono', monospace;
-$ffsecondtext: 'Lora', serif;
+$fftext: 'Raleway', sans-serif;
+$ffbtn-text: 'Kanit', sans-serif;
+$ffsecondtext: 'Raleway', sans-serif;
 
 #root {
 	height: 100%;
@@ -119,6 +119,8 @@ html[data-theme='dark'] {
 	font-family: $fftext;
 	transition: background-color 200ms linear;
 	overflow-x: hidden;
+	line-height: 1.4rem;
+	font-size: 1rem;
 }
 
 .header {

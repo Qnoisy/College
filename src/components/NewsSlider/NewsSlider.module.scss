@@ -1,0 +1,43 @@
+@import '../../common/generall';
+.newsSlider {
+	.slick-slider {
+		border: none; // Удаление границы
+
+		.slick-slide {
+			transition: transform 0.3s ease-out, opacity 0.3s ease-out;
+			opacity: 0.6; // Затемнение неактивных слайдов
+
+			&.slick-center {
+				transform: scale(1.25); // Увеличение центрального слайда
+				opacity: 1; // Яркость для акцентирования
+			}
+		}
+	}
+
+	.newsSlider__slide {
+		@include bg-color-second;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		text-align: center;
+
+		img {
+			width: 100%;
+			height: 18.75rem;
+			padding: 0 0.5rem;
+			object-fit: cover;
+			border-radius: 1.5rem;
+			transition: transform 0.3s ease-out; // Плавное изменение размера
+		}
+
+		h3 {
+			padding: 0.3rem 0;
+		}
+
+		p {
+			font-size: 0.8rem;
+			padding-bottom: 0.3rem;
+		}
+	}
+}

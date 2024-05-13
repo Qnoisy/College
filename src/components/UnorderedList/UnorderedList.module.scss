@@ -1,7 +1,6 @@
 @import '../../common/generall';
 .unorderedList {
 	@include color-second;
-	font-size: 1rem;
 	display: flex;
 	flex-direction: column;
 	gap: 0.5rem;
