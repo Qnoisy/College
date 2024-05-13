@@ -72,11 +72,11 @@ export const Search: React.FC<SearchProps> = () => {
 								setIsActive(false); // Закриття поля вводу
 							}}
 						>
-							{/* {searchTerm.length != 0 && (
+							{searchTerm.length != 0 && (
 								<div className={styles.search__suggestion}>
 									{suggestion.name}
 								</div>
-							)} */}
+							)}
 						</li>
 					))}
 				</ul>
