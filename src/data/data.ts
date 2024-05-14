@@ -61,6 +61,26 @@ export const BigMenuRoutes: IsubRoutes[] = [
 		link: '/support-and-trust',
 	},
 ];
+
+export const underItems = [
+	{
+		name: 'Наші спеціальності',
+		link: '/accreditation/nashi-spetsialnosti',
+	},
+	{
+		name: 'ОПС Фаховий Молодший Бакалавр',
+		link: '/accreditation/ops-fakhovyi-molodshyi-bakalavr',
+	},
+	{
+		name: 'Вступна кампанія',
+		link: '/accreditation/vstup',
+	},
+	{
+		name: 'Архів',
+		link: '/accreditation/arkhiv',
+	},
+];
+
 export const newsItems = [
 	{
 		title: 'Новость 1',
@@ -99,4 +119,4 @@ export const newsItems = [
 			'https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0?ixlib=rb-1.2.1&auto=format&fit=crop&w=700&q=80',
 	},
 ];
-export const allRoutes = [...subRoutes, ...headerRoutes, ...BigMenuRoutes];
+export const allRoutes = [...subRoutes, ...headerRoutes, ...BigMenuRoutes, ...underItems];
