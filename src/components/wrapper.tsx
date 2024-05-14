@@ -10,6 +10,8 @@ import { College } from '../routes/subMenu-routes/College';
 import { Education } from '../routes/subMenu-routes/Education';
 import { Quality } from '../routes/subMenu-routes/Quality';
 import { Contacts } from '../routes/subMenu-routes/Сontacts';
+import { Entrycompany } from '../routes/under-routes/Entry-company';
+import { Educationalunits } from '../routes/under-routes/Educational-units';
 import Breadcrumbs from './Breadcrumbs/Breadcrumbs';
 import { Container } from './Container';
 import { BigMenu } from './Menu/BigMenu';
@@ -45,6 +47,8 @@ const Wrapper = () => {
 					<Route path='/education' element={<Education />} />
 					<Route path='/quality' element={<Quality />} />
 					<Route path='/contacts' element={<Contacts />} />
+					<Route path='/entry-company' element={<Entrycompany />} />
+					<Route path='/educational-units' element={<Educationalunits />} />
 				</Routes>
 			</Container>
 			<Container className='footer'>

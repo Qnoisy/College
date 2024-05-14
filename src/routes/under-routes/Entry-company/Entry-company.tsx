@@ -6,7 +6,7 @@ import Subtitle from '../../../components/sample/Subtitle/Subtitle';
 import Title from '../../../components/sample/Title/Title';
 import UnorderedList from '../../../components/sample/UnorderedList/UnorderedList';
 
-export const Accreditation = () => {
+export const Entrycompany = () => {
 	const accreditationRoutes = [
 		{ name: 'Обзор', path: '/accreditation/overview' },
 		{ name: 'Документы', path: '/accreditation/documents' },
@@ -28,7 +28,7 @@ export const Accreditation = () => {
 
 	const accreditationContent = (
 		<div>
-			<Title text='Сектор акредитації та ліцензування' />
+			<Title text='Вступна компанія' />
 			<hr className='hr-style' />
 			<DropdownMenu title='2022-2023' items={accreditationLinks} />
 			<DropdownMenu title='2023-2024' items={accreditationLinks} />
