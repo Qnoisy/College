@@ -65,19 +65,19 @@ export const BigMenuRoutes: IsubRoutes[] = [
 export const underItems = [
 	{
 		name: 'Наші спеціальності',
-		link: '/accreditation/nashi-spetsialnosti',
+		link: '/entry-company/nashi-spetsialnosti',
 	},
 	{
 		name: 'ОПС Фаховий Молодший Бакалавр',
-		link: '/accreditation/ops-fakhovyi-molodshyi-bakalavr',
+		link: '/entry-company/ops-fakhovyi-molodshyi-bakalavr',
 	},
 	{
 		name: 'Вступна кампанія',
-		link: '/accreditation/vstup',
+		link: '/entry-company/vstup',
 	},
 	{
 		name: 'Архів',
-		link: '/accreditation/arkhiv',
+		link: '/entry-company/arkhiv',
 	},
 ];
 

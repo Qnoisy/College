@@ -14,7 +14,6 @@ const DropUpMenu: React.FC<DropdownMenuProps> = ({ links, name }) => {
 	const toggleDropdown = () => setIsOpen(!isOpen);
 	const ref = useRef<HTMLDivElement>(null);
 
-	// Закриття випадаючого списку, коли клік відбувається поза компонентом
 	useEffect(() => {
 		function handleClickOutside(event: MouseEvent) {
 			if (ref.current && !ref.current.contains(event.target as Node)) {
