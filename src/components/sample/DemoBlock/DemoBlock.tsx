@@ -1,7 +1,6 @@
 import classNames from 'classnames';
 import React from 'react';
 import { Link } from 'react-router-dom';
-import Subtitle from '../Subtitle/Subtitle';
 import styles from './DemoBlock.module.scss';
 
 interface Route {
@@ -28,7 +27,7 @@ const DemoBlock: React.FC<DemoBlockProps> = ({
 					{content}
 				</div>
 				<div className={classNames(styles['demo-block__navigation'])}>
-					<Subtitle text='Підрозділи' />
+					<div className={styles['demo-block__title']}>Підрозділи</div>
 					{routes.map((route, index) => (
 						<div key={index}>
 							<Link

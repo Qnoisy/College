@@ -45,7 +45,7 @@ export const headerRoutes: IsubRoutes[] = [
 ];
 export const BigMenuRoutes: IsubRoutes[] = [
 	{
-		name: 'Вступна компанія',
+		name: 'Приймальна комісія',
 		link: '/entry-company',
 	},
 	{

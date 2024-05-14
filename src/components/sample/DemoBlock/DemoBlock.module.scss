@@ -11,8 +11,14 @@
 
 .demo-block__main-content {
 	display: flex;
-	height: 100%;
 	gap: 2rem;
+}
+.demo-block__title {
+	font-size: 1.3rem;
+	text-align: center;
+	width: 100%;
+	margin-bottom: 1rem;
+	font-weight: 700;
 }
 
 .demo-block__text-content {
@@ -21,14 +27,17 @@
 
 .demo-block__navigation {
 	flex: 1;
+	height: 100%;
 	padding: 1rem;
 	border: 0.0625rem solid var(--hr-color);
 }
 
 .demo-block__nav-item {
+	// @include bg-color;
 	@include color-second;
-	border-bottom: 0.0625rem solid var(--hr-color);
-	margin-bottom: 0.5rem;
+	position: relative;
+	margin-bottom: 0.3rem;
+	padding-left: 0.8rem;
 	@media (hover: hover) {
 		&:hover {
 			@include color-hover-second;
@@ -38,6 +47,19 @@
 		&:active {
 			@include color-hover-second;
 		}
+	}
+	&:hover:before {
+		@include color-hover-second;
+	}
+	&:before {
+		content: '◦';
+		@include color-second;
+		display: block;
+		position: absolute;
+		top: 0;
+		width: 5px;
+		height: 5px;
+		left: 0rem;
 	}
 }
 
