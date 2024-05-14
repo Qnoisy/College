@@ -1,0 +1,56 @@
+@import '../../common/generall.scss';
+.dropdown {
+	position: relative;
+	display: block;
+}
+
+.button {
+	@include bg-color;
+	width: 100%;
+	padding: 0.625rem;
+	color: white;
+	border: none;
+	text-align: left;
+}
+
+.dropdownContent {
+	display: block;
+	@include color-second;
+	box-shadow: 0rem 0.5rem 1rem 0rem rgba(0, 0, 0, 0.2);
+	z-index: 1;
+	width: 100%;
+}
+
+.link {
+	color: black;
+	padding: 0.75rem 1rem;
+	text-decoration: none;
+	display: block;
+
+	&:hover {
+		background-color: #f1f1f1;
+	}
+	@media (hover: hover) {
+		&:hover {
+			@include color-hover-second;
+		}
+	}
+	@media (hover: none) {
+		&:active {
+			@include color-hover-second;
+		}
+	}
+}
+.dropUpMenu__active {
+	@include color;
+	transition: all 0.2s;
+	transform: rotate(180deg);
+	:active {
+		transform: rotate(-180deg);
+		transition: all 0.2s;
+	}
+}
+.dropUpMenu__row {
+	display: flex;
+	justify-content: space-between;
+}
