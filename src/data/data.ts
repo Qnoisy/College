@@ -13,8 +13,8 @@ export const subRoutes: IsubRoutes[] = [
 		link: '/college',
 	},
 	{
-		name: 'Співробітництво',
-		link: '/cooperation',
+		name: 'Освіта',
+		link: '/education',
 	},
 	{
 		name: 'Якість',
@@ -27,16 +27,8 @@ export const subRoutes: IsubRoutes[] = [
 ];
 export const headerRoutes: IsubRoutes[] = [
 	{
-		name: 'Публічне обговорення',
-		link: '/public-discussion',
-	},
-	{
 		name: 'Aкредитація ОП',
 		link: '/accreditation',
-	},
-	{
-		name: 'Структурні підрозділи',
-		link: '/subdivisions',
 	},
 	{
 		name: 'Розклад',
@@ -45,6 +37,10 @@ export const headerRoutes: IsubRoutes[] = [
 	{
 		name: 'Навчальні Матеріали',
 		link: 'https://mdl.chpt.edu.ua/',
+	},
+	{
+		name: 'Бібліотека',
+		link: '/library',
 	},
 ];
 export const BigMenuRoutes: IsubRoutes[] = [
@@ -59,14 +55,6 @@ export const BigMenuRoutes: IsubRoutes[] = [
 	{
 		name: 'Наукова діяльність',
 		link: '/research-activities',
-	},
-	{
-		name: 'Студентське життя',
-		link: '/student-life',
-	},
-	{
-		name: 'Бібліотека',
-		link: '/library',
 	},
 	{
 		name: 'Підтримка та довіра',

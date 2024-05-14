@@ -1,10 +1,10 @@
 import { FiLock } from 'react-icons/fi';
 import Page from '../../../Page/Page';
-import DemoBlock from '../../../components/DemoBlock/DemoBlock';
-import DropdownMenu from '../../../components/DropdownMenu/DropdownMenu';
-import Subtitle from '../../../components/Subtitle/Subtitle';
-import Title from '../../../components/Title/Title';
-import UnorderedList from '../../../components/UnorderedList/UnorderedList';
+import DemoBlock from '../../../components/sample/DemoBlock/DemoBlock';
+import DropdownMenu from '../../../components/sample/DropdownMenu/DropdownMenu';
+import Subtitle from '../../../components/sample/Subtitle/Subtitle';
+import Title from '../../../components/sample/Title/Title';
+import UnorderedList from '../../../components/sample/UnorderedList/UnorderedList';
 
 export const Accreditation = () => {
 	const accreditationRoutes = [
@@ -30,6 +30,8 @@ export const Accreditation = () => {
 		<div>
 			<Title text='Сектор акредитації та ліцензування' />
 			<hr className='hr-style' />
+			<DropdownMenu title='2022-2023' items={accreditationLinks} />
+			<DropdownMenu title='2023-2024' items={accreditationLinks} />
 			<strong className={'strong-style'}>Мета роботи відділу - </strong>полягає
 			у проведенні ряду заходів, пов'язаних із плануванням та організацією
 			процесів ліцензування та акредитації різних напрямків підготовки
@@ -47,8 +49,6 @@ export const Accreditation = () => {
 					'зберігання ліцензійних та акредитаційних документів спеціальностей, що є в наявності в Коледжі, відповідно до чинного законодавства.',
 				]}
 			/>
-			<DropdownMenu title='2022-2023' items={accreditationLinks} />
-			<DropdownMenu title='2023-2024' items={accreditationLinks} />
 			<hr className='hr-style' />
 		</div>
 	);

@@ -2,8 +2,8 @@ import { useRef } from 'react';
 import { AiFillCaretLeft, AiFillCaretRight } from 'react-icons/ai';
 import Slider from 'react-slick';
 import { newsItems } from '../../../data/data';
-import Arrow from '../../Arrow/Arrow';
 import { NewsSlider } from '../../NewsSlider';
+import Arrow from '../../NewsSlider/Arrow/Arrow';
 import styles from './Main.module.scss';
 
 export const Main = () => {

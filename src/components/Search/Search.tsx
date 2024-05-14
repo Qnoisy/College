@@ -51,7 +51,7 @@ export const Search: React.FC<SearchProps> = () => {
 					onChange={handleSearchChange}
 					placeholder='Пошук...'
 					className={styles.searchInput}
-					style={{ display: isActive ? 'block' : 'none' }} // Показувати або приховувати поле вводу
+					style={{ opacity: isActive ? '1' : '0' }}
 				/>
 				<button
 					type='button'
@@ -72,7 +72,7 @@ export const Search: React.FC<SearchProps> = () => {
 								setIsActive(false); // Закриття поля вводу
 							}}
 						>
-							{searchTerm.length != 0 && (
+							{searchTerm.length !== 0 && (
 								<div className={styles.search__suggestion}>
 									{suggestion.name}
 								</div>

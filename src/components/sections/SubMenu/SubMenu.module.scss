@@ -1,27 +1,47 @@
 @import '../../../common/generall';
+
+.subMenuWrapper {
+	width: 100%;
+	transition: transform 0.3s ease-in-out, background-color 0.3s ease; // Smooth transitions for transform and background color
+}
+
+.subMenuWrapper.fixed {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 1000;
+	background-color: rgba(255, 255, 255, 0.95);
+}
+
 .subMenu {
 	@include df-centr;
 	gap: 1.5rem;
 	justify-content: space-between;
 }
+
 .subMenu__logo {
 	@include df-centr;
-	gap: 5rem;
+	gap: 1rem;
 }
+
 .subMenu__logo_img {
-	width: 6.25rem;
-	height: 6.25rem;
+	width: 5rem;
+	height: 5rem;
 }
+
 .subMenu__logo_text {
 	@include color-second;
 	font-family: $ffbtn-text;
 	text-transform: uppercase;
-	font-size: 3.2rem;
+	font-size: 2.7rem;
 	font-weight: 700;
 }
+
 .link__style {
 	gap: 3rem;
 }
+
 .links__style {
 	@include color-second;
 	font-weight: 700;

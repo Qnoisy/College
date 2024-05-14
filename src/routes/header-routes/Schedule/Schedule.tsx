@@ -1,7 +1,8 @@
 import Page from '../../../Page/Page';
 import { Button } from '../../../components/Button';
-import DemoBlock from '../../../components/DemoBlock/DemoBlock';
-import Subtitle from '../../../components/Subtitle/Subtitle';
+import DemoBlock from '../../../components/sample/DemoBlock/DemoBlock';
+import Subtitle from '../../../components/sample/Subtitle/Subtitle';
+
 import styles from './Schedule.module.scss';
 
 export const Schedule = () => {

@@ -13,11 +13,11 @@
 .searchForm {
 	display: flex;
 	border-radius: 0.3rem;
-	// border: 1px solid transparent; // Початково прозорий
+	border: 1px solid transparent;
 }
 
 .search.active .searchForm {
-	border-color: #ffffff; // Біла рамка коли активний
+	border-color: #ffffff;
 	border: 1px solid #ffffff;
 	border-radius: 0.3rem;
 }
