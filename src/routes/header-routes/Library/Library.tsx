@@ -29,7 +29,7 @@ export const Library = () => {
 
 	const accreditationContent = (
 		<div>
-			<Title text='Сектор акредитації та ліцензування' />
+			<Title text='Бібліотека' />
 			<hr className='hr-style' />
 			<DropdownMenu title='2022-2023' items={accreditationLinks} />
 			<DropdownMenu title='2023-2024' items={accreditationLinks} />
