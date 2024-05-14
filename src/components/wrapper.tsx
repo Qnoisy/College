@@ -1,4 +1,3 @@
-// Wrapper.jsx
 import { Route, Routes, useLocation } from 'react-router-dom';
 import '../common/generall.scss';
 import '../common/reset.scss';
