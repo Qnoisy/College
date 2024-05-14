@@ -13,6 +13,7 @@ import { Contacts } from '../routes/subMenu-routes/Сontacts';
 import { Entrycompany } from '../routes/under-routes/Entry-company';
 import { Educationalunits } from '../routes/under-routes/Educational-units';
 import { Researchactivities } from '../routes/under-routes/Research-activities';
+import { Supportandtrust } from '../routes/under-routes/Support-and-trust';
 import Breadcrumbs from './Breadcrumbs/Breadcrumbs';
 import { Container } from './Container';
 import { BigMenu } from './Menu/BigMenu';
@@ -51,6 +52,7 @@ const Wrapper = () => {
 					<Route path='/entry-company' element={<Entrycompany />} />
 					<Route path='/educational-units' element={<Educationalunits />} />
 					<Route path='/research-activities' element={<Researchactivities />} />
+					<Route path='/support-and-trust' element={<Supportandtrust />} />
 				</Routes>
 			</Container>
 			<Container className='footer'>
