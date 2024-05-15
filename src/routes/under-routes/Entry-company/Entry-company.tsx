@@ -53,6 +53,14 @@ export const Entrycompany = () => {
 			text: 'Договір про надання платної освітньої послуги для підготовки фахівців в Черкаському політехнічному фаховому коледжі',
 			url: 'https://drive.google.com/file/d/1iI5f-Ip5FC9JQXSmj5hkKZBkg-K5R6TP/view?usp=sharing',
 		},
+		{
+			text: 'Наказ про внесення змін до складу Приймальної комісії',
+			url: 'https://drive.google.com/file/d/1goL-B5MO59G_oApwutoj113FMBnZICnn/view',
+		},
+		{
+			text: 'Наказ про створення Приймальної комісії на 2023 рік',
+			url: 'https://drive.google.com/file/d/1rPzdFnANx95GlbL41PKLJiBbc6EzRoWc/view',
+		},
 	];
 
 	const list2 = [

@@ -13,6 +13,9 @@ import { Educationalunits } from '../routes/under-routes/Educational-units';
 import { Entrycompany } from '../routes/under-routes/Entry-company';
 import { Researchactivities } from '../routes/under-routes/Research-activities';
 import { Supportandtrust } from '../routes/under-routes/Support-and-trust';
+import { Nashispetsialnosti } from '../routes/under-routes/Entry-company/subdivisions/Nashi-spetsialnosti';
+import { Arkhiv } from '../routes/under-routes/Entry-company/subdivisions/Arkhiv';
+import { Opsfakhovyimolodshyibakalavr } from '../routes/under-routes/Entry-company/subdivisions/Ops-fakhovyi-molodshyi-bakalavr';
 import Breadcrumbs from './Breadcrumbs/Breadcrumbs';
 import { Container } from './Container';
 import { BigMenu } from './Menu/BigMenu';
@@ -52,6 +55,9 @@ const Wrapper = () => {
 					<Route path='/educational-units' element={<Educationalunits />} />
 					<Route path='/research-activities' element={<Researchactivities />} />
 					<Route path='/support-and-trust' element={<Supportandtrust />} />
+					<Route path='/entry-company/nashi-spetsialnosti' element={<Nashispetsialnosti />} />
+					<Route path='/entry-company/arkhiv' element={<Arkhiv />} />
+					<Route path='/entry-company/ops-fakhovyi-molodshyi-bakalavr' element={<Opsfakhovyimolodshyibakalavr/>} />
 				</Routes>
 			</Container>
 			<Container className='footer'>

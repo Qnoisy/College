@@ -1,7 +1,7 @@
 import classNames from 'classnames';
 import React from 'react';
 import { Link } from 'react-router-dom';
-import styles from './DemoBlock.module.scss';
+import styles from './Block.module.scss';
 
 interface Route {
 	name: string;
@@ -9,13 +9,13 @@ interface Route {
 	icon?: JSX.Element;
 }
 
-interface DemoBlockProps {
-	routes?: Route[]; // Routes тепер можуть бути не передані
-	content?: React.ReactNode; // Content тепер може бути не переданий
+interface BlockProps {
+	routes?: Route[]; 
+	content?: React.ReactNode;
 	additionalLinks?: Route[];
 }
 
-const DemoBlock: React.FC<DemoBlockProps> = ({
+const Block: React.FC<BlockProps> = ({
 	routes = [],
 	content = null,
 	additionalLinks = [],
@@ -28,24 +28,7 @@ const DemoBlock: React.FC<DemoBlockProps> = ({
 						{content}
 					</div>
 				)}
-				<div className={classNames(styles['demo-block__navigation'])}>
-					<div className={styles['demo-block__title']}>Підрозділи</div>
-					{routes.map((route, index) => (
-						<div key={index}>
-							<Link
-								to={route.path}
-								className={classNames(styles['demo-block__nav-item'])}
-							>
-								{route.icon && (
-									<span className={classNames(styles['demo-block__icon'])}>
-										{route.icon}
-									</span>
-								)}
-								{route.name}
-							</Link>
-						</div>
-					))}
-				</div>
+				
 			</div>
 			{additionalLinks.length > 0 && (
 				<div className={classNames(styles['demo-block__links'])}>
@@ -71,4 +54,4 @@ const DemoBlock: React.FC<DemoBlockProps> = ({
 	);
 };
 
-export default DemoBlock;
+export default Block;
