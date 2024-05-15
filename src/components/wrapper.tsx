@@ -25,6 +25,9 @@ import { Dninauky } from '../routes/under-routes/Research-activities/subdivision
 import { Naukavkoledzhi } from '../routes/under-routes/Research-activities/subdivisions/Nauka-v-koledzhi';
 import { Naukovodoslidnarobotastudentiv } from '../routes/under-routes/Research-activities/subdivisions/Naukovodoslidna-robota-studentiv';
 import { Naukovadiialnistvykladachiv } from '../routes/under-routes/Research-activities/subdivisions/Naukova-diialnist-vykladachiv';
+import { Sotsialnyipedahoh } from '../routes/under-routes/Support-and-trust/subdivisions/Sotsialnyi-pedahoh';
+import { Praktychnyipsykholoh } from '../routes/under-routes/Support-and-trust/subdivisions/Praktychnyi-psykholoh';
+import { Sotsialnopsykholohichnapidtrymka } from '../routes/under-routes/Support-and-trust/subdivisions/Sotsialno-psykholohichna-pidtrymka';
 import Breadcrumbs from './Breadcrumbs/Breadcrumbs';
 import { Container } from './Container';
 import { BigMenu } from './Menu/BigMenu';
@@ -76,6 +79,9 @@ const Wrapper = () => {
 					<Route path='/research-activities/nauka-v-koledzhi' element={<Naukavkoledzhi/>} />
 					<Route path='/research-activities/naukovodoslidna-robota-studentiv' element={<Naukovodoslidnarobotastudentiv/>} />
 					<Route path='/research-activities/naukova-diialnist-vykladachiv' element={<Naukovadiialnistvykladachiv/>} />
+					<Route path='/support-and-trust/sotsialnyi-pedahoh' element={<Sotsialnyipedahoh/>} />
+					<Route path='/support-and-trust/praktychnyi-psykholoh' element={<Praktychnyipsykholoh/>} />
+					<Route path='/support-and-trust/sotsialno-psykholohichna-pidtrymka' element={<Sotsialnopsykholohichnapidtrymka/>} />
 				</Routes>
 			</Container>
 			<Container className='footer'>

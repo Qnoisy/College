@@ -111,6 +111,18 @@ export const underItems = [
 		name: 'Наукова діяльність викладачів', 
 		link: '/research-activities/naukova-diialnist-vykladachiv' 
 	},
+	{ 
+		name: 'Соціальний педагог', 
+		link: '/support-and-trust/sotsialnyi-pedahoh' 
+	},
+	{
+		name: 'Практичний психолог',
+		link: '/support-and-trust/praktychnyi-psykholoh',
+	},
+	{ 
+		name: 'Соціально-психологічна підтримка', 
+		link: '/support-and-trust/sotsialno-psykholohichna-pidtrymka' 
+	},
 ];
 
 export const newsItems = [
