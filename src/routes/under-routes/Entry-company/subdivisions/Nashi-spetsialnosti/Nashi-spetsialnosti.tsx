@@ -8,7 +8,6 @@ export const Nashispetsialnosti = () => {
 		<div>
 			<Title text='Наші спеціальності' />
 			<hr className='hr-style' />
-			
 			<hr className='hr-style' />
 		</div>
 	);

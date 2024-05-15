@@ -1,1 +1,1 @@
-export * from './Ops-fakhovyi-molodshyi-bakalavr';
+export * from './Department';

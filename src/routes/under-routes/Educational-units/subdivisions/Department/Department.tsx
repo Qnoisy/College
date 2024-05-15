@@ -2,9 +2,9 @@ import Page from '../../../../../Page/Page';
 import Block from '../../../../../components/sample/Block/Block';
 import Title from '../../../../../components/sample/Title/Title';
 
-export const Opsfakhovyimolodshyibakalavr = () => {
+export const Department = () => {
 	
-	const opsfakhovyimolodshyibakalavrContent = (
+	const departmentContent = (
 		<div>
 			<Title text='ОПС Фаховий Молодший Бакалавр' />
 			<hr className='hr-style' />
@@ -15,7 +15,7 @@ export const Opsfakhovyimolodshyibakalavr = () => {
 
 	return (
 		<Page title='ОПС Фаховий Молодший Бакалавр - ЧПФК'>
-			<Block content={opsfakhovyimolodshyibakalavrContent} />
+			<Block content={departmentContent} />
 		</Page>
 	);
 };
