@@ -3,12 +3,11 @@ import Block from '../../../../../components/sample/Block/Block';
 import Title from '../../../../../components/sample/Title/Title';
 
 export const Department = () => {
-	
 	const departmentContent = (
 		<div>
 			<Title text='Відділення' />
 			<hr className='hr-style' />
-			
+
 			<hr className='hr-style' />
 		</div>
 	);

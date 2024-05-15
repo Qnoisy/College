@@ -10,7 +10,7 @@ interface Route {
 }
 
 interface BlockProps {
-	routes?: Route[]; 
+	routes?: Route[];
 	content?: React.ReactNode;
 	additionalLinks?: Route[];
 }
@@ -28,7 +28,6 @@ const Block: React.FC<BlockProps> = ({
 						{content}
 					</div>
 				)}
-				
 			</div>
 			{additionalLinks.length > 0 && (
 				<div className={classNames(styles['demo-block__links'])}>

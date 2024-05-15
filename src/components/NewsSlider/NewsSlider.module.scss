@@ -1,15 +1,16 @@
 @import '../../common/generall';
 .newsSlider {
+	position: relative;
 	.slick-slider {
-		border: none; // Удаление границы
+		border: none;
 
 		.slick-slide {
 			transition: transform 0.3s ease-out, opacity 0.3s ease-out;
-			opacity: 0.6; // Затемнение неактивных слайдов
+			opacity: 0.6;
 
 			&.slick-center {
-				transform: scale(1.25); // Увеличение центрального слайда
-				opacity: 1; // Яркость для акцентирования
+				transform: scale(1.25);
+				opacity: 1;
 			}
 		}
 	}
@@ -28,7 +29,7 @@
 			padding: 0 0.5rem;
 			object-fit: cover;
 			border-radius: 1.5rem;
-			transition: transform 0.3s ease-out; // Плавное изменение размера
+			transition: transform 0.3s ease-out;
 		}
 
 		h3 {
@@ -38,6 +39,43 @@
 		p {
 			font-size: 0.8rem;
 			padding-bottom: 0.3rem;
+		}
+	}
+	.newsSlider__arrow {
+		display: block;
+		position: absolute;
+		width: 100%;
+	}
+
+	.arrows__left {
+		position: absolute;
+		z-index: 2;
+		top: 50%;
+		left: -2.5rem;
+		transform: translate(0, -100%);
+	}
+
+	.arrows__right {
+		position: absolute;
+		z-index: 2;
+		top: 50%;
+		right: -2.5rem;
+		transform: translate(0, -100%);
+	}
+
+	.arrowIcon {
+		@include color-second;
+		font-size: 2.8rem;
+		cursor: pointer;
+		@media (hover: hover) {
+			&:hover {
+				@include color-hover-second;
+			}
+		}
+		@media (hover: none) {
+			&:active {
+				@include color-hover-second;
+			}
 		}
 	}
 }
