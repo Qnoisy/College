@@ -13,54 +13,9 @@
 	display: flex;
 	gap: 2rem;
 }
-.block__title {
-	font-size: 1.3rem;
-	text-align: center;
-	width: 100%;
-	margin-bottom: 1rem;
-	font-weight: 700;
-}
 
 .block__text-content {
 	flex: 3;
-}
-
-.block__navigation {
-	flex: 1;
-	height: 100%;
-	padding: 1rem;
-	border: 0.0625rem solid var(--hr-color);
-}
-
-.block__nav-item {
-	// @include bg-color;
-	@include color-second;
-	position: relative;
-	margin-bottom: 0.3rem;
-	padding-left: 0.8rem;
-	@media (hover: hover) {
-		&:hover {
-			@include color-hover-second;
-		}
-	}
-	@media (hover: none) {
-		&:active {
-			@include color-hover-second;
-		}
-	}
-	&:hover:before {
-		@include color-hover-second;
-	}
-	&:before {
-		content: '◦';
-		@include color-second;
-		display: block;
-		position: absolute;
-		top: 0;
-		width: 5px;
-		height: 5px;
-		left: 0rem;
-	}
 }
 
 .block__icon {
@@ -71,14 +26,9 @@
 	flex-wrap: wrap;
 	gap: 1rem;
 }
-
-.block__nav-item,
 .block__link {
 	@include df-centr;
 	justify-content: flex-start;
-}
-
-.block__link {
 	@include btn-color;
 	padding: 1rem;
 	margin-bottom: 0.5rem;
