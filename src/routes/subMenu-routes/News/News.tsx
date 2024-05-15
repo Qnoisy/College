@@ -19,8 +19,8 @@ export const News = () => {
 	return (
 		<div className={styles.news}>
 			<Page title='Новини - ЧПФК' />
-			<h2 className={styles.news__title}>Новини</h2>
-			<NewsSlider newsItems={newsItems} />
+			<Block content={newsContent} />
+
 		</div>
 	);
 };
