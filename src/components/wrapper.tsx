@@ -16,7 +16,7 @@ import { Metodychnikomisii } from '../routes/under-routes/Educational-units/subd
 import { Tsyklovikomisii } from '../routes/under-routes/Educational-units/subdivisions/Tsyklovi-komisii';
 import { Entrycompany } from '../routes/under-routes/Entry-company';
 import { Arkhiv } from '../routes/under-routes/Entry-company/subdivisions/Arkhiv';
-import { Starshoklasnykam } from '../routes/under-routes/Entry-company/subdivisions/Starshoklasnykam';
+//import { Starshoklasnykam } from '../routes/under-routes/Entry-company/subdivisions/Starshoklasnykam';
 import { Opsfakhovyimolodshyibakalavr } from '../routes/under-routes/Entry-company/subdivisions/Ops-fakhovyi-molodshyi-bakalavr';
 import { Vstup } from '../routes/under-routes/Entry-company/subdivisions/Vstup';
 import { Researchactivities } from '../routes/under-routes/Research-activities';
@@ -31,6 +31,8 @@ import { Supportandtrust } from '../routes/under-routes/Support-and-trust';
 import Breadcrumbs from './Breadcrumbs/Breadcrumbs';
 import { Container } from './Container';
 import { BigMenu } from './Menu/BigMenu';
+import { AboutCollege } from './sections/AboutCollege';
+import { Advantages } from './sections/Advantages';
 import { Copyright } from './sections/Copyright';
 import { Footer } from './sections/Footer';
 import { Header } from './sections/Header';
@@ -67,7 +69,7 @@ const Wrapper = () => {
 					<Route path='/educational-units' element={<Educationalunits />} />
 					<Route path='/research-activities' element={<Researchactivities />} />
 					<Route path='/support-and-trust' element={<Supportandtrust />} />
-					<Route path='/entry-company/starshoklasnykam' element={ <Starshoklasnykam />}/>
+					
 					<Route path='/entry-company/arkhiv' element={<Arkhiv />} />
 					<Route path='/entry-company/ops-fakhovyi-molodshyi-bakalavr' element={<Opsfakhovyimolodshyibakalavr/>} />
 					<Route path='/entry-company/vstup' element={<Vstup/>} />
@@ -84,6 +86,17 @@ const Wrapper = () => {
 					<Route path='/support-and-trust/sotsialno-psykholohichna-pidtrymka' element={<Sotsialnopsykholohichnapidtrymka/>} />
 				</Routes>
 			</Container>
+			{isHomePage && (
+				<Container className='main__advantages'>
+					<Advantages />
+				</Container>
+			)}
+			{isHomePage && (
+				<Container>
+					<AboutCollege />
+				</Container>
+			)}
+
 			<Container className='footer'>
 				<Footer />
 			</Container>

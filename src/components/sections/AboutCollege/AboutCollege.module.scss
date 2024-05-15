@@ -1,2 +1,44 @@
+@import '../../../common/generall';
 .aboutCollege {
+	height: 25rem;
+	gap: 0;
+}
+.aboutCollege__img {
+	flex: 1 1 50%;
+	height: 100%;
+	object-fit: cover;
+}
+.aboutCollege__content {
+	flex: 1 1 50%;
+	height: 100%;
+	@include bg-color;
+	padding: 2rem;
+}
+
+// Стилизация скроллбара для .aboutCollege__text
+.aboutCollege__text {
+	height: 100px;
+	overflow-y: auto;
+	font-size: 0.8rem;
+
+	// Стили для скроллбара
+	&::-webkit-scrollbar {
+		width: 5px; // ширина скроллбара
+	}
+
+	&::-webkit-scrollbar-track {
+		background: #f1f1f1; // цвет дорожки
+		border-radius: 10px; // закругление углов дорожки
+	}
+
+	&::-webkit-scrollbar-thumb {
+		background: #888; // цвет самого скроллбара
+		border-radius: 10px; // закругление углов скроллбара
+		&:hover {
+			background: #555; // цвет при наведении
+		}
+	}
+}
+
+.aboutCollege__h2 {
 }
