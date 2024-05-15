@@ -14,11 +14,11 @@ export const Researchactivities = () => {
 		},
 		{
 			name: 'Науково-дослідна робота студентів',
-			path: '/research-activities/naukova-diialnist-vykladachiv',
+			path: '/research-activities/naukovodoslidna-robota-studentiv',
 		},
 		{ 
 			name: 'Наукова діяльність викладачів', 
-			path: '/research-activities/naukovodoslidna-robota-studentiv' 
+			path: '/research-activities/naukova-diialnist-vykladachiv' 
 		},
 	];
 

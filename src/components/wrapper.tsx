@@ -23,8 +23,8 @@ import { Tsyklovikomisii } from '../routes/under-routes/Educational-units/subdiv
 import { Metodychnikomisii } from '../routes/under-routes/Educational-units/subdivisions/Metodychni-komisii';
 import { Dninauky } from '../routes/under-routes/Research-activities/subdivisions/Dni-nauky';
 import { Naukavkoledzhi } from '../routes/under-routes/Research-activities/subdivisions/Nauka-v-koledzhi';
-import { Naukovadiialnistvykladachiv } from '../routes/under-routes/Research-activities/subdivisions/Naukova-diialnist-vykladachiv';
 import { Naukovodoslidnarobotastudentiv } from '../routes/under-routes/Research-activities/subdivisions/Naukovodoslidna-robota-studentiv';
+import { Naukovadiialnistvykladachiv } from '../routes/under-routes/Research-activities/subdivisions/Naukova-diialnist-vykladachiv';
 import Breadcrumbs from './Breadcrumbs/Breadcrumbs';
 import { Container } from './Container';
 import { BigMenu } from './Menu/BigMenu';
@@ -74,8 +74,8 @@ const Wrapper = () => {
 					<Route path='/educational-units/tsyklovi-komisii' element={<Tsyklovikomisii/>} />
 					<Route path='/research-activities/dni-nauky' element={<Dninauky/>} />
 					<Route path='/research-activities/nauka-v-koledzhi' element={<Naukavkoledzhi/>} />
-					<Route path='/research-activities/naukova-diialnist-vykladachiv' element={<Naukovadiialnistvykladachiv/>} />
 					<Route path='/research-activities/naukovodoslidna-robota-studentiv' element={<Naukovodoslidnarobotastudentiv/>} />
+					<Route path='/research-activities/naukova-diialnist-vykladachiv' element={<Naukovadiialnistvykladachiv/>} />
 				</Routes>
 			</Container>
 			<Container className='footer'>
