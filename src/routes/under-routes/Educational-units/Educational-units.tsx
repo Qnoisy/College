@@ -16,7 +16,7 @@ export const Educationalunits = () => {
 			name: 'Відділення', path: '/educational-units/department',
 		},
 		{ 
-			name: 'Основіні підрозділи', path: '/educational-units/main' 
+			name: 'Основні підрозділи', path: '/educational-units/main' 
 		},
 	];
 

@@ -17,6 +17,8 @@ import { Nashispetsialnosti } from '../routes/under-routes/Entry-company/subdivi
 import { Arkhiv } from '../routes/under-routes/Entry-company/subdivisions/Arkhiv';
 import { Opsfakhovyimolodshyibakalavr } from '../routes/under-routes/Entry-company/subdivisions/Ops-fakhovyi-molodshyi-bakalavr';
 import { Vstup } from '../routes/under-routes/Entry-company/subdivisions/Vstup';
+import { Department } from '../routes/under-routes/Educational-units/subdivisions/Department';
+import { MainSub } from '../routes/under-routes/Educational-units/subdivisions/MainSub';
 import Breadcrumbs from './Breadcrumbs/Breadcrumbs';
 import { Container } from './Container';
 import { BigMenu } from './Menu/BigMenu';
@@ -60,6 +62,8 @@ const Wrapper = () => {
 					<Route path='/entry-company/arkhiv' element={<Arkhiv />} />
 					<Route path='/entry-company/ops-fakhovyi-molodshyi-bakalavr' element={<Opsfakhovyimolodshyibakalavr/>} />
 					<Route path='/entry-company/vstup' element={<Vstup/>} />
+					<Route path='/educational-units/department' element={<Department/>} />
+					<Route path='/educational-units/mainsub' element={<MainSub/>} />
 				</Routes>
 			</Container>
 			<Container className='footer'>

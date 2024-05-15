@@ -6,7 +6,7 @@ export const Department = () => {
 	
 	const departmentContent = (
 		<div>
-			<Title text='ОПС Фаховий Молодший Бакалавр' />
+			<Title text='Відділення' />
 			<hr className='hr-style' />
 			
 			<hr className='hr-style' />
@@ -14,7 +14,7 @@ export const Department = () => {
 	);
 
 	return (
-		<Page title='ОПС Фаховий Молодший Бакалавр - ЧПФК'>
+		<Page title='Відділення - ЧПФК'>
 			<Block content={departmentContent} />
 		</Page>
 	);

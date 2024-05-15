@@ -93,7 +93,7 @@ export const underItems = [
 	},
 	{
 		name: 'Основні підрозділи',
-		link: '/educational-units/main',
+		link: '/educational-units/mainsub',
 	},
 	{
 		name: 'Дні науки',
