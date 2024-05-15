@@ -2,11 +2,11 @@ import Page from '../../../../../Page/Page';
 import Block from '../../../../../components/sample/Block/Block';
 import Title from '../../../../../components/sample/Title/Title';
 
-export const Nashispetsialnosti = () => {
+export const Arkhiv = () => {
 	
-	const nashispetsialnostiContent = (
+	const arkhivContent = (
 		<div>
-			<Title text='Наші спеціальності' />
+			<Title text='Архів' />
 			<hr className='hr-style' />
 			
 			<hr className='hr-style' />
@@ -14,8 +14,8 @@ export const Nashispetsialnosti = () => {
 	);
 
 	return (
-		<Page title='Наші спеціальності - ЧПФК'>
-			<Block content={nashispetsialnostiContent} />
+		<Page title='Архів - ЧПФК'>
+			<Block content={arkhivContent} />
 		</Page>
 	);
 };

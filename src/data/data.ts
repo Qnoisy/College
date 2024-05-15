@@ -79,6 +79,30 @@ export const underItems = [
 		name: 'Архів',
 		link: '/entry-company/arkhiv',
 	},
+	{
+		name: 'Циклова комісія',
+		link: '/educational-units/tsyklovi-komisii',
+	},
+	{
+		name: 'Методична комісія',
+		link: '/educational-units/metodychni-komisii',
+	},
+	{
+		name: 'Відділення',
+		link: '/educational-units/department',
+	},
+	{
+		name: 'Основні підрозділи',
+		link: '/educational-units/main',
+	},
+	{
+		name: 'Дні науки',
+		link: '/research-activities/dni-nauky',
+	},
+	{ 
+		name: 'Наука в коледжі', 
+		link: '/research-activities/nauka-v-koledzhi' 
+	},
 ];
 
 export const newsItems = [

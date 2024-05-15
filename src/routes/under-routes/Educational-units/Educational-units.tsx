@@ -1,23 +1,22 @@
 import Page from '../../../Page/Page';
-import DropUpMenu from '../../../components/DropUpMenu/DropUpMenu';
 import DemoBlock from '../../../components/sample/DemoBlock/DemoBlock';
 import Title from '../../../components/sample/Title/Title';
 
 export const Educationalunits = () => {
 	const educationalunitsRoutes = [
 		{
-			name: 'Наші спеціальності',
-			path: '/entry-company/nashi-spetsialnosti',
+			name: 'Циклова комісія',
+			path: '/educational-units/tsyklovi-komisii',
 		},
 		{
-			name: 'ОПС Фаховий Молодший Бакалавр',
-			path: '/entry-company/ops-fakhovyi-molodshyi-bakalavr',
+			name: 'Методичка комісія',
+			path: '/educational-units/metodychni-komisii',
 		},
 		{ 
-			name: 'Вступна кампанія', path: '/entry-company/vstup' 
+			name: 'Відділення', path: '/educational-units/department',
 		},
 		{ 
-			name: 'Архів', path: '/entry-company/arkhiv' 
+			name: 'Основіні підрозділи', path: '/educational-units/main' 
 		},
 	];
 
