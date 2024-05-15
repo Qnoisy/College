@@ -1,0 +1,49 @@
+@import '../../../common/generall';
+.advantages {
+	position: relative;
+	z-index: 2;
+	@include color;
+	padding: 10rem 0;
+	font-weight: 700;
+}
+.advantages__title {
+	@include df-centr;
+	font-size: 1.5rem;
+	margin-bottom: 2rem;
+	h2 {
+		width: 300px;
+		font-weight: 700;
+	}
+}
+.advantages__list {
+	display: grid;
+	grid-template-columns: repeat(3, 33.333%);
+	grid-template-rows: repeat(2, 1fr);
+	gap: 2rem;
+
+	@media (max-width: 767.98px) {
+		grid-template-columns: repeat(2, 50%);
+		grid-template-rows: repeat(3, 1fr);
+		gap: 1rem;
+	}
+	@media (max-width: 539.98px) {
+		grid-template-columns: repeat(1, 1fr);
+		grid-template-rows: repeat(6, 1fr);
+	}
+}
+.advantages__li {
+	@include df-centr;
+	gap: 2rem;
+}
+.advantages__li_img {
+	flex: 0 0 auto;
+	background-color: white;
+	width: 4.25rem;
+	height: 4.25rem;
+	border-radius: 50%;
+}
+.advantages__li_text {
+	font-weight: 600;
+	font-size: 1.5rem;
+	width: 300px;
+}

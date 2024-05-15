@@ -169,6 +169,13 @@ html[data-theme='dark'] {
 	background-color: #64b5f6;
 	padding: 0 !important;
 }
+.main__advantages {
+	position: relative;
+	background-image: url('../../public/img/stariy_tehn_kum.png'); // Adjust path as needed based on actual directory structure
+	background-size: cover;
+	transition: filter 0.3s ease; /* Плавное изменение фильтра */
+	background-position: center;
+}
 
 // @media (max-width: 1151.98px) {
 

@@ -28,6 +28,8 @@ import { Supportandtrust } from '../routes/under-routes/Support-and-trust';
 import Breadcrumbs from './Breadcrumbs/Breadcrumbs';
 import { Container } from './Container';
 import { BigMenu } from './Menu/BigMenu';
+import { AboutCollege } from './sections/AboutCollege';
+import { Advantages } from './sections/Advantages';
 import { Copyright } from './sections/Copyright';
 import { Footer } from './sections/Footer';
 import { Header } from './sections/Header';
@@ -102,6 +104,17 @@ const Wrapper = () => {
 					/>
 				</Routes>
 			</Container>
+			{isHomePage && (
+				<Container className='main__advantages'>
+					<Advantages />
+				</Container>
+			)}
+			{isHomePage && (
+				<Container>
+					<AboutCollege />
+				</Container>
+			)}
+
 			<Container className='footer'>
 				<Footer />
 			</Container>
