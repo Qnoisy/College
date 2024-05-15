@@ -1,1 +1,1 @@
-export * from './Nashi-spetsialnosti';
+export * from './Metodychni-komisii';

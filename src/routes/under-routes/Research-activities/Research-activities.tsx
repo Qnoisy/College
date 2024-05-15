@@ -12,6 +12,14 @@ export const Researchactivities = () => {
 		{ 
 			name: 'Наука в коледжі', path: '/research-activities/nauka-v-koledzhi' 
 		},
+		{
+			name: 'Науково-дослідна робота студентів',
+			path: '/research-activities/naukova-diialnist-vykladachiv',
+		},
+		{ 
+			name: 'Наукова діяльність викладачів', 
+			path: '/research-activities/naukovodoslidna-robota-studentiv' 
+		},
 	];
 
 

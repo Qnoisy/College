@@ -103,6 +103,14 @@ export const underItems = [
 		name: 'Наука в коледжі', 
 		link: '/research-activities/nauka-v-koledzhi' 
 	},
+	{
+		name: 'Науково-дослідна робота студентів',
+		link: '/research-activities/naukovodoslidna-robota-studentiv',
+	},
+	{ 
+		name: 'Наукова діяльність викладачів', 
+		link: '/research-activities/naukova-diialnist-vykladachiv' 
+	},
 ];
 
 export const newsItems = [

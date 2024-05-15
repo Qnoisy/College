@@ -1,1 +1,1 @@
-export * from './Arkhiv';
+export * from './Tsyklovi-komisii';
