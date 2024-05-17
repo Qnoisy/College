@@ -3,6 +3,7 @@ import DemoBlock from '../../../components/sample/DemoBlock/DemoBlock';
 import Title from '../../../components/sample/Title/Title';
 
 export const Educationalunits = () => {
+
 	const educationalunitsRoutes = [
 		{
 			name: 'Циклова комісія',
