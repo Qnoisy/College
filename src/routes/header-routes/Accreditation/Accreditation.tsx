@@ -8,19 +8,19 @@ import UnorderedList from '../../../components/sample/UnorderedList/UnorderedLis
 
 export const Accreditation = () => {
 	const accreditationRoutes = [
-		{ name: 'Обзор', path: '/accreditation/overview' },
-		{ name: 'Документы', path: '/accreditation/documents' },
-		{ name: 'Контакты', path: '/accreditation/contacts' },
+		{ name: 'Ліцензії', path: '/accreditation/overview' },
+		{ name: 'Сертифікати про акредитацію', path: '/accreditation/documents' },
+		{ name: 'Відомості про самооцінювання', path: '/accreditation/contacts' },
 	];
 
 	const accreditationLinks = [
 		{
-			name: 'Формы документов',
+			name: 'Форми документів',
 			path: '/accreditation/forms',
 			icon: <FiLock />, // Иконка для документов
 		},
 		{
-			name: 'Политика конфиденциальности',
+			name: 'Політика конфіденційності',
 			path: '/accreditation/privacy',
 			icon: <FiLock />, // Иконка для конфиденциальности
 		},
