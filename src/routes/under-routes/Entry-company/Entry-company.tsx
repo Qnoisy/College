@@ -5,16 +5,17 @@ import Title from '../../../components/sample/Title/Title';
 
 export const Entrycompany = () => {
 	const entrycompanyRoutes = [
-		{
-			name: 'Наші спеціальності',
-			path: '/entry-company/nashi-spetsialnosti',
-		},
+		
 		{
 			name: 'ОПС Фаховий Молодший Бакалавр',
 			path: '/entry-company/ops-fakhovyi-molodshyi-bakalavr',
 		},
 		{ 
 			name: 'Вступна кампанія', path: '/entry-company/vstup' 
+		},
+		{
+			name: 'Старшокласникам',
+			path: '/entry-company/starshoklasnykam',
 		},
 		{ 
 			name: 'Архів', path: '/entry-company/arkhiv' 

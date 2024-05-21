@@ -16,7 +16,7 @@ import { Metodychnikomisii } from '../routes/under-routes/Educational-units/subd
 import { Tsyklovikomisii } from '../routes/under-routes/Educational-units/subdivisions/Tsyklovi-komisii';
 import { Entrycompany } from '../routes/under-routes/Entry-company';
 import { Arkhiv } from '../routes/under-routes/Entry-company/subdivisions/Arkhiv';
-import { Nashispetsialnosti } from '../routes/under-routes/Entry-company/subdivisions/Nashi-spetsialnosti';
+import Nashispetsialnosti from '../routes/under-routes/Entry-company/subdivisions/Nashi-spetsialnosti';
 import { Opsfakhovyimolodshyibakalavr } from '../routes/under-routes/Entry-company/subdivisions/Ops-fakhovyi-molodshyi-bakalavr';
 import { Vstup } from '../routes/under-routes/Entry-company/subdivisions/Vstup';
 import { Researchactivities } from '../routes/under-routes/Research-activities';
