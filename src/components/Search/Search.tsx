@@ -8,7 +8,7 @@ import styles from './Search.module.scss';
 
 interface SearchProps {}
 
-export const Search: React.FC<SearchProps> = () => {
+export const Search = () => {
 	const [searchTerm, setSearchTerm] = useState('');
 	const [isActive, setIsActive] = useState(false);
 	const [suggestions, setSuggestions] = useState<IsubRoutes[]>([]);
