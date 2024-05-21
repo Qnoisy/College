@@ -16,7 +16,7 @@ import { Metodychnikomisii } from '../routes/under-routes/Educational-units/subd
 import { Tsyklovikomisii } from '../routes/under-routes/Educational-units/subdivisions/Tsyklovi-komisii';
 import { Entrycompany } from '../routes/under-routes/Entry-company';
 import { Arkhiv } from '../routes/under-routes/Entry-company/subdivisions/Arkhiv';
-//import { Nashispetsialnosti } from '../routes/under-routes/Entry-company/subdivisions/Nashi-spetsialnosti';
+import { Nashispetsialnosti } from '../routes/under-routes/Entry-company/subdivisions/Nashi-spetsialnosti';
 import { Opsfakhovyimolodshyibakalavr } from '../routes/under-routes/Entry-company/subdivisions/Ops-fakhovyi-molodshyi-bakalavr';
 import { Vstup } from '../routes/under-routes/Entry-company/subdivisions/Vstup';
 import { Researchactivities } from '../routes/under-routes/Research-activities';
@@ -66,12 +66,9 @@ const Wrapper = () => {
 					<Route path='/educational-units' element={<Educationalunits />} />
 					<Route path='/research-activities' element={<Researchactivities />} />
 					<Route path='/support-and-trust' element={<Supportandtrust />} />
-					
+					<Route path='/entry-company/nashi-spetsialnosti' element={< Nashispetsialnosti />} />
 					<Route path='/entry-company/arkhiv' element={<Arkhiv />} />
-					<Route
-						path='/entry-company/ops-fakhovyi-molodshyi-bakalavr'
-						element={<Opsfakhovyimolodshyibakalavr />}
-					/>
+					<Route path='/entry-company/ops-fakhovyi-molodshyi-bakalavr' element={<Opsfakhovyimolodshyibakalavr />}/>
 					<Route path='/entry-company/vstup' element={<Vstup />} />
 					<Route
 						path='/educational-units/department'

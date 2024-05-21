@@ -2,7 +2,7 @@ import Page from '../../../../../Page/Page';
 import Block from '../../../../../components/sample/Block/Block';
 import Title from '../../../../../components/sample/Title/Title';
 
-export const Nashispetsialnosti = () => {
+ const Nashispetsialnosti = () => {
 	const nashispetsialnostiContent = (
 		<div>
 			<Title text='Наші спеціальності' />
@@ -17,3 +17,5 @@ export const Nashispetsialnosti = () => {
 		</Page>
 	);
 };
+
+export default Nashispetsialnosti
