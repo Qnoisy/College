@@ -1,6 +1,7 @@
 import classNames from 'classnames';
-import { NavLink } from 'react-router-dom'; // Изменено с Link на NavLink
+import { NavLink } from 'react-router-dom';
 import { IsubRoutes } from '../../types/CommonInterface';
+import { DropDownList } from '../DropDownList';
 import styles from './Menu.module.scss';
 
 interface MenuProps {
@@ -42,7 +43,14 @@ export const Menu = ({
 				</li>
 			);
 		} else {
-			return (
+			return item.kategories ? (
+				<DropDownList
+					title={item.name}
+					path={item.link}
+					categories={item.kategories}
+					linkClassName={linkClassName}
+				/>
+			) : (
 				<li
 					key={index}
 					className={classNames(styles.menu__link, linkClassName)}
