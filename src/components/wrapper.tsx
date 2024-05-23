@@ -16,8 +16,8 @@ import { Metodychnikomisii } from '../routes/under-routes/Educational-units/subd
 import { Tsyklovikomisii } from '../routes/under-routes/Educational-units/subdivisions/Tsyklovi-komisii';
 import { Entrycompany } from '../routes/under-routes/Entry-company';
 import { Arkhiv } from '../routes/under-routes/Entry-company/subdivisions/Arkhiv';
-import { Starshoklasnykam } from '../routes/under-routes/Entry-company/subdivisions/Starshoklasnykam';
 import { Opsfakhovyimolodshyibakalavr } from '../routes/under-routes/Entry-company/subdivisions/Ops-fakhovyi-molodshyi-bakalavr';
+import { Starshoklasnykam } from '../routes/under-routes/Entry-company/subdivisions/Starshoklasnykam';
 import { Vstup } from '../routes/under-routes/Entry-company/subdivisions/Vstup';
 import { Researchactivities } from '../routes/under-routes/Research-activities';
 import { Dninauky } from '../routes/under-routes/Research-activities/subdivisions/Dni-nauky';
@@ -42,16 +42,18 @@ const Wrapper = () => {
 	const isHomePage = location.pathname === '/';
 	return (
 		<div className='wrapper'>
-			<Container className='header'>
+			<Container className='blue-decor'>
 				<Header />
 			</Container>
 			<SubMenu />
 			{isHomePage && <VideoPlayer />}
-			<Container className='bg'>
+			<Container className='blue-decor'>
 				<BigMenu />
 			</Container>
-			<Breadcrumbs />
-			<Container className='main'>
+			<Container className='light-bg' offPadding>
+				<Breadcrumbs />
+			</Container>
+			<Container className='main' section>
 				<Routes>
 					<Route path='/' element={<Main />} />
 					<Route path='/accreditation' element={<Accreditation />} />
@@ -67,9 +69,15 @@ const Wrapper = () => {
 					<Route path='/research-activities' element={<Researchactivities />} />
 					<Route path='/support-and-trust' element={<Supportandtrust />} />
 					<Route path='/entry-company/arkhiv' element={<Arkhiv />} />
-					<Route path='/entry-company/ops-fakhovyi-molodshyi-bakalavr' element={<Opsfakhovyimolodshyibakalavr />}/>
+					<Route
+						path='/entry-company/ops-fakhovyi-molodshyi-bakalavr'
+						element={<Opsfakhovyimolodshyibakalavr />}
+					/>
 					<Route path='/entry-company/vstup' element={<Vstup />} />
-					<Route path='/entry-company/starshoklasnykam' element={<Starshoklasnykam />} />
+					<Route
+						path='/entry-company/starshoklasnykam'
+						element={<Starshoklasnykam />}
+					/>
 					<Route
 						path='/educational-units/department'
 						element={<Department />}
@@ -99,17 +107,16 @@ const Wrapper = () => {
 				</Routes>
 			</Container>
 			{isHomePage && (
-				<Container className='main__advantages'>
+				<Container className='main__advantages' section>
 					<Advantages />
 				</Container>
 			)}
 			{isHomePage && (
-				<Container>
+				<Container section>
 					<AboutCollege />
 				</Container>
 			)}
-
-			<Container className='footer'>
+			<Container className='blue-decor'>
 				<Footer />
 			</Container>
 			<Container className='dark-bg'>

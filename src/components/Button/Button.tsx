@@ -11,7 +11,7 @@ interface ButtonProps {
 export const Button = ({ children, onClick, className }: ButtonProps) => {
 	return (
 		<button
-			className={classNames('button', 'css-button-rounded--green', className)}
+			className={classNames('button', 'style', className)}
 			onClick={onClick}
 		>
 			{children}

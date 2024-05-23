@@ -99,29 +99,29 @@ export const underItems = [
 		name: 'Дні науки',
 		link: '/research-activities/dni-nauky',
 	},
-	{ 
-		name: 'Наука в коледжі', 
-		link: '/research-activities/nauka-v-koledzhi' 
+	{
+		name: 'Наука в коледжі',
+		link: '/research-activities/nauka-v-koledzhi',
 	},
 	{
 		name: 'Науково-дослідна робота студентів',
 		link: '/research-activities/naukovodoslidna-robota-studentiv',
 	},
-	{ 
-		name: 'Наукова діяльність викладачів', 
-		link: '/research-activities/naukova-diialnist-vykladachiv' 
+	{
+		name: 'Наукова діяльність викладачів',
+		link: '/research-activities/naukova-diialnist-vykladachiv',
 	},
-	{ 
-		name: 'Соціальний педагог', 
-		link: '/support-and-trust/sotsialnyi-pedahoh' 
+	{
+		name: 'Соціальний педагог',
+		link: '/support-and-trust/sotsialnyi-pedahoh',
 	},
 	{
 		name: 'Практичний психолог',
 		link: '/support-and-trust/praktychnyi-psykholoh',
 	},
-	{ 
-		name: 'Соціально-психологічна підтримка', 
-		link: '/support-and-trust/sotsialno-psykholohichna-pidtrymka' 
+	{
+		name: 'Соціально-психологічна підтримка',
+		link: '/support-and-trust/sotsialno-psykholohichna-pidtrymka',
 	},
 ];
 
@@ -163,4 +163,9 @@ export const newsItems = [
 			'https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0?ixlib=rb-1.2.1&auto=format&fit=crop&w=700&q=80',
 	},
 ];
-export const allRoutes = [...subRoutes, ...headerRoutes, ...BigMenuRoutes, ...underItems];
+export const allRoutes = [
+	...subRoutes,
+	...headerRoutes,
+	...BigMenuRoutes,
+	...underItems,
+];

@@ -1,5 +1,5 @@
 import classNames from 'classnames';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom'; // Изменено с Link на NavLink
 import { IsubRoutes } from '../../types/CommonInterface';
 import styles from './Menu.module.scss';
 
@@ -47,12 +47,16 @@ export const Menu = ({
 					key={index}
 					className={classNames(styles.menu__link, linkClassName)}
 				>
-					<Link
+					<NavLink
 						to={item.link}
-						className={classNames(styles.menu__link, linkClassName)}
+						className={({ isActive }) =>
+							classNames(styles.menu__link, linkClassName, {
+								[styles.active]: isActive,
+							})
+						}
 					>
 						{item.name}
-					</Link>
+					</NavLink>
 				</li>
 			);
 		}

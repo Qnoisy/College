@@ -6,11 +6,10 @@
 	font-family: $ffbtn-text;
 }
 
-.css-button-rounded--green {
+.style {
 	@include btn-color;
 	position: relative;
 	padding: 1rem;
-	margin-bottom: 0.5rem;
 	border-radius: 1rem;
 	max-width: 300px;
 	@media (hover: hover) {

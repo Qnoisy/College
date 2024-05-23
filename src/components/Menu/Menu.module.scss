@@ -10,18 +10,42 @@
 	gap: 1.5rem;
 	justify-content: space-between;
 }
-.menu__link span {
+.menu__link {
+	position: relative;
 	display: block;
-	@include color;
-	font-size: 0.9rem;
-	@media (hover: hover) {
-		&:hover {
-			@include color-hover;
+	span {
+		display: block;
+		@include color;
+		font-size: 0.9rem;
+		@media (hover: hover) {
+			&:hover {
+				@include color-hover;
+			}
+		}
+		@media (hover: none) {
+			&:active {
+				@include color-hover;
+			}
 		}
 	}
-	@media (hover: none) {
-		&:active {
-			@include color-hover;
-		}
-	}
+}
+
+.menu__link.active::after {
+	content: '';
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: -5px;
+	height: 3px;
+	background: linear-gradient(
+		to right,
+		rgb(255, 255, 255),
+		var(--text-color-second)
+	);
+	border-radius: 2px;
+	transition: all 0.2s;
+}
+.menu__link.active:hover::after {
+	left: 50%;
+	right: 50%;
 }

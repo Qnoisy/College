@@ -6,7 +6,7 @@ import { allRoutes } from '../../data/data';
 import { IsubRoutes } from '../../types/CommonInterface';
 import styles from './Search.module.scss';
 
-interface SearchProps {}
+// interface SearchProps {}
 
 export const Search = () => {
 	const [searchTerm, setSearchTerm] = useState('');

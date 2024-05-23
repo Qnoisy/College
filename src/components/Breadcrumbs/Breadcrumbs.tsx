@@ -21,22 +21,20 @@ const Breadcrumbs = () => {
 
 	return (
 		<div className={styles.breadcrumbs}>
-			<div className={styles.breadcrumbs__container}>
-				<Link to='/'>Головна</Link> {/* Стартовий пункт шляху */}
-				{breadcrumbLinks.map(({ name, routePath, isLast }) =>
-					isLast ? (
-						<span key={routePath}>
-							{' > '}
-							{name}
-						</span>
-					) : (
-						<span key={routePath}>
-							{' > '}
-							<Link to={routePath}>{name}</Link>
-						</span>
-					)
-				)}
-			</div>
+			<Link to='/'>Головна</Link> {/* Стартовий пункт шляху */}
+			{breadcrumbLinks.map(({ name, routePath, isLast }) =>
+				isLast ? (
+					<span key={routePath}>
+						{' > '}
+						{name}
+					</span>
+				) : (
+					<span key={routePath}>
+						{' > '}
+						<Link to={routePath}>{name}</Link>
+					</span>
+				)
+			)}
 		</div>
 	);
 };

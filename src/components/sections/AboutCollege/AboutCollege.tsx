@@ -1,7 +1,5 @@
 import classNames from 'classnames';
 import { Button } from '../../Button';
-import Subtitle from '../../sample/Subtitle/Subtitle';
-import Title from '../../sample/Title/Title';
 import styles from './AboutCollege.module.scss';
 
 // interface AboutCollegeProps {}
@@ -11,11 +9,11 @@ export const AboutCollege = () => {
 		<div className={classNames(styles.aboutCollege, 'row')}>
 			<img className={styles.aboutCollege__img} src='img/chpt.jpg' alt='' />
 			<div className={styles.aboutCollege__content}>
-				<Title text='Про університет' />
+				<h1 className={styles.aboutCollege__title}>Про університет</h1>
 				<h2 className={styles.aboutCollege__h2}>
-					Надаємо якісні освітні послуги з 1922р
+					ЧЕРКАСЬКИЙ ПОЛІТЕХНІЧНИЙ ФАХОВИЙ КОЛЕДЖ
+					<p>Надаємо якісні освітні послуги з 1922р</p>
 				</h2>
-				<Subtitle text='ЧЕРКАСЬКИЙ ПОЛІТЕХНІЧНИЙ ФАХОВИЙ КОЛЕДЖ' />
 				<div className={styles.aboutCollege__text}>
 					Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam id quas
 					doloremque quod repellat expedita delectus, aliquid quos a velit
@@ -30,7 +28,9 @@ export const AboutCollege = () => {
 					nostrum neque animi iure? Voluptatibus fugiat ullam, dignissimos error
 					sequi perspiciatis?
 				</div>
-				<Button>Детальніше</Button>
+				<div className={styles.aboutCollege__btn}>
+					<Button>Детальніше</Button>
+				</div>
 			</div>
 		</div>
 	);

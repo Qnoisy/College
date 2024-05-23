@@ -1,6 +1,7 @@
 @import '../../../common/generall';
 .footer {
 	display: flex;
+	align-items: center;
 	justify-content: flex-end;
 }
 .footer__list {
@@ -8,11 +9,11 @@
 	gap: 1rem;
 }
 .footer__item {
+	height: 1.5625rem;
 }
 .footer__icon {
 	@include color;
-	width: 1.5625rem;
-	height: 1.5625rem;
+	font-size: 1.5rem;
 	@media (hover: hover) {
 		&:hover {
 			@include color-hover;
