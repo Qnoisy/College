@@ -17,9 +17,9 @@ export const subRoutes: IsubRoutes[] = [
 		name: 'Коледж',
 		link: '/college',
 		kategories: [
-			{ name: 'test1', path: '/test1' },
-			{ name: 'test2', path: '/test2' },
-			{ name: 'test3', path: '/test3' },
+			{ name: 'Про нас', path: '/collage/pro-nas' },
+			{ name: 'Загальна Інформація', path: '/collage/zagaln-informacia' },
+			{ name: 'Публічна Інформація', path: '/collage/publichna-informatsiia' },
 		],
 	},
 	{

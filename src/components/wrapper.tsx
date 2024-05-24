@@ -24,6 +24,7 @@ import { Dninauky } from '../routes/under-routes/Research-activities/subdivision
 import { Naukavkoledzhi } from '../routes/under-routes/Research-activities/subdivisions/Nauka-v-koledzhi';
 import { Naukovadiialnistvykladachiv } from '../routes/under-routes/Research-activities/subdivisions/Naukova-diialnist-vykladachiv';
 import { Naukovodoslidnarobotastudentiv } from '../routes/under-routes/Research-activities/subdivisions/Naukovodoslidna-robota-studentiv';
+import { Pronas } from '../routes/subMenu-routes/College/subdivisions/Pro-nas';
 import { Supportandtrust } from '../routes/under-routes/Support-and-trust';
 import Breadcrumbs from './Breadcrumbs/Breadcrumbs';
 import { Container } from './Container';
@@ -103,6 +104,10 @@ const Wrapper = () => {
 					<Route
 						path='/research-activities/naukova-diialnist-vykladachiv'
 						element={<Naukovadiialnistvykladachiv />}
+					/>
+					<Route
+						path='/collage/pro-nas'
+						element={<Pronas />}
 					/>
 				</Routes>
 			</Container>
