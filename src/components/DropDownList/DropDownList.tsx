@@ -5,19 +5,19 @@ import styles from './DropDownList.module.scss';
 
 interface Category {
 	name: string;
-	path: string;
+	link: string;
 }
 
 interface DropDownListProps {
 	title: string;
-	path: string;
+	link: string;
 	categories: Category[];
 	linkClassName: string;
 }
 
 export const DropDownList: React.FC<DropDownListProps> = ({
 	title,
-	path,
+	link,
 	categories,
 	linkClassName,
 }) => {
@@ -26,7 +26,7 @@ export const DropDownList: React.FC<DropDownListProps> = ({
 	return (
 		<li className={styles.dropdown}>
 			<NavLink
-				to={path}
+				to={link}
 				onMouseEnter={() => setIsOpen(true)}
 				onMouseLeave={() => setIsOpen(false)}
 				className={({ isActive }) =>
@@ -40,7 +40,7 @@ export const DropDownList: React.FC<DropDownListProps> = ({
 			<ul className={`${styles.dropdownContent} ${isOpen ? styles.show : ''}`}>
 				{categories.map((category, index) => (
 					<li key={index}>
-						<NavLink to={category.path} className={styles.dropdown__item}>
+						<NavLink to={category.link} className={styles.dropdown__item}>
 							{category.name}
 						</NavLink>
 					</li>

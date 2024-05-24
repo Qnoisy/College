@@ -8,27 +8,27 @@ export const subRoutes: IsubRoutes[] = [
 		name: 'Новини',
 		link: '/news',
 		kategories: [
-			{ name: 'test1', path: '/test1' },
-			{ name: 'test2', path: '/test2' },
-			{ name: 'test3', path: '/test3' },
+			{ name: 'test1', link: '/test1' },
+			{ name: 'test2', link: '/test2' },
+			{ name: 'test3', link: '/test3' },
 		],
 	},
 	{
 		name: 'Коледж',
 		link: '/college',
 		kategories: [
-			{ name: 'Про нас', path: '/collage/pro-nas' },
-			{ name: 'Загальна Інформація', path: '/collage/zagaln-informacia' },
-			{ name: 'Публічна Інформація', path: '/collage/publichna-informatsiia' },
+			{ name: 'Про нас', link: '/college/pro-nas' },
+			{ name: 'Загальна Інформація', link: '/collage/zagaln-informacia' },
+			{ name: 'Публічна Інформація', link: '/collage/publichna-informatsiia' },
 		],
 	},
 	{
 		name: 'Освіта',
 		link: '/education',
 		kategories: [
-			{ name: 'test1', path: '/test1' },
-			{ name: 'test2', path: '/test2' },
-			{ name: 'test3', path: '/test3' },
+			{ name: 'test1', link: '/test1' },
+			{ name: 'test2', link: '/test2' },
+			{ name: 'test3', link: '/test3' },
 		],
 	},
 	{

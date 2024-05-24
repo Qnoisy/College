@@ -2,22 +2,21 @@ import Page from '../../../Page/Page';
 import DemoBlock from '../../../components/sample/DemoBlock/DemoBlock';
 import Title from '../../../components/sample/Title/Title';
 
-export const College  = () => {
-
+export const College = () => {
 	const сollegeRoutes = [
 		{
 			name: 'Про нас',
-			path: '/сollege/pro-nas',
+			path: '/college/pro-nas',
 		},
 		{
 			name: 'Загальна Інформація',
 			path: '/сollege/zagaln-informacia',
 		},
-		{ 
-			name: 'Публічна Інформація', path: '/сollege/publichna-informatsiia',
+		{
+			name: 'Публічна Інформація',
+			path: '/сollege/publichna-informatsiia',
 		},
 	];
-
 
 	const сollegeContent = (
 		<div>

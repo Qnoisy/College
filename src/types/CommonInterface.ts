@@ -1,6 +1,6 @@
 export interface Ikategories {
 	name: string;
-	path: string;
+	link: string;
 }
 export interface IsubRoutes {
 	name: string;

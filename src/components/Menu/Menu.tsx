@@ -46,7 +46,7 @@ export const Menu = ({
 			return item.kategories ? (
 				<DropDownList
 					title={item.name}
-					path={item.link}
+					link={item.link}
 					categories={item.kategories}
 					linkClassName={linkClassName}
 				/>

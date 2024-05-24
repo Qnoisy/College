@@ -5,6 +5,7 @@ import { Accreditation } from '../routes/header-routes/Accreditation';
 import { Library } from '../routes/header-routes/Library';
 import { Schedule } from '../routes/header-routes/Schedule';
 import { College } from '../routes/subMenu-routes/College';
+import { Pronas } from '../routes/subMenu-routes/College/subdivisions/Pro-nas';
 import { Education } from '../routes/subMenu-routes/Education';
 import { News } from '../routes/subMenu-routes/News';
 import { Quality } from '../routes/subMenu-routes/Quality';
@@ -24,7 +25,6 @@ import { Dninauky } from '../routes/under-routes/Research-activities/subdivision
 import { Naukavkoledzhi } from '../routes/under-routes/Research-activities/subdivisions/Nauka-v-koledzhi';
 import { Naukovadiialnistvykladachiv } from '../routes/under-routes/Research-activities/subdivisions/Naukova-diialnist-vykladachiv';
 import { Naukovodoslidnarobotastudentiv } from '../routes/under-routes/Research-activities/subdivisions/Naukovodoslidna-robota-studentiv';
-import { Pronas } from '../routes/subMenu-routes/College/subdivisions/Pro-nas';
 import { Supportandtrust } from '../routes/under-routes/Support-and-trust';
 import Breadcrumbs from './Breadcrumbs/Breadcrumbs';
 import { Container } from './Container';
@@ -105,10 +105,7 @@ const Wrapper = () => {
 						path='/research-activities/naukova-diialnist-vykladachiv'
 						element={<Naukovadiialnistvykladachiv />}
 					/>
-					<Route
-						path='/collage/pro-nas'
-						element={<Pronas />}
-					/>
+					<Route path='/college/pro-nas' element={<Pronas />} />
 				</Routes>
 			</Container>
 			{isHomePage && (
