@@ -1,4 +1,4 @@
-@import '../../common/generall';
+@import '../../../common/generall';
 
 .demo-block {
 	display: flex;
@@ -16,7 +16,7 @@
 }
 
 .demo-block__text-content {
-	flex: 5;
+	flex: 3;
 }
 
 .demo-block__navigation {

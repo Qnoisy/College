@@ -13,7 +13,7 @@ export const VideoPlayer = () => {
 			></video>
 			<div className={styles.video__overlay}></div>
 			<h1 className={styles.video__title}>
-				Черкаський політехнічний фаховий коледж
+				Черкаський політехнічний <p>фаховий коледж</p>
 			</h1>
 		</div>
 	);
