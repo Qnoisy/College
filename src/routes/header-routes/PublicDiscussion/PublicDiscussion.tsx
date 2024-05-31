@@ -1,11 +1,12 @@
 
-import { FiLock } from 'react-icons/fi';
-import Page from '../../../Page/Page';
-import DemoBlock from '../../../components/DemoBlock/DemoBlock';
-import DropdownMenu from '../../../components/DropdownMenu/DropdownMenu';
-import Subtitle from '../../../components/Subtitle/Subtitle';
-import Title from '../../../components/Title/Title';
-import UnorderedList from '../../../components/UnorderedList/UnorderedList';
+import { FiLock } from 'react-icons/fi'
+import Page from '../../../Page/Page'
+import DemoBlock from '../../../components/sample/DemoBlock/DemoBlock'
+import DropdownMenu from '../../../components/sample/DropdownMenu/DropdownMenu'
+import Subtitle from '../../../components/sample/Subtitle/Subtitle'
+import Title from '../../../components/sample/Title/Title'
+import UnorderedList from '../../../components/sample/UnorderedList/UnorderedList'
+
 
 export const PublicDiscussion = () => {
 	const accreditationRoutes = [
