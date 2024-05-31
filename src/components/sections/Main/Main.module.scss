@@ -1,40 +1,11 @@
-@import '../../../common/generall';
-
-.main__title {
-	@include color-second;
-	width: 100%;
-	text-align: center;
-	font-family: $ffbtn-text;
-	font-size: 1.2rem;
-	margin-bottom: 1rem;
-	font-weight: 600;
-}
-// Main.module.scss
-.newsHeader {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	position: relative;
+.aboutSection {
+	padding: 1.25rem 0;
 }
 
-.arrows {
-	display: flex;
-	position: absolute; // Позиционируем стрелки над заголовком
-	right: 0; // Смещаем стрелки вправо
+.newsSection {
+	padding: 1.25rem 0.75rem;
+	box-shadow: 0 0.125rem 0.3125rem rgba(0, 0, 0, 0.5);
 }
-
-.arrowIcon {
-	@include color-second;
-	font-size: 1.8rem;
-	cursor: pointer;
-	@media (hover: hover) {
-		&:hover {
-			@include color-hover-second;
-		}
-	}
-	@media (hover: none) {
-		&:active {
-			@include color-hover-second;
-		}
-	}
-}
+// .main__container {
+// 	margin: 1.25rem auto;
+// }

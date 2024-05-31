@@ -7,14 +7,29 @@ export const subRoutes: IsubRoutes[] = [
 	{
 		name: 'Новини',
 		link: '/news',
+		kategories: [
+			{ name: 'test1', link: '/test1' },
+			{ name: 'test2', link: '/test2' },
+			{ name: 'test3', link: '/test3' },
+		],
 	},
 	{
 		name: 'Коледж',
 		link: '/college',
+		kategories: [
+			{ name: 'Про нас', link: '/college/pro-nas' },
+			{ name: 'Загальна Інформація', link: '/collage/zagaln-informacia' },
+			{ name: 'Публічна Інформація', link: '/collage/publichna-informatsiia' },
+		],
 	},
 	{
 		name: 'Освіта',
 		link: '/education',
+		kategories: [
+			{ name: 'test1', link: '/test1' },
+			{ name: 'test2', link: '/test2' },
+			{ name: 'test3', link: '/test3' },
+		],
 	},
 	{
 		name: 'Якість',
@@ -45,7 +60,7 @@ export const headerRoutes: IsubRoutes[] = [
 ];
 export const BigMenuRoutes: IsubRoutes[] = [
 	{
-		name: 'Вступна компанія',
+		name: 'Приймальна комісія',
 		link: '/entry-company',
 	},
 	{
@@ -61,6 +76,70 @@ export const BigMenuRoutes: IsubRoutes[] = [
 		link: '/support-and-trust',
 	},
 ];
+
+export const underItems = [
+	{
+		name: 'Старшокласникам',
+		link: '/entry-company/starshoklasnykam',
+	},
+	{
+		name: 'ОПС Фаховий Молодший Бакалавр',
+		link: '/entry-company/ops-fakhovyi-molodshyi-bakalavr',
+	},
+	{
+		name: 'Вступна кампанія',
+		link: '/entry-company/vstup',
+	},
+	{
+		name: 'Архів',
+		link: '/entry-company/arkhiv',
+	},
+	{
+		name: 'Циклова комісія',
+		link: '/educational-units/tsyklovi-komisii',
+	},
+	{
+		name: 'Методична комісія',
+		link: '/educational-units/metodychni-komisii',
+	},
+	{
+		name: 'Відділення',
+		link: '/educational-units/department',
+	},
+	{
+		name: 'Основні підрозділи',
+		link: '/educational-units/mainsub',
+	},
+	{
+		name: 'Дні науки',
+		link: '/research-activities/dni-nauky',
+	},
+	{
+		name: 'Наука в коледжі',
+		link: '/research-activities/nauka-v-koledzhi',
+	},
+	{
+		name: 'Науково-дослідна робота студентів',
+		link: '/research-activities/naukovodoslidna-robota-studentiv',
+	},
+	{
+		name: 'Наукова діяльність викладачів',
+		link: '/research-activities/naukova-diialnist-vykladachiv',
+	},
+	{
+		name: 'Соціальний педагог',
+		link: '/support-and-trust/sotsialnyi-pedahoh',
+	},
+	{
+		name: 'Практичний психолог',
+		link: '/support-and-trust/praktychnyi-psykholoh',
+	},
+	{
+		name: 'Соціально-психологічна підтримка',
+		link: '/support-and-trust/sotsialno-psykholohichna-pidtrymka',
+	},
+];
+
 export const newsItems = [
 	{
 		title: 'Новость 1',
@@ -99,4 +178,9 @@ export const newsItems = [
 			'https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0?ixlib=rb-1.2.1&auto=format&fit=crop&w=700&q=80',
 	},
 ];
-export const allRoutes = [...subRoutes, ...headerRoutes, ...BigMenuRoutes];
+export const allRoutes = [
+	...subRoutes,
+	...headerRoutes,
+	...BigMenuRoutes,
+	...underItems,
+];

@@ -1,18 +1,12 @@
 $fftext: 'Raleway', sans-serif;
 $ffbtn-text: 'Kanit', sans-serif;
 $ffsecondtext: 'Raleway', sans-serif;
-
-#root {
-	height: 100%;
-	width: 100%;
-}
-
 html[data-theme='light'] {
 	--button-text-color: #1c407e;
 	--button-text-color-hover: #ffffff;
 	--button-background-color: #e3f2fd;
 	--button-background-color-hover: #1c407e;
-	--button-border-color: #f4d931;
+	--button-border-color: #1c407e;
 
 	--background-color: #1c407e;
 	--second-background-color: #ffffff;
@@ -30,7 +24,7 @@ html[data-theme='dark'] {
 	--button-text-color-hover: #ffffff;
 	--button-background-color: #becad3;
 	--button-background-color-hover: #1c407e;
-	--button-border-color: #f4d931;
+	--button-border-color: #1c407e;
 
 	--background-color: #1c407e;
 	--second-background-color: #3a3a3a;
@@ -48,7 +42,6 @@ html[data-theme='dark'] {
 	align-items: center;
 	justify-content: center;
 }
-
 @mixin color {
 	color: var(--text-color);
 	transition: all 200ms linear;
@@ -70,7 +63,6 @@ html[data-theme='dark'] {
 	color: var(--text-color-second-hover);
 	transition: all 200ms linear;
 }
-
 @mixin bg-color {
 	background-color: var(--background-color);
 	transition: background-color 200ms linear;
@@ -86,7 +78,6 @@ html[data-theme='dark'] {
 	transition: background-color 200ms linear;
 	@include color;
 }
-
 @mixin btn-color {
 	&,
 	* {
@@ -110,7 +101,10 @@ html[data-theme='dark'] {
 		color: var(--button-text-color-hover);
 	}
 }
-
+#root {
+	height: 100%;
+	width: 100%;
+}
 .wrapper {
 	@include bg-color-second;
 	min-height: 100%;
@@ -122,33 +116,26 @@ html[data-theme='dark'] {
 	line-height: 1.4rem;
 	font-size: 1rem;
 }
-
-.header {
-	@include bg-color;
-	background-image: url('../../public/img/texture/texture.jpg');
-	background-size: cover;
-}
-
 .main {
 	flex: 1 0 auto;
 	@include bg-color-second;
 }
-
-.footer {
+.row {
+	@include df-centr;
+	justify-content: start;
+	gap: 1rem;
+}
+.blue-decor {
 	@include bg-color;
 	background-image: url('../../public/img/texture/texture.jpg');
 	background-size: cover;
 }
-
-.bg {
-	background-image: url('../../public/img/texture/texture.jpg');
-	background-size: cover;
+.light-bg {
+	background-color: var(--hr-color);
 }
-
 .dark-bg {
 	background-color: rgb(41, 36, 36);
 }
-
 .strong-style {
 	@include color-second;
 	font-weight: 800;
@@ -159,29 +146,31 @@ html[data-theme='dark'] {
 	height: 1px;
 	width: 100%;
 }
-
-.row {
-	@include df-centr;
-	justify-content: start;
-	gap: 1rem;
+.main__advantages {
+	position: relative;
+	background-image: url('../../public/img/stariy_tehn_kum.png');
+	background-size: cover;
+	transition: filter 0.3s ease;
+	background-position: center;
 }
-.container-padding {
-	background-color: #64b5f6;
-	padding: 0 !important;
+.offPadding {
+	padding: 0;
+}
+*::-webkit-scrollbar {
+	width: 7px;
+	background-color: transparent !important;
+	border-radius: 0.625rem; // закругление углов скроллбара
 }
 
-// @media (max-width: 1151.98px) {
+*::-webkit-scrollbar-track {
+	background: rgb(218, 218, 218);
+	border-radius: 0.625rem; // закругление углов скроллбара
+}
 
-// }
-// @media (max-width: 959.98px) {
-
-// }
-// @media (max-width:767.98px) {
-
-// }
-// @media (max-width:539.98px) {
-
-// }
-// @media (max-width:400.98px) {
-
-// }
+*::-webkit-scrollbar-thumb {
+	background: #888; // цвет самого скроллбара
+	border-radius: 0.625rem; // закругление углов скроллбара
+	&:hover {
+		background: #555; // цвет при наведении
+	}
+}

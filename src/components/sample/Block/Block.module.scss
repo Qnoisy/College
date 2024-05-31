@@ -1,0 +1,50 @@
+@import '../../../common/generall';
+
+.block {
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+	&__icon {
+		margin-right: 0.5rem;
+	}
+}
+
+.block__main-content {
+	display: flex;
+	gap: 2rem;
+}
+
+.block__text-content {
+	flex: 3;
+}
+
+.block__icon {
+	font-size: 1.5rem;
+}
+.block__links {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 1rem;
+}
+.block__link {
+	@include df-centr;
+	justify-content: flex-start;
+	@include btn-color;
+	padding: 1rem;
+	margin-bottom: 0.5rem;
+	border-radius: 1rem;
+	width: 250px;
+	@media (hover: hover) {
+		&:hover {
+			@include btn-color-hover;
+		}
+	}
+	@media (hover: none) {
+		&:active {
+			@include btn-color-hover;
+		}
+	}
+}
+.block__link-text {
+	@include df-centr;
+}

@@ -1,6 +1,7 @@
 import classNames from 'classnames';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import { IsubRoutes } from '../../types/CommonInterface';
+import { DropDownList } from '../DropDownList';
 import styles from './Menu.module.scss';
 
 interface MenuProps {
@@ -42,17 +43,28 @@ export const Menu = ({
 				</li>
 			);
 		} else {
-			return (
+			return item.kategories ? (
+				<DropDownList
+					title={item.name}
+					link={item.link}
+					categories={item.kategories}
+					linkClassName={linkClassName}
+				/>
+			) : (
 				<li
 					key={index}
 					className={classNames(styles.menu__link, linkClassName)}
 				>
-					<Link
+					<NavLink
 						to={item.link}
-						className={classNames(styles.menu__link, linkClassName)}
+						className={({ isActive }) =>
+							classNames(styles.menu__link, linkClassName, {
+								[styles.active]: isActive,
+							})
+						}
 					>
 						{item.name}
-					</Link>
+					</NavLink>
 				</li>
 			);
 		}

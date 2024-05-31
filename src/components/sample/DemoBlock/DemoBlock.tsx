@@ -1,7 +1,6 @@
 import classNames from 'classnames';
 import React from 'react';
 import { Link } from 'react-router-dom';
-import Subtitle from '../Subtitle/Subtitle';
 import styles from './DemoBlock.module.scss';
 
 interface Route {
@@ -11,24 +10,26 @@ interface Route {
 }
 
 interface DemoBlockProps {
-	routes: Route[];
-	content: React.ReactNode;
+	routes?: Route[]; // Routes тепер можуть бути не передані
+	content?: React.ReactNode; // Content тепер може бути не переданий
 	additionalLinks?: Route[];
 }
 
 const DemoBlock: React.FC<DemoBlockProps> = ({
-	routes,
-	content,
-	additionalLinks,
+	routes = [],
+	content = null,
+	additionalLinks = [],
 }) => {
 	return (
 		<div className={classNames(styles['demo-block'])}>
 			<div className={classNames(styles['demo-block__main-content'])}>
-				<div className={classNames(styles['demo-block__text-content'])}>
-					{content}
-				</div>
+				{content && (
+					<div className={classNames(styles['demo-block__text-content'])}>
+						{content}
+					</div>
+				)}
 				<div className={classNames(styles['demo-block__navigation'])}>
-					<Subtitle text='Підрозділи' />
+					<div className={styles['demo-block__title']}>Підрозділи</div>
 					{routes.map((route, index) => (
 						<div key={index}>
 							<Link
@@ -46,11 +47,11 @@ const DemoBlock: React.FC<DemoBlockProps> = ({
 					))}
 				</div>
 			</div>
-			<div className={classNames(styles['demo-block__links'])}>
-				{additionalLinks &&
-					additionalLinks.map(link => (
+			{additionalLinks.length > 0 && (
+				<div className={classNames(styles['demo-block__links'])}>
+					{additionalLinks.map(link => (
 						<Link
-							key={link.path} // Moved here from the div inside
+							key={link.path}
 							to={link.path}
 							className={classNames(styles['demo-block__link'])}
 						>
@@ -64,7 +65,8 @@ const DemoBlock: React.FC<DemoBlockProps> = ({
 							</div>
 						</Link>
 					))}
-			</div>
+				</div>
+			)}
 		</div>
 	);
 };

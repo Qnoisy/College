@@ -2,3 +2,12 @@
 .news {
 	font-family: $fftext;
 }
+.news__title {
+	@include color-second;
+	width: 100%;
+	text-align: center;
+	font-family: $ffbtn-text;
+	font-size: 1.2rem;
+	margin-bottom: 1rem;
+	font-weight: 600;
+}

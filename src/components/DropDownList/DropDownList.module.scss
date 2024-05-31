@@ -1,0 +1,66 @@
+@import '../../common/generall';
+.dropdownButton {
+	@include color-second;
+	padding: 0.3125rem 0;
+	background: none;
+	border: none;
+	width: 100%;
+	text-align: left;
+	cursor: pointer;
+	display: block;
+	text-decoration: none;
+	position: relative;
+	transition: all 0.2s;
+
+	&:hover {
+		@include color-hover-second;
+	}
+	&.active:hover::after {
+		left: 50%;
+		right: 50%;
+	}
+
+	&.active::after {
+		content: '';
+		position: absolute;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		height: 3px;
+		background: linear-gradient(to right, #ffffff, var(--text-color-second));
+		border-radius: 2px;
+	}
+}
+
+.dropdownContent {
+	display: none;
+	position: absolute;
+	background-color: #f9f9f9;
+	min-width: 10rem;
+	box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+	z-index: 1;
+	padding: 0.3rem;
+}
+
+.dropdown:hover .dropdownContent {
+	display: block;
+}
+
+.dropdownItem {
+	padding: 0.75rem 1rem;
+	text-decoration: none;
+	@include color;
+	font-size: 0.9rem;
+}
+
+.dropdownItem:hover {
+	background-color: #ddd;
+	@include color-hover;
+}
+.dropdown__item {
+	font-size: 1rem;
+	@include color-second;
+	&:hover {
+		@include color-hover-second;
+	}
+}

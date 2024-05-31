@@ -1,15 +1,13 @@
 @import '../../common/generall';
-
 .search {
 	display: flex;
 	justify-content: flex-end;
 	height: 1.3rem;
 }
-
 .searchIcon {
+	@include color;
 	font-size: 1.3rem;
 }
-
 .searchForm {
 	display: flex;
 	border-radius: 0.3rem;
@@ -17,7 +15,6 @@
 }
 
 .search.active .searchForm {
-	border-color: #ffffff;
 	border: 1px solid #ffffff;
 	border-radius: 0.3rem;
 }
@@ -25,14 +22,12 @@
 .searchInput {
 	@include bg-color-second;
 	width: 12.5rem;
-  	height: 1.3rem;
+	height: 1.2rem;
 	border-radius: 0.3rem 0 0 0.3rem;
 }
 
 .searchButton {
 	background: none;
-	border: none;
-	color: #ffffff;
 	cursor: pointer;
 	border-radius: 0 0.3125rem 0.3125rem 0;
 	&:active {
@@ -44,10 +39,10 @@
 }
 .search__suggestion {
 	width: 12.5rem;
-  	height: 1.3rem;
+	height: 1.3rem;
 	cursor: pointer;
 	position: relative;
-	left: -22px; 
+	left: -1.375rem;
 	top: 1.3rem;
 	background-color: var(--hr-color);
 	color: var(--text-color-second);
