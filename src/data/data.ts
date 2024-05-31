@@ -1,4 +1,4 @@
-import { IsubRoutes } from '../types/CommonInterface';
+import { IsubRoutes } from '../types/CommonInterface'
 export const subRoutes: IsubRoutes[] = [
 	{
 		name: 'Головна',
@@ -137,6 +137,18 @@ export const underItems = [
 	{
 		name: 'Соціально-психологічна підтримка',
 		link: '/support-and-trust/sotsialno-psykholohichna-pidtrymka',
+	},
+	{
+		name: 'Діяльність бібліотеки',
+		link: '/library/activity',
+	},
+	{
+		name: 'Бібліотечні ресурси',
+		link: '/library/resources',
+	},
+	{
+		name: 'Провідні бібліотеки світу',
+		link: '/library/resources/leadingLibraries',
 	},
 ];
 

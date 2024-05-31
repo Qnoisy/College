@@ -1,7 +1,7 @@
-import classNames from 'classnames';
-import React from 'react';
-import { Link } from 'react-router-dom';
-import styles from './DemoBlock.module.scss';
+import classNames from 'classnames'
+import React from 'react'
+import { Link } from 'react-router-dom'
+import styles from './DemoBlock.module.scss'
 
 interface Route {
 	name: string;
