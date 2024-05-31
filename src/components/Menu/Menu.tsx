@@ -49,6 +49,7 @@ export const Menu = ({
 					link={item.link}
 					categories={item.kategories}
 					linkClassName={linkClassName}
+					key={index}
 				/>
 			) : (
 				<li

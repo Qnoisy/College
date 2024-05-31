@@ -14,7 +14,7 @@ export const BigMenu = () => {
 	];
 	const links = BigMenuRoutes.map((item: IsubRoutes, index: number) => {
 		return (
-			<Link to={item.link}>
+			<Link to={item.link} key={index}>
 				<li className={styles.bigMenu__item}>
 					{BigMenuReactIcons[index]}
 					<p>{item.name}</p>

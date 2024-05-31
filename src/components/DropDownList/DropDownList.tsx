@@ -1,5 +1,5 @@
 import classNames from 'classnames';
-import React, { useState } from 'react';
+import React from 'react';
 import { NavLink } from 'react-router-dom';
 import styles from './DropDownList.module.scss';
 
@@ -21,23 +21,19 @@ export const DropDownList: React.FC<DropDownListProps> = ({
 	categories,
 	linkClassName,
 }) => {
-	const [isOpen, setIsOpen] = useState(false);
-
 	return (
 		<li className={styles.dropdown}>
 			<NavLink
 				to={link}
-				onMouseEnter={() => setIsOpen(true)}
-				onMouseLeave={() => setIsOpen(false)}
 				className={({ isActive }) =>
 					classNames(styles.dropdownButton, linkClassName, {
-						[styles.active]: isActive, // Применяем активный класс
+						[styles.active]: isActive,
 					})
 				}
 			>
 				{title}
 			</NavLink>
-			<ul className={`${styles.dropdownContent} ${isOpen ? styles.show : ''}`}>
+			<ul className={classNames(styles.dropdownContent)}>
 				{categories.map((category, index) => (
 					<li key={index}>
 						<NavLink to={category.link} className={styles.dropdown__item}>

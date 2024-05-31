@@ -8,7 +8,7 @@ const Breadcrumbs = () => {
 	const pathnames = location.pathname.split('/').filter(x => x);
 
 	if (pathnames.length === 0) {
-		return null; // Не рендеримо компонент для головної сторінки
+		return null;
 	}
 
 	const breadcrumbLinks = pathnames.map((value, index) => {

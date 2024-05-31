@@ -1,15 +1,14 @@
 import Page from '../../../Page/Page';
 import { NewsSlider } from '../../../components/NewsSlider';
 import Block from '../../../components/sample/Block/Block';
-import Title from '../../../components/sample/Title/Title';
 import { newsItems } from '../../../data/data';
 import styles from './News.module.scss';
 
 export const News = () => {
 	const newsContent = (
 		<div>
-			<Title text='Новини' />
-			<hr className='hr-style' />
+			{/* <Title text='Новини' />
+			<hr className='hr-style' /> */}
 		</div>
 	);
 

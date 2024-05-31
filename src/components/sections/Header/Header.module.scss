@@ -44,20 +44,3 @@
 		}
 	}
 }
-.header__link {
-	cursor: pointer;
-	@include color;
-	@media (hover: hover) {
-		&:hover {
-			@include color-hover-second;
-		}
-	}
-	@media (hover: none) {
-		&:active {
-			@include color-hover-second;
-		}
-	}
-}
-.header__icon {
-	font-size: 1.1rem;
-}

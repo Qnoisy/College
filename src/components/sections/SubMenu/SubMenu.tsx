@@ -1,8 +1,8 @@
 import classNames from 'classnames';
 import { useEffect, useRef, useState } from 'react';
-import { Link } from 'react-router-dom';
 import { subRoutes } from '../../../data/data';
 import { Container } from '../../Container';
+import { Logo } from '../../Logo';
 import { Menu } from '../../Menu';
 import styles from './SubMenu.module.scss';
 
@@ -36,14 +36,7 @@ const SubMenu = () => {
 			>
 				<Container>
 					<nav className={styles.subMenu}>
-						<Link to='/' className={styles.subMenu__logo}>
-							<img
-								src='img/logo.png'
-								alt='Logo'
-								className={styles.subMenu__logo_img}
-							/>
-							<div className={styles.subMenu__logo_text}>чпфк</div>
-						</Link>
+						<Logo />
 						<Menu
 							navLinks={subRoutes}
 							linkClassName={styles.links__style}

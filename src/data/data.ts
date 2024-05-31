@@ -18,8 +18,8 @@ export const subRoutes: IsubRoutes[] = [
 		link: '/college',
 		kategories: [
 			{ name: 'Про нас', link: '/college/pro-nas' },
-			{ name: 'Загальна Інформація', link: '/collage/zagaln-informacia' },
-			{ name: 'Публічна Інформація', link: '/collage/publichna-informatsiia' },
+			{ name: 'Загальна Інформація', link: '/college/zagaln-informacia' },
+			{ name: 'Публічна Інформація', link: '/college/publichna-informatsiia' },
 		],
 	},
 	{

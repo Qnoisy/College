@@ -1,0 +1,20 @@
+@import '../../common/generall';
+.header__link {
+	font-family: $ffbtn-text;
+	font-size: 1rem;
+	cursor: pointer;
+	@include color;
+	@media (hover: hover) {
+		&:hover {
+			@include color-hover-second;
+		}
+	}
+	@media (hover: none) {
+		&:active {
+			@include color-hover-second;
+		}
+	}
+}
+.header__icon {
+	font-size: 1.1rem;
+}

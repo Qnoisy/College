@@ -1,7 +1,7 @@
 @import '../../common/generall';
 .dropdownButton {
 	@include color-second;
-	padding: 0.3125rem 0;
+	padding: 0.43125rem 0;
 	background: none;
 	border: none;
 	width: 100%;
@@ -11,7 +11,6 @@
 	text-decoration: none;
 	position: relative;
 	transition: all 0.2s;
-
 	&:hover {
 		@include color-hover-second;
 	}
