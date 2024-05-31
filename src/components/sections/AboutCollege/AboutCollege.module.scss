@@ -1,36 +1,35 @@
 @import '../../../common/generall';
 .aboutCollege {
-	height: 25rem;
+	height: 450px;
 	gap: 0;
 	@include bg-color;
 }
 .aboutCollege__img {
-	flex: 1 1 50%;
 	height: 100%;
+	width: 50%;
 	object-fit: cover;
 }
 .aboutCollege__content {
 	flex: 1 1 50%;
 	height: 100%;
 	@include bg-color;
-	padding: 2rem;
+	padding: 3rem 4rem;
 }
 
 // Стилизация скроллбара для .aboutCollege__text
 .aboutCollege__text {
-	height: 7.8125rem;
+	height: 9.375rem;
 	overflow-y: auto;
 	font-size: 0.8rem;
 	margin-bottom: 2rem;
 }
 .aboutCollege__title {
 	font-size: 1.5rem;
-	text-align: center;
+	font-weight: 700;
 	margin-bottom: 1rem;
 }
 .aboutCollege__h2 {
 	font-size: 1.1rem;
-	text-align: center;
 	margin-bottom: 2rem;
 }
 .aboutCollege__btn {

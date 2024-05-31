@@ -5,12 +5,20 @@
 	@include color;
 	font-weight: 700;
 }
+.advantages__wrapper {
+	position: relative;
+	background-image: url('../../../../public/img/stariy_tehn_kum.png');
+	background-size: cover;
+	transition: filter 0.3s ease;
+	background-position: center;
+}
 .advantages__title {
 	@include df-centr;
-	font-size: 1.5rem;
-	margin-bottom: 2rem;
+	font-size: 2.2rem;
+	margin-bottom: 3rem;
 	h2 {
-		width: 300px;
+		flex: 0 0 30%;
+		width: 100%;
 		font-weight: 700;
 	}
 }
@@ -35,14 +43,48 @@
 	gap: 2rem;
 }
 .advantages__li_img {
+	@include df-centr;
+	@include bg-color;
+	font-size: 3.2rem;
 	flex: 0 0 auto;
-	background-color: white;
 	width: 4.25rem;
 	height: 4.25rem;
 	border-radius: 50%;
 }
 .advantages__li_text {
 	font-weight: 600;
-	font-size: 1.5rem;
+	font-size: 1.3rem;
 	width: 300px;
+}
+.advantages__block {
+}
+.advantages__block_content {
+	font-size: 1.2rem;
+	@include color-second;
+	padding: 2rem 1rem 2rem 0;
+}
+.advantages__block_btn {
+	position: relative;
+	padding: 2rem 2rem;
+	z-index: 3;
+	@include bg-color;
+	img {
+		width: 2.5rem;
+		height: 2.5rem;
+	}
+	&::after {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 18rem;
+		bottom: 0;
+		z-index: 1;
+		width: 800px;
+		@include bg-color;
+	}
+}
+.advantages__block_btn_text {
+}
+.advantages__block_color {
+	background-color: var(--hr-color);
 }

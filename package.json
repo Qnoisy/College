@@ -3,6 +3,7 @@
 	"version": "0.1.0",
 	"private": true,
 	"dependencies": {
+		"@react-google-maps/api": "^2.19.3",
 		"@types/swiper": "^6.0.0",
 		"axios": "^1.6.8",
 		"classnames": "^2.5.1",

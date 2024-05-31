@@ -123,11 +123,7 @@ const Wrapper = () => {
 					/>
 				</Routes>
 			</Container>
-			{isHomePage && (
-				<Container className='main__advantages' section>
-					<Advantages />
-				</Container>
-			)}
+			{isHomePage && <Advantages />}
 			{isHomePage && (
 				<Container section>
 					<AboutCollege />

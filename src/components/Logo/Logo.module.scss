@@ -1,0 +1,17 @@
+@import '../../common/generall';
+.logo {
+	@include df-centr;
+	gap: 1rem;
+}
+
+.logo_img {
+	width: 5rem;
+	height: 5rem;
+}
+.logo_text {
+	@include color-second;
+	font-family: $ffbtn-text;
+	text-transform: uppercase;
+	font-size: 2.7rem;
+	font-weight: 700;
+}

@@ -5,5 +5,5 @@ export interface Ikategories {
 export interface IsubRoutes {
 	name: string;
 	link: string;
-	kategories?: Ikategories[];
+	kategories?: IsubRoutes[];
 }

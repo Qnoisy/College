@@ -20,9 +20,18 @@ export const Search = () => {
 
 		if (value.length > 1) {
 			const searchQuery = value.toLowerCase().trim();
-			const filteredSuggestions = allRoutes.filter(route =>
-				route.name.toLowerCase().includes(searchQuery)
-			);
+			const filteredSuggestions = allRoutes.flatMap((route: IsubRoutes) => {
+				const routeMatches = route.name.toLowerCase().includes(searchQuery)
+					? [route]
+					: [];
+				const categoryMatches =
+					route.kategories?.filter((cat: IsubRoutes) =>
+						cat.name.toLowerCase().includes(searchQuery)
+					) || [];
+
+				return [...routeMatches, ...categoryMatches];
+			});
+
 			setSuggestions(filteredSuggestions);
 		} else {
 			setSuggestions([]);
@@ -34,8 +43,8 @@ export const Search = () => {
 		if (suggestions.length === 1) {
 			navigate(suggestions[0].link);
 		}
-		setSearchTerm(''); // Очищення поля вводу
-		setIsActive(false); // Закриття поля вводу
+		setSearchTerm('');
+		setIsActive(false);
 	};
 
 	const toggleSearch = () => {
@@ -56,7 +65,7 @@ export const Search = () => {
 				<button
 					type='button'
 					className={styles.searchButton}
-					onClick={toggleSearch} // Перемикач активного стану поля вводу
+					onClick={toggleSearch}
 				>
 					<IoMdSearch className={styles.searchIcon} />
 				</button>
