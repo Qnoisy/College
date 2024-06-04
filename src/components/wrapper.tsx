@@ -1,3 +1,4 @@
+
 import { Route, Routes, useLocation } from 'react-router-dom'
 import '../common/generall.scss'
 import '../common/reset.scss'
@@ -52,6 +53,11 @@ import { Header } from './sections/Header'
 import { Main } from './sections/Main'
 import SubMenu from './sections/SubMenu/SubMenu'
 import { VideoPlayer } from './sections/VideoPlayer'
+
+import '../common/generall.scss'
+import '../common/reset.scss'
+import { UsefulLinks } from './UsefulLinks'
+
 
 const Wrapper = () => {
 	const location = useLocation();
@@ -116,14 +122,8 @@ const Wrapper = () => {
 						element={<Naukovadiialnistvykladachiv />}
 					/>
 					<Route path='/college/pro-nas' element={<Pronas />} />
-					<Route
-						path='/library/activity'
-						element={<Activity />}
-					/>
-					<Route
-						path='/library/resources'
-						element={<Resource />}
-					/>
+					<Route path='/library/activity' element={<Activity />} />
+					<Route path='/library/resources' element={<Resource />} />
 					<Route
 						path='/library/resources/leadingLibraries'
 						element={<LeadingLibraries />}
@@ -188,8 +188,13 @@ const Wrapper = () => {
 			</Container>
 			{isHomePage && <Advantages />}
 			{isHomePage && (
-				<Container section>
+				<Container>
 					<AboutCollege />
+				</Container>
+			)}
+			{isHomePage && (
+				<Container>
+					<UsefulLinks />
 				</Container>
 			)}
 			<Container className='blue-decor'>

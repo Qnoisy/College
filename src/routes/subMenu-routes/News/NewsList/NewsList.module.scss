@@ -1,0 +1,48 @@
+// NewsList.module.scss
+.news-container {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-gap: 20px;
+	max-width: 75%; // Залишаємо місце для панелі останніх новин
+
+	.news-item {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		border: 1px solid #ccc;
+		padding: 10px;
+		border-radius: 8px;
+
+		img {
+			max-width: 100%;
+			height: auto;
+			margin-bottom: 10px;
+		}
+
+		h3 {
+			font-size: 18px;
+			margin: 5px 0;
+		}
+
+		p {
+			font-size: 14px;
+			color: #666;
+		}
+	}
+}
+
+.button {
+	padding: 10px 15px;
+	margin: 0 5px;
+	background-color: #fff;
+	border: 1px solid #ccc;
+	cursor: pointer;
+
+	&:hover {
+		background-color: #f0f0f0;
+	}
+
+	&.active {
+		background-color: #ccc;
+	}
+}

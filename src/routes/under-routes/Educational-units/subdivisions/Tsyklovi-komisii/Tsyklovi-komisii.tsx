@@ -7,6 +7,7 @@ export const Tsyklovikomisii = () => {
 		{
 			name: 'ЦИКЛОВА КОМІСІЯ  ДИСЦИПЛІН ЗАГАЛЬНООСВІТНЬОЇ ПІДГОТОВКИ',
 			path: '/entry-company/ops-fakhovyi-molodshyi-bakalavr',
+			
 		},
 		{ 
 			name: 'ЦИКЛОВА КОМІСІЯ  ФІЛОЛОГІЧНИХ ТА ГУМАНІТАРНИХ ДИСЦИПЛІН', 

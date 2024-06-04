@@ -1,14 +1,18 @@
 // В вашем JSX файле
 import classNames from 'classnames';
-import { News } from '../../../routes/subMenu-routes/News';
+import Page from '../../../Page/Page';
+import { newsItems } from '../../../data/data';
+import { NewsSlider } from '../../NewsSlider';
 import styles from './Main.module.scss';
 
 export const Main = () => {
 	return (
-		<main className={styles.main}>
-			<div className={classNames(styles.newsSection, styles.main__container)}>
-				<News />
-			</div>
-		</main>
+		<Page title='Головна - ЧПФК'>
+			<main className={styles.main}>
+				<div className={classNames(styles.newsSection, styles.main__container)}>
+					<NewsSlider newsItems={newsItems} />
+				</div>
+			</main>
+		</Page>
 	);
 };
