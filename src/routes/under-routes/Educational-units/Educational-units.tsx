@@ -1,6 +1,6 @@
-import Page from '../../../Page/Page';
-import DemoBlock from '../../../components/sample/DemoBlock/DemoBlock';
-import Title from '../../../components/sample/Title/Title';
+import Page from '../../../Page/Page'
+import DemoBlock from '../../../components/sample/DemoBlock/DemoBlock'
+import Title from '../../../components/sample/Title/Title'
 
 export const Educationalunits = () => {
 
@@ -8,10 +8,6 @@ export const Educationalunits = () => {
 		{
 			name: 'Циклова комісія',
 			path: '/educational-units/tsyklovi-komisii',
-		},
-		{
-			name: 'Методичка комісія',
-			path: '/educational-units/metodychni-komisii',
 		},
 		{ 
 			name: 'Відділення', path: '/educational-units/department',

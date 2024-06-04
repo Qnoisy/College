@@ -1,6 +1,6 @@
 import Page from '../../../../Page/Page'
 import DropUpMenu from '../../../../components/DropUpMenu/DropUpMenu'
-import DemoBlock from '../../../../components/sample/DemoBlock/DemoBlock'
+import Block from '../../../../components/sample/Block/Block'
 import Title from '../../../../components/sample/Title/Title'
 
 
@@ -49,7 +49,7 @@ export const Activity = () => {
 
 	return (
 		<Page title='Діяльність бібліотеки- ЧПФК'>
-			<DemoBlock content={activityContent} />
+			<Block content={activityContent} />
 		</Page>
 	);
 };

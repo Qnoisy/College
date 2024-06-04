@@ -1,7 +1,7 @@
-import Page from '../../../Page/Page';
-import DropUpMenu from '../../../components/DropUpMenu/DropUpMenu';
-import DemoBlock from '../../../components/sample/DemoBlock/DemoBlock';
-import Title from '../../../components/sample/Title/Title';
+import Page from '../../../Page/Page'
+import DropUpMenu from '../../../components/DropUpMenu/DropUpMenu'
+import DemoBlock from '../../../components/sample/DemoBlock/DemoBlock'
+import Title from '../../../components/sample/Title/Title'
 
 export const Entrycompany = () => {
 	const entrycompanyRoutes = [
@@ -16,9 +16,6 @@ export const Entrycompany = () => {
 		{
 			name: 'Старшокласникам',
 			path: '/entry-company/starshoklasnykam',
-		},
-		{ 
-			name: 'Архів', path: '/entry-company/arkhiv' 
 		},
 	];
 
