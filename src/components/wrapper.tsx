@@ -43,13 +43,13 @@ import { Sotsialnopsykholohichnapidtrymka } from '../routes/under-routes/Support
 import { Sotsialnyipedahoh } from '../routes/under-routes/Support-and-trust/subdivisions/Sotsialnyi-pedahoh';
 import Breadcrumbs from './Breadcrumbs/Breadcrumbs';
 import { Container } from './Container';
-import { BigMenu } from './Menu/BigMenu';
 import { UsefulLinks } from './UsefulLinks';
 import { AboutCollege } from './sections/AboutCollege';
 import { Advantages } from './sections/Advantages';
 import { Copyright } from './sections/Copyright';
 import { Footer } from './sections/Footer';
 import { Header } from './sections/Header';
+import { BigMenu } from './sections/Header/Menu/BigMenu';
 import { Main } from './sections/Main';
 import SubMenu from './sections/SubMenu/SubMenu';
 import { VideoPlayer } from './sections/VideoPlayer';
@@ -57,6 +57,12 @@ import { VideoPlayer } from './sections/VideoPlayer';
 const Wrapper = () => {
 	const location = useLocation();
 	const isHomePage = location.pathname === '/';
+	// const customRoutes = useRoutes([
+	// 	{
+	// 		path: '/',
+	// 		element: <Main />,
+	// 	},
+	// ]);
 
 	return (
 		<div className='wrapper'>

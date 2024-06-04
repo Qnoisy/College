@@ -1,4 +1,4 @@
-@import '../../common/generall';
+@import '../../../../common/generall';
 .menu {
 	font-family: $ffbtn-text;
 }
@@ -7,7 +7,7 @@
 }
 .menu__links {
 	@include df-centr;
-	gap: 1.5rem;
+	gap: 1.2rem;
 	justify-content: space-between;
 }
 .menu__link {
@@ -26,6 +26,9 @@
 				@include color-hover;
 			}
 		}
+	}
+	@media (max-width: 1151.98px) {
+		font-size: 0.8rem;
 	}
 }
 

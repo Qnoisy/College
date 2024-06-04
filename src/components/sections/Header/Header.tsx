@@ -3,9 +3,9 @@ import { MdLightMode, MdOutlineLightMode } from 'react-icons/md';
 import { headerRoutes } from '../../../data/data';
 import { useTheme } from '../../../hooks/useTheme';
 import ContactLink from '../../ContactLink/ContactLink';
-import { Menu } from '../../Menu';
 import { Search } from '../../Search';
 import styles from './Header.module.scss';
+import { Menu } from './Menu';
 
 export const Header = () => {
 	const { theme, setTheme } = useTheme();

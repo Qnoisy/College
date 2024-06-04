@@ -1,7 +1,7 @@
 import { GrBook, GrCertificate, GrCli, GrCluster } from 'react-icons/gr';
 import { Link } from 'react-router-dom';
-import { BigMenuRoutes } from '../../../data/data';
-import { IsubRoutes } from '../../../types/CommonInterface';
+import { BigMenuRoutes } from '../../../../../data/data';
+import { IsubRoutes } from '../../../../../types/CommonInterface';
 import styles from './BigMenu.module.scss';
 // interface BigMenuProps {}
 

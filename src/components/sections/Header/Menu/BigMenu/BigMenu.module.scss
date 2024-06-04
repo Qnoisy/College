@@ -1,4 +1,4 @@
-@import '../../../common/generall';
+@import '../../../../../common/generall';
 .bigMenu {
 	@include color;
 	@include df-centr;
@@ -10,9 +10,11 @@
 	@include df-centr;
 	cursor: pointer;
 	flex-direction: row;
-	gap: 0.5rem;
+	gap: 1rem;
 	font-size: 1rem;
 	font-weight: 600;
+	line-height: normal;
+	text-align: center;
 	@media (hover: hover) {
 		&:hover {
 			@include color-hover;
@@ -25,6 +27,16 @@
 	}
 	p {
 		@include color;
+	}
+	@media (max-width: 1151.98px) {
+		font-size: 0.9rem;
+	}
+	@media (max-width: 959.98px) {
+		font-size: 0.85rem;
+		font-weight: 400;
+	}
+	@media (max-width: 767.98px) {
+		font-size: 0.75rem;
 	}
 }
 .bigMenu__icon {
@@ -41,5 +53,12 @@
 		&:active {
 			@include color-hover;
 		}
+	}
+	@media (max-width: 1151.98px) {
+		width: 22px;
+		height: 22px;
+	}
+	@media (max-width: 959.98px) {
+		display: none;
 	}
 }

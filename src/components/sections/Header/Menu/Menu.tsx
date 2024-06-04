@@ -1,7 +1,7 @@
 import classNames from 'classnames';
 import { NavLink } from 'react-router-dom';
-import { IsubRoutes } from '../../types/CommonInterface';
-import { DropDownList } from '../DropDownList';
+import { IsubRoutes } from '../../../../types/CommonInterface';
+import { DropDownList } from '../../../DropDownList';
 import styles from './Menu.module.scss';
 
 interface MenuProps {
