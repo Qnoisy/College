@@ -1,45 +1,46 @@
-import { Route, Routes, useLocation } from 'react-router-dom'
-import '../common/generall.scss'
-import '../common/reset.scss'
-import { Accreditation } from '../routes/header-routes/Accreditation'
-import { Library } from '../routes/header-routes/Library'
-import { Activity } from '../routes/header-routes/Library/activity'
-import { Resource } from '../routes/header-routes/Library/resources'
-import { LeadingLibraries } from '../routes/header-routes/Library/resources/leadingLibraries'
-import { Schedule } from '../routes/header-routes/Schedule'
-import { College } from '../routes/subMenu-routes/College'
-import { Pronas } from '../routes/subMenu-routes/College/subdivisions/Pro-nas'
-import { Education } from '../routes/subMenu-routes/Education'
-import { News } from '../routes/subMenu-routes/News'
-import { Quality } from '../routes/subMenu-routes/Quality'
-import { Contacts } from '../routes/subMenu-routes/Сontacts'
-import { Educationalunits } from '../routes/under-routes/Educational-units'
-import { Department } from '../routes/under-routes/Educational-units/subdivisions/Department'
-import { MainSub } from '../routes/under-routes/Educational-units/subdivisions/MainSub'
-import { Metodychnikomisii } from '../routes/under-routes/Educational-units/subdivisions/Metodychni-komisii'
-import { Tsyklovikomisii } from '../routes/under-routes/Educational-units/subdivisions/Tsyklovi-komisii'
-import { Entrycompany } from '../routes/under-routes/Entry-company'
-import { Arkhiv } from '../routes/under-routes/Entry-company/subdivisions/Arkhiv'
-import { Opsfakhovyimolodshyibakalavr } from '../routes/under-routes/Entry-company/subdivisions/Ops-fakhovyi-molodshyi-bakalavr'
-import { Starshoklasnykam } from '../routes/under-routes/Entry-company/subdivisions/Starshoklasnykam'
-import { Vstup } from '../routes/under-routes/Entry-company/subdivisions/Vstup'
-import { Researchactivities } from '../routes/under-routes/Research-activities'
-import { Dninauky } from '../routes/under-routes/Research-activities/subdivisions/Dni-nauky'
-import { Naukavkoledzhi } from '../routes/under-routes/Research-activities/subdivisions/Nauka-v-koledzhi'
-import { Naukovadiialnistvykladachiv } from '../routes/under-routes/Research-activities/subdivisions/Naukova-diialnist-vykladachiv'
-import { Naukovodoslidnarobotastudentiv } from '../routes/under-routes/Research-activities/subdivisions/Naukovodoslidna-robota-studentiv'
-import { Supportandtrust } from '../routes/under-routes/Support-and-trust'
-import Breadcrumbs from './Breadcrumbs/Breadcrumbs'
-import { Container } from './Container'
-import { BigMenu } from './Menu/BigMenu'
-import { AboutCollege } from './sections/AboutCollege'
-import { Advantages } from './sections/Advantages'
-import { Copyright } from './sections/Copyright'
-import { Footer } from './sections/Footer'
-import { Header } from './sections/Header'
-import { Main } from './sections/Main'
-import SubMenu from './sections/SubMenu/SubMenu'
-import { VideoPlayer } from './sections/VideoPlayer'
+import { Route, Routes, useLocation } from 'react-router-dom';
+import '../common/generall.scss';
+import '../common/reset.scss';
+import { Accreditation } from '../routes/header-routes/Accreditation';
+import { Library } from '../routes/header-routes/Library';
+import { Activity } from '../routes/header-routes/Library/activity';
+import { Resource } from '../routes/header-routes/Library/resources';
+import { LeadingLibraries } from '../routes/header-routes/Library/resources/leadingLibraries';
+import { Schedule } from '../routes/header-routes/Schedule';
+import { College } from '../routes/subMenu-routes/College';
+import { Pronas } from '../routes/subMenu-routes/College/subdivisions/Pro-nas';
+import { Education } from '../routes/subMenu-routes/Education';
+import { News } from '../routes/subMenu-routes/News';
+import { Quality } from '../routes/subMenu-routes/Quality';
+import { Contacts } from '../routes/subMenu-routes/Сontacts';
+import { Educationalunits } from '../routes/under-routes/Educational-units';
+import { Department } from '../routes/under-routes/Educational-units/subdivisions/Department';
+import { MainSub } from '../routes/under-routes/Educational-units/subdivisions/MainSub';
+import { Metodychnikomisii } from '../routes/under-routes/Educational-units/subdivisions/Metodychni-komisii';
+import { Tsyklovikomisii } from '../routes/under-routes/Educational-units/subdivisions/Tsyklovi-komisii';
+import { Entrycompany } from '../routes/under-routes/Entry-company';
+import { Arkhiv } from '../routes/under-routes/Entry-company/subdivisions/Arkhiv';
+import { Opsfakhovyimolodshyibakalavr } from '../routes/under-routes/Entry-company/subdivisions/Ops-fakhovyi-molodshyi-bakalavr';
+import { Starshoklasnykam } from '../routes/under-routes/Entry-company/subdivisions/Starshoklasnykam';
+import { Vstup } from '../routes/under-routes/Entry-company/subdivisions/Vstup';
+import { Researchactivities } from '../routes/under-routes/Research-activities';
+import { Dninauky } from '../routes/under-routes/Research-activities/subdivisions/Dni-nauky';
+import { Naukavkoledzhi } from '../routes/under-routes/Research-activities/subdivisions/Nauka-v-koledzhi';
+import { Naukovadiialnistvykladachiv } from '../routes/under-routes/Research-activities/subdivisions/Naukova-diialnist-vykladachiv';
+import { Naukovodoslidnarobotastudentiv } from '../routes/under-routes/Research-activities/subdivisions/Naukovodoslidna-robota-studentiv';
+import { Supportandtrust } from '../routes/under-routes/Support-and-trust';
+import Breadcrumbs from './Breadcrumbs/Breadcrumbs';
+import { Container } from './Container';
+import { BigMenu } from './Menu/BigMenu';
+import { UsefulLinks } from './UsefulLinks';
+import { AboutCollege } from './sections/AboutCollege';
+import { Advantages } from './sections/Advantages';
+import { Copyright } from './sections/Copyright';
+import { Footer } from './sections/Footer';
+import { Header } from './sections/Header';
+import { Main } from './sections/Main';
+import SubMenu from './sections/SubMenu/SubMenu';
+import { VideoPlayer } from './sections/VideoPlayer';
 
 const Wrapper = () => {
 	const location = useLocation();
@@ -109,14 +110,8 @@ const Wrapper = () => {
 						element={<Naukovadiialnistvykladachiv />}
 					/>
 					<Route path='/college/pro-nas' element={<Pronas />} />
-					<Route
-						path='/library/activity'
-						element={<Activity />}
-					/>
-					<Route
-						path='/library/resources'
-						element={<Resource />}
-					/>
+					<Route path='/library/activity' element={<Activity />} />
+					<Route path='/library/resources' element={<Resource />} />
 					<Route
 						path='/library/resources/leadingLibraries'
 						element={<LeadingLibraries />}
@@ -125,8 +120,13 @@ const Wrapper = () => {
 			</Container>
 			{isHomePage && <Advantages />}
 			{isHomePage && (
-				<Container section>
+				<Container>
 					<AboutCollege />
+				</Container>
+			)}
+			{isHomePage && (
+				<Container>
+					<UsefulLinks />
 				</Container>
 			)}
 			<Container className='blue-decor'>

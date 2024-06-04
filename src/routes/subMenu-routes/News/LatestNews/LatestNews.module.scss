@@ -1,0 +1,31 @@
+// LatestNews.module.scss
+.latest-news {
+	width: 20%; // Займає 20% від загальної ширини
+	padding: 10px;
+	border: 1px solid #ccc;
+	border-radius: 8px;
+	margin-left: 20px; // Додаємо відступ зліва
+
+	.news-item {
+		margin-bottom: 20px;
+		last-child: {
+			margin-bottom: 0;
+		}
+
+		img {
+			width: 100%;
+			border-radius: 5px;
+			margin-bottom: 10px;
+		}
+
+		h3 {
+			font-size: 16px;
+			margin-bottom: 5px;
+		}
+
+		p {
+			font-size: 14px;
+			color: #666;
+		}
+	}
+}
