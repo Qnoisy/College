@@ -1,6 +1,6 @@
 import Page from '../../../../../Page/Page'
 import DropUpMenu from '../../../../../components/DropUpMenu/DropUpMenu'
-import DemoBlock from '../../../../../components/sample/DemoBlock/DemoBlock'
+import Block from '../../../../../components/sample/Block/Block'
 import Title from '../../../../../components/sample/Title/Title'
 
 
@@ -141,7 +141,7 @@ const leadingLibrariesContent = (
 
 return (
 	<Page title='Провідні бібліотеки світу'>
-		<DemoBlock content={leadingLibrariesContent} />
+		<Block content={leadingLibrariesContent} />
 	</Page>
 );
 };

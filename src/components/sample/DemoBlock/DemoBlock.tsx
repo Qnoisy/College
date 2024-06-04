@@ -1,7 +1,7 @@
-import classNames from 'classnames'
-import React from 'react'
-import { Link } from 'react-router-dom'
-import styles from './DemoBlock.module.scss'
+import classNames from 'classnames';
+import React from 'react';
+import { Link } from 'react-router-dom';
+import styles from './DemoBlock.module.scss';
 
 interface Route {
 	name: string;
@@ -25,9 +25,36 @@ const DemoBlock: React.FC<DemoBlockProps> = ({
 			<div className={classNames(styles['demo-block__main-content'])}>
 				{content && (
 					<div className={classNames(styles['demo-block__text-content'])}>
-						{content}
+						<div className={styles['demo-block__text-content-text']}>
+							{content}
+						</div>
+						{additionalLinks.length > 0 && (
+							<div className={classNames(styles['demo-block__links'])}>
+								{additionalLinks.map(link => (
+									<Link
+										key={link.path}
+										to={link.path}
+										className={classNames(styles['demo-block__link'])}
+									>
+										<div
+											className={classNames(styles['demo-block__link-text'])}
+										>
+											{link.icon && (
+												<span
+													className={classNames(styles['demo-block__icon'])}
+												>
+													{link.icon}
+												</span>
+											)}
+											{link.name}
+										</div>
+									</Link>
+								))}
+							</div>
+						)}
 					</div>
 				)}
+
 				<div className={classNames(styles['demo-block__navigation'])}>
 					<div className={styles['demo-block__title']}>Підрозділи</div>
 					{routes.map((route, index) => (
@@ -47,26 +74,6 @@ const DemoBlock: React.FC<DemoBlockProps> = ({
 					))}
 				</div>
 			</div>
-			{additionalLinks.length > 0 && (
-				<div className={classNames(styles['demo-block__links'])}>
-					{additionalLinks.map(link => (
-						<Link
-							key={link.path}
-							to={link.path}
-							className={classNames(styles['demo-block__link'])}
-						>
-							<div className={classNames(styles['demo-block__link-text'])}>
-								{link.icon && (
-									<span className={classNames(styles['demo-block__icon'])}>
-										{link.icon}
-									</span>
-								)}
-								{link.name}
-							</div>
-						</Link>
-					))}
-				</div>
-			)}
 		</div>
 	);
 };

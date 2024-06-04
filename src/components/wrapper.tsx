@@ -16,12 +16,21 @@ import { Contacts } from '../routes/subMenu-routes/Сontacts';
 import { Educationalunits } from '../routes/under-routes/Educational-units';
 import { Department } from '../routes/under-routes/Educational-units/subdivisions/Department';
 import { MainSub } from '../routes/under-routes/Educational-units/subdivisions/MainSub';
-import { Metodychnikomisii } from '../routes/under-routes/Educational-units/subdivisions/Metodychni-komisii';
 import { Tsyklovikomisii } from '../routes/under-routes/Educational-units/subdivisions/Tsyklovi-komisii';
 import { Entrycompany } from '../routes/under-routes/Entry-company';
-import { Arkhiv } from '../routes/under-routes/Entry-company/subdivisions/Arkhiv';
 import { Opsfakhovyimolodshyibakalavr } from '../routes/under-routes/Entry-company/subdivisions/Ops-fakhovyi-molodshyi-bakalavr';
+import { EA } from '../routes/under-routes/Entry-company/subdivisions/Ops-fakhovyi-molodshyi-bakalavr/ea';
+import { EK } from '../routes/under-routes/Entry-company/subdivisions/Ops-fakhovyi-molodshyi-bakalavr/ek';
+import { EP } from '../routes/under-routes/Entry-company/subdivisions/Ops-fakhovyi-molodshyi-bakalavr/ep';
+import { ES } from '../routes/under-routes/Entry-company/subdivisions/Ops-fakhovyi-molodshyi-bakalavr/es';
+import { OD } from '../routes/under-routes/Entry-company/subdivisions/Ops-fakhovyi-molodshyi-bakalavr/od';
+import { OM } from '../routes/under-routes/Entry-company/subdivisions/Ops-fakhovyi-molodshyi-bakalavr/om';
+import { OV } from '../routes/under-routes/Entry-company/subdivisions/Ops-fakhovyi-molodshyi-bakalavr/ov';
+import { PS } from '../routes/under-routes/Entry-company/subdivisions/Ops-fakhovyi-molodshyi-bakalavr/ps';
+import { RA } from '../routes/under-routes/Entry-company/subdivisions/Ops-fakhovyi-molodshyi-bakalavr/ra';
+import { ZM } from '../routes/under-routes/Entry-company/subdivisions/Ops-fakhovyi-molodshyi-bakalavr/zm';
 import { Starshoklasnykam } from '../routes/under-routes/Entry-company/subdivisions/Starshoklasnykam';
+import { Chooseprofesion } from '../routes/under-routes/Entry-company/subdivisions/Starshoklasnykam/choose-profesion';
 import { Vstup } from '../routes/under-routes/Entry-company/subdivisions/Vstup';
 import { Researchactivities } from '../routes/under-routes/Research-activities';
 import { Dninauky } from '../routes/under-routes/Research-activities/subdivisions/Dni-nauky';
@@ -29,6 +38,9 @@ import { Naukavkoledzhi } from '../routes/under-routes/Research-activities/subdi
 import { Naukovadiialnistvykladachiv } from '../routes/under-routes/Research-activities/subdivisions/Naukova-diialnist-vykladachiv';
 import { Naukovodoslidnarobotastudentiv } from '../routes/under-routes/Research-activities/subdivisions/Naukovodoslidna-robota-studentiv';
 import { Supportandtrust } from '../routes/under-routes/Support-and-trust';
+import { Praktychnyipsykholoh } from '../routes/under-routes/Support-and-trust/subdivisions/Praktychnyi-psykholoh';
+import { Sotsialnopsykholohichnapidtrymka } from '../routes/under-routes/Support-and-trust/subdivisions/Sotsialno-psykholohichna-pidtrymka';
+import { Sotsialnyipedahoh } from '../routes/under-routes/Support-and-trust/subdivisions/Sotsialnyi-pedahoh';
 import Breadcrumbs from './Breadcrumbs/Breadcrumbs';
 import { Container } from './Container';
 import { BigMenu } from './Menu/BigMenu';
@@ -45,6 +57,7 @@ import { VideoPlayer } from './sections/VideoPlayer';
 const Wrapper = () => {
 	const location = useLocation();
 	const isHomePage = location.pathname === '/';
+
 	return (
 		<div className='wrapper'>
 			<Container className='blue-decor'>
@@ -58,7 +71,7 @@ const Wrapper = () => {
 			<Container className='light-bg' offPadding>
 				<Breadcrumbs />
 			</Container>
-			<Container className='main' section>
+			<Container className='main'>
 				<Routes>
 					<Route path='/' element={<Main />} />
 					<Route path='/accreditation' element={<Accreditation />} />
@@ -73,7 +86,6 @@ const Wrapper = () => {
 					<Route path='/educational-units' element={<Educationalunits />} />
 					<Route path='/research-activities' element={<Researchactivities />} />
 					<Route path='/support-and-trust' element={<Supportandtrust />} />
-					<Route path='/entry-company/arkhiv' element={<Arkhiv />} />
 					<Route
 						path='/entry-company/ops-fakhovyi-molodshyi-bakalavr'
 						element={<Opsfakhovyimolodshyibakalavr />}
@@ -88,10 +100,6 @@ const Wrapper = () => {
 						element={<Department />}
 					/>
 					<Route path='/educational-units/mainsub' element={<MainSub />} />
-					<Route
-						path='/educational-units/metodychni-komisii'
-						element={<Metodychnikomisii />}
-					/>
 					<Route
 						path='/educational-units/tsyklovi-komisii'
 						element={<Tsyklovikomisii />}
@@ -115,6 +123,62 @@ const Wrapper = () => {
 					<Route
 						path='/library/resources/leadingLibraries'
 						element={<LeadingLibraries />}
+					/>
+					<Route
+						path='/support-and-trust/sotsialnyi-pedahoh'
+						element={<Sotsialnyipedahoh />}
+					/>
+					<Route
+						path='/support-and-trust/praktychnyi-psykholoh'
+						element={<Praktychnyipsykholoh />}
+					/>
+					<Route
+						path='/support-and-trust/sotsialno-psykholohichna-pidtrymka'
+						element={<Sotsialnopsykholohichnapidtrymka />}
+					/>
+					<Route
+						path='/entry-company/ops-fakhovyi-molodshyi-bakalavr/es'
+						element={<ES />}
+					/>
+					<Route
+						path='/entry-company/ops-fakhovyi-molodshyi-bakalavr/ep'
+						element={<EP />}
+					/>
+					<Route
+						path='/entry-company/ops-fakhovyi-molodshyi-bakalavr/ov'
+						element={<OV />}
+					/>
+					<Route
+						path='/entry-company/ops-fakhovyi-molodshyi-bakalavr/ek'
+						element={<EK />}
+					/>
+					<Route
+						path='/entry-company/ops-fakhovyi-molodshyi-bakalavr/ps'
+						element={<PS />}
+					/>
+					<Route
+						path='/entry-company/ops-fakhovyi-molodshyi-bakalavr/ea'
+						element={<EA />}
+					/>
+					<Route
+						path='/entry-company/ops-fakhovyi-molodshyi-bakalavr/ra'
+						element={<RA />}
+					/>
+					<Route
+						path='/entry-company/ops-fakhovyi-molodshyi-bakalavr/od'
+						element={<OD />}
+					/>
+					<Route
+						path='/entry-company/ops-fakhovyi-molodshyi-bakalavr/zm'
+						element={<ZM />}
+					/>
+					<Route
+						path='/entry-company/ops-fakhovyi-molodshyi-bakalavr/om'
+						element={<OM />}
+					/>
+					<Route
+						path='/entry-company/starshoklasnykam/choose-profesion'
+						element={<Chooseprofesion />}
 					/>
 				</Routes>
 			</Container>
