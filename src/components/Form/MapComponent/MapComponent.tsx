@@ -1,4 +1,6 @@
+
 import styles from './MapComponent.module.scss'
+
 const MapComponent = () => {
 	return (
 		<iframe

@@ -1,12 +1,12 @@
 // CustomForm.tsx
-import { Form, Formik } from 'formik';
-import React from 'react';
-import { Button } from '../Button';
-import styles from './Form.module.scss';
+import { Form, Formik } from 'formik'
+import React from 'react'
+import { Button } from '../Button'
+import styles from './Form.module.scss'
 import { Input } from './Input'; // Предполагаем, что Input уже типизирован
-import MapComponent from './MapComponent/MapComponent';
-import { Textarea } from './Textarea';
-import { initialValues, schemas } from './helper';
+import MapComponent from './MapComponent/MapComponent'
+import { Textarea } from './Textarea'
+import { initialValues, schemas } from './helper'
 
 export const CustomForm: React.FC = () => {
 	return (

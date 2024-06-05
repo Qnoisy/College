@@ -1,4 +1,7 @@
 
+import '../common/generall.scss'
+import '../common/reset.scss'
+
 import { Route, Routes, useLocation } from 'react-router-dom'
 import '../common/generall.scss'
 import '../common/reset.scss'
@@ -45,6 +48,7 @@ import { Sotsialnyipedahoh } from '../routes/under-routes/Support-and-trust/subd
 import Breadcrumbs from './Breadcrumbs/Breadcrumbs'
 import { Container } from './Container'
 import { BigMenu } from './Menu/BigMenu'
+import { UsefulLinks } from './UsefulLinks'
 import { AboutCollege } from './sections/AboutCollege'
 import { Advantages } from './sections/Advantages'
 import { Copyright } from './sections/Copyright'
@@ -54,14 +58,11 @@ import { Main } from './sections/Main'
 import SubMenu from './sections/SubMenu/SubMenu'
 import { VideoPlayer } from './sections/VideoPlayer'
 
-import '../common/generall.scss'
-import '../common/reset.scss'
-import { UsefulLinks } from './UsefulLinks'
-
 
 const Wrapper = () => {
 	const location = useLocation();
 	const isHomePage = location.pathname === '/';
+
 	return (
 		<div className='wrapper'>
 			<Container className='blue-decor'>
@@ -75,7 +76,7 @@ const Wrapper = () => {
 			<Container className='light-bg' offPadding>
 				<Breadcrumbs />
 			</Container>
-			<Container className='main' section>
+			<Container className='main'>
 				<Routes>
 					<Route path='/' element={<Main />} />
 					<Route path='/accreditation' element={<Accreditation />} />
@@ -144,7 +145,7 @@ const Wrapper = () => {
 						path='/entry-company/ops-fakhovyi-molodshyi-bakalavr/es'
 						element={<ES />}
 					/>
-						<Route
+					<Route
 						path='/entry-company/ops-fakhovyi-molodshyi-bakalavr/ep'
 						element={<EP />}
 					/>
@@ -172,11 +173,11 @@ const Wrapper = () => {
 						path='/entry-company/ops-fakhovyi-molodshyi-bakalavr/od'
 						element={<OD />}
 					/>
-						<Route
+					<Route
 						path='/entry-company/ops-fakhovyi-molodshyi-bakalavr/zm'
 						element={<ZM />}
 					/>
-						<Route
+					<Route
 						path='/entry-company/ops-fakhovyi-molodshyi-bakalavr/om'
 						element={<OM />}
 					/>
