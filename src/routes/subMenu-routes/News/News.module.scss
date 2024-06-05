@@ -1,6 +1,8 @@
 @import '../../../common/generall';
 .news {
 	font-family: $fftext;
+	display: flex;
+	justify-content: space-between;
 }
 .news__title {
 	@include color-second;

@@ -12,7 +12,7 @@ const categories = ['Всі статті', 'Актуально', 'Анонси',
 
 const NewsList: React.FC<NewsListProps> = ({ newsItems }) => {
 	const [currentPage, setCurrentPage] = useState<number>(1);
-	const [newsPerPage] = useState<number>(2);
+	const [newsPerPage] = useState<number>(3);
 	const [filter, setFilter] = useState<string>('Всі статті');
 
 	const filteredNews: NewsItem[] = newsItems.filter(
@@ -30,7 +30,7 @@ const NewsList: React.FC<NewsListProps> = ({ newsItems }) => {
 
 	return (
 		<div>
-			<div>
+			<div className={styles.categories}>
 				{categories.map(cat => (
 					<button
 						key={cat}
@@ -46,7 +46,11 @@ const NewsList: React.FC<NewsListProps> = ({ newsItems }) => {
 			<div className={styles.newsContainer}>
 				{currentNews.map(news => (
 					<div key={news.title} className={styles.newsItem}>
-						<img src={news.imageUrl} alt={news.title} />
+						<img
+							src={news.imageUrl}
+							alt={news.title}
+							className={styles.newsItem__img}
+						/>
 						<h3>{news.title}</h3>
 						<p>{news.description}</p>
 					</div>

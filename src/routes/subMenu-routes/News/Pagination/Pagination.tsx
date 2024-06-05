@@ -1,3 +1,4 @@
+import styles from './Pagination.module.scss';
 interface PaginationProps {
 	itemsPerPage: number;
 	totalItems: number;
@@ -16,10 +17,13 @@ export const Pagination = ({
 
 	return (
 		<nav>
-			<ul className='pagination'>
+			<ul className={styles.pagination}>
 				{pageNumbers.map(number => (
-					<li key={number} className='page-item'>
-						<button onClick={() => paginate(number)} className='page-link'>
+					<li key={number} className={styles.pageItem}>
+						<button
+							onClick={() => paginate(number)}
+							className={styles.pageLink}
+						>
 							{number}
 						</button>
 					</li>

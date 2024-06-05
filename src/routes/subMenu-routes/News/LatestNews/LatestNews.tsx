@@ -13,7 +13,11 @@ const LatestNews: React.FC<LatestNewsProps> = ({ newsItems }) => {
 		<div className={styles.latestNews}>
 			{latestNews.map(news => (
 				<div key={news.title} className={styles.newsItem}>
-					<img src={news.imageUrl} alt={news.title} />
+					<img
+						src={news.imageUrl}
+						alt={news.title}
+						className={styles.newsItem__img}
+					/>
 					<h3>{news.title}</h3>
 					<p>{news.description}</p>
 				</div>
