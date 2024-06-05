@@ -1,6 +1,10 @@
 @import '../../../../common/generall';
 .menu {
 	font-family: $ffbtn-text;
+	@media (max-width: 959.98px) {
+		display: none;
+	}
+	//!
 }
 .menu__title {
 	@include color;

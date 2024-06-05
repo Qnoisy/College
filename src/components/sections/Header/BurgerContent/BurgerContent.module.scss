@@ -1,5 +1,4 @@
 @import '../../../../common/generall';
-
 .burgerContent {
 	overflow: hidden;
 	@include bg-color-second;
@@ -21,13 +20,54 @@
 }
 .burgerContent__block {
 	position: absolute;
-	// right: 0;
 	top: 0;
+	min-width: 100%;
 }
 .burgerContent__block_row {
 	display: flex;
 	justify-content: space-between;
-	padding-right: 0.9rem;
-	padding-top: 1.3rem;
-	gap: 5rem;
+	padding: 1rem 0;
+	gap: 1rem;
+	@media (max-width: 959.98px) {
+		padding: 0.5rem 0.5rem;
+	}
 }
+.burgerContent__block_list {
+	display: grid;
+	height: 100%;
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-rows: auto;
+	gap: 4rem;
+	@media (max-width: 959.98px) {
+		grid-template-columns: repeat(2, 1fr);
+		gap: 2rem;
+	}
+}
+.burgerContent__link {
+	@include color-second;
+	font-size: 1.4rem;
+}
+.contacts__links {
+	display: flex;
+	flex-direction: column;
+}
+.contacts__link {
+	@include color-second;
+	font-size: 1.2rem;
+	padding: 1.2rem 0;
+}
+// @media (max-width: 1151.98px) {
+
+// }
+// @media (max-width: 959.98px) {
+
+// }
+// @media (max-width:767.98px) {
+
+// }
+// @media (max-width:539.98px) {
+
+// }
+// @media (max-width:400.98px) {
+
+// }

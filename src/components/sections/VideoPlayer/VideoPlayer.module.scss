@@ -41,6 +41,7 @@ video {
 	left: 50%;
 	transform: translate(-50%, -50%);
 	z-index: 2;
+	width: 100%;
 
 	@include color;
 	font-family: $ffbtn-text;
@@ -50,4 +51,12 @@ video {
 	font-size: 3.5rem;
 	line-height: 3.5rem;
 	font-weight: bold;
+	@media (max-width: 1151.98px) {
+		font-size: 3rem;
+	}
+	@media (max-width: 959.98px) {
+		font-size: 2rem;
+	}
+	@media (max-width: 767.98px) {
+	}
 }

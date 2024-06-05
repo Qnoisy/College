@@ -7,11 +7,17 @@ interface ContactLinkProps {
 	url: string;
 	icon?: IconType; // icon is optional
 	text: string;
+	className?: string;
 }
 
-const ContactLink: React.FC<ContactLinkProps> = ({ url, icon: Icon, text }) => {
+const ContactLink: React.FC<ContactLinkProps> = ({
+	url,
+	icon: Icon,
+	text,
+	className,
+}) => {
 	return (
-		<a href={url} className={classNames(styles.header__link, 'row')}>
+		<a href={url} className={classNames(styles.header__link, className, 'row')}>
 			{Icon && <Icon className={styles.header__icon} />}
 			<span>{text}</span>
 		</a>

@@ -1,5 +1,9 @@
 @import '../../../../common/generall';
 .burger {
+	display: none;
+	@media (max-width: 1151.98px) {
+		display: block;
+	}
 }
 .burger__btn {
 	position: absolute;
@@ -11,12 +15,10 @@
 }
 .burger__content {
 	@include bg-color-third;
-
 	position: absolute;
 	z-index: 5;
 	top: 0;
 	right: 0;
-
 	height: 100%;
 	padding: 1rem;
 	transition: right 0.3s ease; /* Плавное появление */

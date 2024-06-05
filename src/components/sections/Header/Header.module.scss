@@ -4,6 +4,9 @@
 	justify-content: space-between;
 	gap: 1rem;
 	font-family: $ffbtn-text;
+	@media (max-width: 539.98px) {
+		justify-content: flex-end;
+	}
 }
 .header__block {
 	display: flex;
@@ -22,26 +25,14 @@
 		}
 	}
 }
-.header__btn {
-	background-color: rgba(0, 0, 0, 0);
-}
-.header__theme {
-	@include color;
+.header__links {
 	display: flex;
-	align-items: center;
-	font-size: 1.3rem;
-	@media (max-width: 959.98px) {
+	gap: 6rem;
+	@media (max-width: 1151.98px) {
+		gap: 1rem;
+	}
+	@media (max-width: 539.98px) {
 		display: none;
-	}
-	@media (hover: hover) {
-		&:hover {
-			@include color-hover;
-		}
-	}
-	@media (hover: none) {
-		&:active {
-			@include color-hover;
-		}
 	}
 }
 // @media (max-width: 1151.98px) {
