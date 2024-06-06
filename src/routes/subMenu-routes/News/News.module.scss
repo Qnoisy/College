@@ -3,6 +3,7 @@
 	font-family: $fftext;
 	display: flex;
 	justify-content: space-between;
+	gap: 1rem;
 }
 .news__title {
 	@include color-second;
