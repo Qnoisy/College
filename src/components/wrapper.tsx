@@ -19,7 +19,6 @@ import { Quality } from '../routes/subMenu-routes/Quality'
 import { Contacts } from '../routes/subMenu-routes/Сontacts'
 import { Educationalunits } from '../routes/under-routes/Educational-units'
 import { Department } from '../routes/under-routes/Educational-units/subdivisions/Department'
-import { MainSub } from '../routes/under-routes/Educational-units/subdivisions/MainSub'
 import { Tsyklovikomisii } from '../routes/under-routes/Educational-units/subdivisions/Tsyklovi-komisii'
 import { Entrycompany } from '../routes/under-routes/Entry-company'
 import { Opsfakhovyimolodshyibakalavr } from '../routes/under-routes/Entry-company/subdivisions/Ops-fakhovyi-molodshyi-bakalavr'
@@ -47,7 +46,7 @@ import { Sotsialnopsykholohichnapidtrymka } from '../routes/under-routes/Support
 import { Sotsialnyipedahoh } from '../routes/under-routes/Support-and-trust/subdivisions/Sotsialnyi-pedahoh'
 import Breadcrumbs from './Breadcrumbs/Breadcrumbs'
 import { Container } from './Container'
-import { BigMenu } from './Menu/BigMenu'
+
 import { UsefulLinks } from './UsefulLinks'
 import { AboutCollege } from './sections/AboutCollege'
 import { Advantages } from './sections/Advantages'
@@ -58,10 +57,31 @@ import { Main } from './sections/Main'
 import SubMenu from './sections/SubMenu/SubMenu'
 import { VideoPlayer } from './sections/VideoPlayer'
 
+import '../common/generall.scss'
+import '../common/reset.scss'
+import { DEPARTMENTOFBUSINESSEDUCATIONANDKT } from '../routes/under-routes/Educational-units/subdivisions/Department/DEPARTMENT OF BUSINESS EDUCATION AND KT'
+import { Electricalengineering } from '../routes/under-routes/Educational-units/subdivisions/Department/Electrical engineering'
+import { Electromechanical } from '../routes/under-routes/Educational-units/subdivisions/Department/Electromechanical'
+import { Mechanical } from '../routes/under-routes/Educational-units/subdivisions/Department/Mechanical'
+import { CCofGTDandIME } from '../routes/under-routes/Educational-units/subdivisions/Tsyklovi-komisii/CC of GTD and IME'
+import { CycCommDiscProfPracTrainElecEnergySpec } from '../routes/under-routes/Educational-units/subdivisions/Tsyklovi-komisii/CycCommDiscProfPracTrainElecEnergySpec'
+import { CyclicCommissionofDisciplinesofGeneralEducation } from '../routes/under-routes/Educational-units/subdivisions/Tsyklovi-komisii/Cyclic Commission of Disciplines of General Education'
+import { Cycliccommissionofphilologicalandhumanitariandisciplines } from '../routes/under-routes/Educational-units/subdivisions/Tsyklovi-komisii/Cyclic commission of philological and humanitarian disciplines'
+import { CyclicalCommissionofRoadTransportDisciplines } from '../routes/under-routes/Educational-units/subdivisions/Tsyklovi-komisii/Cyclical Commission of Road Transport Disciplines'
+import { Cyclicalcommissionofelectromechanicaldisciplines } from '../routes/under-routes/Educational-units/subdivisions/Tsyklovi-komisii/Cyclical commission of electromechanical disciplines'
+import { CyclingCommissionofSoftwareandSocioEconomicDisciplines } from '../routes/under-routes/Educational-units/subdivisions/Tsyklovi-komisii/Cycling Commission of Software and Socio-Economic Disciplines'
+import { BigMenu } from './sections/Header/Menu/BigMenu'
+
 
 const Wrapper = () => {
 	const location = useLocation();
 	const isHomePage = location.pathname === '/';
+	// const customRoutes = useRoutes([
+	// 	{
+	// 		path: '/',
+	// 		element: <Main />,
+	// 	},
+	// ]);
 
 	return (
 		<div className='wrapper'>
@@ -104,7 +124,6 @@ const Wrapper = () => {
 						path='/educational-units/department'
 						element={<Department />}
 					/>
-					<Route path='/educational-units/mainsub' element={<MainSub />} />
 					<Route
 						path='/educational-units/tsyklovi-komisii'
 						element={<Tsyklovikomisii />}
@@ -184,6 +203,50 @@ const Wrapper = () => {
 					<Route
 						path='/entry-company/starshoklasnykam/choose-profesion'
 						element={<Chooseprofesion />}
+					/>
+					<Route
+						path='/educational-units/tsyklovi-komisii/CyclicCommissionofDisciplinesofGeneralEducation'
+						element={<CyclicCommissionofDisciplinesofGeneralEducation />}
+					/>
+					<Route
+						path='/educational-units/tsyklovi-komisii/Cycliccommissionofphilologicalandhumanitariandisciplines'
+						element={<Cycliccommissionofphilologicalandhumanitariandisciplines />}
+					/>
+					<Route
+						path='/educational-units/tsyklovi-komisii/CyclingCommissionofSoftwareandSocioEconomicDisciplines'
+						element={<CyclingCommissionofSoftwareandSocioEconomicDisciplines />}
+					/>
+					<Route
+						path='/educational-units/tsyklovi-komisii/CycCommDiscProfPracTrainElecEnergySpec'
+						element={<CycCommDiscProfPracTrainElecEnergySpec />}
+					/>
+					<Route
+						path='/educational-units/tsyklovi-komisii/Cyclicalcommissionofelectromechanicaldisciplines'
+						element={<Cyclicalcommissionofelectromechanicaldisciplines />}
+					/>
+					<Route
+						path='/educational-units/tsyklovi-komisii/CCofGTDandIME'
+						element={<CCofGTDandIME />}
+					/>
+						<Route
+						path='/educational-units/tsyklovi-komisii/CyclicalCommissionofRoadTransportDisciplines'
+						element={<CyclicalCommissionofRoadTransportDisciplines />}
+					/>
+					<Route
+						path='/educational-units/department/DEPARTMENTOFBUSINESSEDUCATIONANDKT'
+						element={<DEPARTMENTOFBUSINESSEDUCATIONANDKT />}
+					/>
+						<Route
+						path='/educational-units/department/Electromechanical'
+						element={<Electromechanical />}
+					/>
+						<Route
+						path='/educational-units/department/Electricalengineering'
+						element={<Electricalengineering />}
+					/>
+					<Route
+						path='/educational-units/department/Mechanical'
+						element={<Mechanical />}
 					/>
 				</Routes>
 			</Container>

@@ -3,7 +3,8 @@ import { useEffect, useRef, useState } from 'react';
 import { subRoutes } from '../../../data/data';
 import { Container } from '../../Container';
 import { Logo } from '../../Logo';
-import { Menu } from '../../Menu';
+import { Burger } from '../Header/Burger';
+import { Menu } from '../Header/Menu';
 import styles from './SubMenu.module.scss';
 
 const SubMenu = () => {
@@ -42,6 +43,7 @@ const SubMenu = () => {
 							linkClassName={styles.links__style}
 							menuClassName={styles.link__style}
 						/>
+						<Burger />
 					</nav>
 				</Container>
 			</div>

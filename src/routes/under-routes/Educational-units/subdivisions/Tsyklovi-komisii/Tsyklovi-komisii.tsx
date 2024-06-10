@@ -1,3 +1,6 @@
+import { FaCar, FaLaptopCode } from "react-icons/fa"
+import { GiMaterialsScience, GiMechanicGarage, GiPowerGenerator, GiWorld } from "react-icons/gi"
+import { MdOutlineElectricBolt } from "react-icons/md"
 import Page from '../../../../../Page/Page'
 import DemoBlock from '../../../../../components/sample/DemoBlock/DemoBlock'
 import Title from '../../../../../components/sample/Title/Title'
@@ -6,42 +9,51 @@ export const Tsyklovikomisii = () => {
 	const tsyklovikomisiiLinks = [
 		{
 			name: 'ЦИКЛОВА КОМІСІЯ  ДИСЦИПЛІН ЗАГАЛЬНООСВІТНЬОЇ ПІДГОТОВКИ',
-			path: '/entry-company/ops-fakhovyi-molodshyi-bakalavr',
+			path: '/educational-units/tsyklovi-komisii/CyclicCommissionofDisciplinesofGeneralEducation',
+			icon: <GiMaterialsScience />
 			
 		},
 		{ 
 			name: 'ЦИКЛОВА КОМІСІЯ  ФІЛОЛОГІЧНИХ ТА ГУМАНІТАРНИХ ДИСЦИПЛІН', 
-			path: '/entry-company/vstup' 
+			path: '/educational-units/tsyklovi-komisii/Cycliccommissionofphilologicalandhumanitariandisciplines',
+			icon: <GiWorld /> 
 		},
 		{
 			name: 'ЦИКЛОВА КОМІСІЯ  ПРОГРАМНОГО ЗАБЕЗПЕЧЕННЯ ТА СОЦІАЛЬНО-ЕКОНОМІЧНИХ ДИСЦИПЛІН',
-			path: '/entry-company/starshoklasnykam',
+			path: '/educational-units/tsyklovi-komisii/CyclingCommissionofSoftwareandSocioEconomicDisciplines',
+			icon: <FaLaptopCode />
 		},
 		{
 			name: 'ЦИКЛОВА КОМІСІЯ ДИСЦИПЛІН ПРОФЕСІЙНО-ПРАКТИЧНОЇ ПІДГОТОВКИ ЕЛЕКТРОЕНЕРГЕТИЧНИХ СПЕЦІАЛЬНОСТЕЙ',
-			path: '/entry-company/starshoklasnykam',
+			path: '/educational-units/tsyklovi-komisii/CycCommDiscProfPracTrainElecEnergySpec',
+			icon: <GiPowerGenerator />
 		},
 		{
 			name: 'ЦИКЛОВА КОМІСІЯ ЕЛЕКТРОМЕХАНІЧНИХ ДИСЦИПЛІН',
-			path: '/entry-company/starshoklasnykam',
+			path: '/educational-units/tsyklovi-komisii/Cyclicalcommissionofelectromechanicaldisciplines',
+			icon: <MdOutlineElectricBolt />,
 		},
 		{
 			name: 'ЦИКЛОВА КОМІСІЯ ЗАГАЛЬНОТЕХНІЧНИХ ДИСЦИПЛІН ТА ГАЛУЗЕВОГО МАШИНОБУДУВАННЯ',
-			path: '/entry-company/starshoklasnykam',
-		},
+			path: '/educational-units/tsyklovi-komisii/CCofGTDandIME',
+			icon: <GiMechanicGarage />,},
 		{
 			name: 'ЦИКЛОВА КОМІСІЯ ДИСЦИПЛІН АВТОМОБІЛЬНОГО ТРАНСПОРТУ',
-			path: '/entry-company/starshoklasnykam',
+			path: '/educational-units/tsyklovi-komisii/CyclicalCommissionofRoadTransportDisciplines',
+			icon: <FaCar />,
 		},
 	];
 	const tsyklovikomisiiRoutes = [
-		{ name: 'ЦИКЛОВА КОМІСІЯ  ДИСЦИПЛІН ЗАГАЛЬНООСВІТНЬОЇ ПІДГОТОВКИ', path: '/entry-company/ops-fakhovyi-molodshyi-bakalavr/es' },
-		{ name: 'ЦИКЛОВА КОМІСІЯ  ФІЛОЛОГІЧНИХ ТА ГУМАНІТАРНИХ ДИСЦИПЛІН', path: '/entry-company/ops-fakhovyi-molodshyi-bakalavr/ep' },
-		{ name: 'ЦИКЛОВА КОМІСІЯ  ПРОГРАМНОГО ЗАБЕЗПЕЧЕННЯ ТА СОЦІАЛЬНО-ЕКОНОМІЧНИХ ДИСЦИПЛІН', path: '/entry-company/ops-fakhovyi-molodshyi-bakalavr/ov' },
-		{ name: 'ЦИКЛОВА КОМІСІЯ ДИСЦИПЛІН ПРОФЕСІЙНО-ПРАКТИЧНОЇ ПІДГОТОВКИ ЕЛЕКТРОЕНЕРГЕТИЧНИХ СПЕЦІАЛЬНОСТЕЙ', path: '/entry-company/ops-fakhovyi-molodshyi-bakalavr/ek' },
-		{ name: 'ЦИКЛОВА КОМІСІЯ ЕЛЕКТРОМЕХАНІЧНИХ ДИСЦИПЛІН', path: '/entry-company/ops-fakhovyi-molodshyi-bakalavr/om' },
-		{ name: 'ЦИКЛОВА КОМІСІЯ ЗАГАЛЬНОТЕХНІЧНИХ ДИСЦИПЛІН ТА ГАЛУЗЕВОГО МАШИНОБУДУВАННЯ', path: '/entry-company/ops-fakhovyi-molodshyi-bakalavr/ps' },
-		{ name: 'ЦИКЛОВА КОМІСІЯ ДИСЦИПЛІН АВТОМОБІЛЬНОГО ТРАНСПОРТУ', path: '/entry-company/ops-fakhovyi-molodshyi-bakalavr/ea' },
+		{ name: 'ЦИКЛОВА КОМІСІЯ  ДИСЦИПЛІН ЗАГАЛЬНООСВІТНЬОЇ ПІДГОТОВКИ', path: '/educational-units/tsyklovi-komisii/CyclicCommissionofDisciplinesofGeneralEducation' ,
+		icon: <GiMaterialsScience />},
+		{ name: 'ЦИКЛОВА КОМІСІЯ  ФІЛОЛОГІЧНИХ ТА ГУМАНІТАРНИХ ДИСЦИПЛІН', path: '/educational-units/tsyklovi-komisii/Cycliccommissionofphilologicalandhumanitariandisciplines',icon: <GiWorld /> },
+		{ name: 'ЦИКЛОВА КОМІСІЯ  ПРОГРАМНОГО ЗАБЕЗПЕЧЕННЯ ТА СОЦІАЛЬНО-ЕКОНОМІЧНИХ ДИСЦИПЛІН', path: '/educational-units/tsyklovi-komisii/CyclingCommissionofSoftwareandSocioEconomicDisciplines',icon: <FaLaptopCode />},
+		{ name: 'ЦИКЛОВА КОМІСІЯ ДИСЦИПЛІН ПРОФЕСІЙНО-ПРАКТИЧНОЇ ПІДГОТОВКИ ЕЛЕКТРОЕНЕРГЕТИЧНИХ СПЕЦІАЛЬНОСТЕЙ', path: '/educational-units/tsyklovi-komisii/CycCommDiscProfPracTrainElecEnergySpec',icon: <GiPowerGenerator /> },
+		{ name: 'ЦИКЛОВА КОМІСІЯ ЕЛЕКТРОМЕХАНІЧНИХ ДИСЦИПЛІН', path: '/educational-units/tsyklovi-komisii/Cyclicalcommissionofelectromechanicaldiscipline',
+		icon: <MdOutlineElectricBolt />,},
+		{ name: 'ЦИКЛОВА КОМІСІЯ ЗАГАЛЬНОТЕХНІЧНИХ ДИСЦИПЛІН ТА ГАЛУЗЕВОГО МАШИНОБУДУВАННЯ', path: '/educational-units/tsyklovi-komisii/CCofGTDandIME',icon: <GiMechanicGarage /> },
+		{ name: 'ЦИКЛОВА КОМІСІЯ ДИСЦИПЛІН АВТОМОБІЛЬНОГО ТРАНСПОРТУ', path: '/educational-units/tsyklovi-komisii/CyclicalCommissionofRoadTransportDisciplines',
+		icon: <FaCar />,},
 		];
 	const tsyklovikomisiiContent = (
 		<div>

@@ -1,9 +1,9 @@
-import Page from '../../../Page/Page';
-import { Button } from '../../../components/Button';
-import DemoBlock from '../../../components/sample/DemoBlock/DemoBlock';
-import Subtitle from '../../../components/sample/Subtitle/Subtitle';
+import Page from '../../../Page/Page'
+import { Button } from '../../../components/Button'
+import Block from '../../../components/sample/Block/Block'
+import Subtitle from '../../../components/sample/Subtitle/Subtitle'
 
-import styles from './Schedule.module.scss';
+import styles from './Schedule.module.scss'
 
 export const Schedule = () => {
 	const handleClick = () => {
@@ -12,12 +12,6 @@ export const Schedule = () => {
 			'_blank'
 		);
 	};
-
-	const accreditationRoutes = [
-		{ name: 'Обзор', path: '/accreditation/overview' },
-		{ name: 'Документы', path: '/accreditation/documents' },
-		{ name: 'Контакты', path: '/accreditation/contacts' },
-	];
 
 	const accreditationContent = (
 		<div>
@@ -33,7 +27,7 @@ export const Schedule = () => {
 
 	return (
 		<Page title='Розклад - ЧПФК'>
-			<DemoBlock routes={accreditationRoutes} content={accreditationContent} />
+			<Block content={accreditationContent} />
 		</Page>
 	);
 };

@@ -1,5 +1,5 @@
-import { IsubRoutes } from '../types/CommonInterface';
-import { NewsItem, category } from '../types/dataInterface';
+import { IsubRoutes } from '../types/CommonInterface'
+import { NewsItem, category } from '../types/dataInterface'
 export const subRoutes: IsubRoutes[] = [
 	{
 		name: 'Головна',
@@ -151,6 +151,11 @@ export const underItems = [
 		name: 'Провідні бібліотеки світу',
 		link: '/library/resources/leadingLibraries',
 	},
+	{
+		name: 'Циклова комісія дисциплін загальноосвітньої підготовки',
+		link: '/educational-units/tsyklovi-komisii/CyclicCommissionofDisciplinesofGeneralEducation',
+	},
+	
 ];
 
 export const newsItems: NewsItem[] = [
@@ -196,6 +201,14 @@ export const newsItems: NewsItem[] = [
 	},
 	{
 		title: 'Культура',
+		description: 'Фестиваль уличного искусства начинается этой весной',
+		imageUrl:
+			'https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0?ixlib=rb-1.2.1&auto=format&fit=crop&w=700&q=80',
+		path: '/news',
+		category: category.ANNOUNCE,
+	},
+	{
+		title: 'Культураа',
 		description: 'Фестиваль уличного искусства начинается этой весной',
 		imageUrl:
 			'https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0?ixlib=rb-1.2.1&auto=format&fit=crop&w=700&q=80',

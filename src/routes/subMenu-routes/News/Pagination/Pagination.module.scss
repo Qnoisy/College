@@ -1,2 +1,18 @@
+@import '../../../../common/generall';
 .pagination {
+	display: flex;
+	justify-content: center;
+	gap: 10px;
+	padding: 20px;
+}
+
+.pageLink {
+	padding: 10px 15px;
+	@include bg-color;
+	cursor: pointer;
+	&.active {
+		@include bg-color-third;
+		color: white;
+		font-weight: bold;
+	}
 }

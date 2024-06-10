@@ -1,0 +1,20 @@
+@import '../../common/generall';
+.theme {
+	background-color: rgba(0, 0, 0, 0);
+}
+.theme__btn {
+	@include color;
+	display: flex;
+	align-items: center;
+	font-size: 1.3rem;
+	@media (hover: hover) {
+		&:hover {
+			@include color-hover;
+		}
+	}
+	@media (hover: none) {
+		&:active {
+			@include color-hover;
+		}
+	}
+}
