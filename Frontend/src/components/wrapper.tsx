@@ -9,6 +9,7 @@ import { Resource } from '../routes/header-routes/Library/resources';
 import { LeadingLibraries } from '../routes/header-routes/Library/resources/leadingLibraries';
 import { Schedule } from '../routes/header-routes/Schedule';
 import { College } from '../routes/subMenu-routes/College';
+
 import { Pronas } from '../routes/subMenu-routes/College/subdivisions/Pro-nas';
 import { Education } from '../routes/subMenu-routes/Education';
 import { News } from '../routes/subMenu-routes/News';
