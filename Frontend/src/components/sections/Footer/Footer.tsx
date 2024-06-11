@@ -22,10 +22,17 @@ export const Footer = () => {
 		<div className={styles.footer}>
 			<div className={styles.footer__block}>
 				<Logo customStyle={styles.footer__img} />
-				<ContactLink
-					url='https://bit.ly/4c0kssT'
-					text='Адреса: 18001, м. Черкаси, вул. Надпільна, 226'
-				/>
+				<div className={styles.footer__block_link}>
+					<ContactLink
+						url='https://bit.ly/4c0kssT'
+						text='Адреса: 18001, м. Черкаси, вул. Надпільна, 226'
+					/>
+					<p>
+						Єдиним офіційним сайтом Черкаський політехнічний фіховий коледж
+						(ЧПФК)
+						<a href='/'>polytechnic.ck.ua</a>
+					</p>
+				</div>
 			</div>
 			<div className={styles.footer__block}>
 				<div className={styles.footer__block_title}>

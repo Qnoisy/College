@@ -40,7 +40,12 @@ const DropUpMenu: React.FC<DropdownMenuProps> = ({ links, name }) => {
 			{isOpen && (
 				<div className={styles.dropdownContent}>
 					{links.map((link, index) => (
-						<a key={index} href={link.url} className={styles.link}>
+						<a
+							key={index}
+							href={link.url}
+							rel='noopener'
+							className={styles.link}
+						>
 							{link.text}
 						</a>
 					))}

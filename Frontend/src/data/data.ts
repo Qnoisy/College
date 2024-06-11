@@ -213,11 +213,11 @@ export const newsItems: NewsItem[] = [
 ];
 export const usefulLinks = [
 	{
-		imageUrl: '/img/useful links/chnu.jpg',
+		imageUrl: '/img/useful links/chnu.png',
 		path: 'https://cdu.edu.ua/',
 	},
 	{
-		imageUrl: '/img/useful links/chpty.jpg',
+		imageUrl: '/img/useful links/chpty.png',
 		path: 'https://chdtu.edu.ua/',
 	},
 	{
