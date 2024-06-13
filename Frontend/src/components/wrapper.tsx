@@ -40,6 +40,12 @@ import { OV } from '../routes/under-routes/Entry-company/subdivisions/Ops-fakhov
 import { PS } from '../routes/under-routes/Entry-company/subdivisions/Ops-fakhovyi-molodshyi-bakalavr/ps';
 import { RA } from '../routes/under-routes/Entry-company/subdivisions/Ops-fakhovyi-molodshyi-bakalavr/ra';
 import { ZM } from '../routes/under-routes/Entry-company/subdivisions/Ops-fakhovyi-molodshyi-bakalavr/zm';
+
+import { BussEducandKT } from '../routes/under-routes/Educational-units/Educational-units/subdivisions/Department/BussEduc and KT';
+import { Electricalengineering } from '../routes/under-routes/Educational-units/Educational-units/subdivisions/Department/Electrical engineering';
+import { Electromechanical } from '../routes/under-routes/Educational-units/Educational-units/subdivisions/Department/Electromechanical';
+import { Mechanical } from '../routes/under-routes/Educational-units/Educational-units/subdivisions/Department/Mechanical';
+
 import { Starshoklasnykam } from '../routes/under-routes/Entry-company/subdivisions/Starshoklasnykam';
 import { Chooseprofesion } from '../routes/under-routes/Entry-company/subdivisions/Starshoklasnykam/choose-profesion';
 import { Vstup } from '../routes/under-routes/Entry-company/subdivisions/Vstup';
@@ -225,6 +231,22 @@ const Wrapper = () => {
 					<Route
 						path='/educational-units/tsyklovi-komisii/SoftwareandSoc-Eco'
 						element={<SoftwareandSocEco />}
+					/>
+					<Route
+						path='/educational-units/department/BussEducandKT'
+						element={<BussEducandKT/>}
+					/>
+						<Route
+						path='/educational-units/department/Electromechanical'
+						element={<Electromechanical />}
+					/>
+						<Route
+						path='/educational-units/department/Electricalengineering'
+						element={<Electricalengineering />}
+					/>
+					<Route
+						path='/educational-units/department/Mechanical'
+						element={<Mechanical />}
 					/>
 					<Route
 						path='/login'

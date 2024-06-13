@@ -14,74 +14,74 @@ export const Tsyklovikomisii = () => {
 	const tsyklovikomisiiLinks = [
 		{
 			name: 'ЦИКЛОВА КОМІСІЯ  ДИСЦИПЛІН ЗАГАЛЬНООСВІТНЬОЇ ПІДГОТОВКИ',
-			path: '/educational-units/tsyklovi-komisii/CyclicCommissionofDisciplinesofGeneralEducation',
+			path: '/educational-units/tsyklovi-komisii/DisciplinesofGenera',
 			icon: <GiMaterialsScience />,
 		},
 		{
 			name: 'ЦИКЛОВА КОМІСІЯ  ФІЛОЛОГІЧНИХ ТА ГУМАНІТАРНИХ ДИСЦИПЛІН',
-			path: '/educational-units/tsyklovi-komisii/Cycliccommissionofphilologicalandhumanitariandisciplines',
+			path: '/educational-units/tsyklovi-komisii/Philologicalandhumanitarian',
 			icon: <GiWorld />,
 		},
 		{
 			name: 'ЦИКЛОВА КОМІСІЯ  ПРОГРАМНОГО ЗАБЕЗПЕЧЕННЯ ТА СОЦІАЛЬНО-ЕКОНОМІЧНИХ ДИСЦИПЛІН',
-			path: '/educational-units/tsyklovi-komisii/CyclingCommissionofSoftwareandSocioEconomicDisciplines',
+			path: '/educational-units/tsyklovi-komisii/SoftwareandSoc-Eco',
 			icon: <FaLaptopCode />,
 		},
 		{
 			name: 'ЦИКЛОВА КОМІСІЯ ДИСЦИПЛІН ПРОФЕСІЙНО-ПРАКТИЧНОЇ ПІДГОТОВКИ ЕЛЕКТРОЕНЕРГЕТИЧНИХ СПЕЦІАЛЬНОСТЕЙ',
-			path: '/educational-units/tsyklovi-komisii/CycCommDiscProfPracTrainElecEnergySpec',
+			path: '/educational-units/tsyklovi-komisii/ElecEnergySpec',
 			icon: <GiPowerGenerator />,
 		},
 		{
 			name: 'ЦИКЛОВА КОМІСІЯ ЕЛЕКТРОМЕХАНІЧНИХ ДИСЦИПЛІН',
-			path: '/educational-units/tsyklovi-komisii/Cyclicalcommissionofelectromechanicaldisciplines',
+			path: '/educational-units/tsyklovi-komisii/CCElectromechanical',
 			icon: <MdOutlineElectricBolt />,
 		},
 		{
 			name: 'ЦИКЛОВА КОМІСІЯ ЗАГАЛЬНОТЕХНІЧНИХ ДИСЦИПЛІН ТА ГАЛУЗЕВОГО МАШИНОБУДУВАННЯ',
-			path: '/educational-units/tsyklovi-komisii/CCofGTDandIME',
+			path: '/educational-units/tsyklovi-komisii/GTDandIME',
 			icon: <GiMechanicGarage />,
 		},
 		{
 			name: 'ЦИКЛОВА КОМІСІЯ ДИСЦИПЛІН АВТОМОБІЛЬНОГО ТРАНСПОРТУ',
-			path: '/educational-units/tsyklovi-komisii/CyclicalCommissionofRoadTransportDisciplines',
+			path: '/educational-units/tsyklovi-komisii/RoadTransport',
 			icon: <FaCar />,
 		},
 	];
 	const tsyklovikomisiiRoutes = [
 		{
 			name: 'ЦИКЛОВА КОМІСІЯ  ДИСЦИПЛІН ЗАГАЛЬНООСВІТНЬОЇ ПІДГОТОВКИ',
-			path: '/educational-units/tsyklovi-komisii/CyclicCommissionofDisciplinesofGeneralEducation',
+			path: '/educational-units/tsyklovi-komisii/DisciplinesofGenera',
 			icon: <GiMaterialsScience />,
 		},
 		{
 			name: 'ЦИКЛОВА КОМІСІЯ  ФІЛОЛОГІЧНИХ ТА ГУМАНІТАРНИХ ДИСЦИПЛІН',
-			path: '/educational-units/tsyklovi-komisii/Cycliccommissionofphilologicalandhumanitariandisciplines',
+			path: '/educational-units/tsyklovi-komisii/Philologicalandhumanitarian',
 			icon: <GiWorld />,
 		},
 		{
 			name: 'ЦИКЛОВА КОМІСІЯ  ПРОГРАМНОГО ЗАБЕЗПЕЧЕННЯ ТА СОЦІАЛЬНО-ЕКОНОМІЧНИХ ДИСЦИПЛІН',
-			path: '/educational-units/tsyklovi-komisii/CyclingCommissionofSoftwareandSocioEconomicDisciplines',
+			path: '/educational-units/tsyklovi-komisii/SoftwareandSoc-Eco',
 			icon: <FaLaptopCode />,
 		},
 		{
 			name: 'ЦИКЛОВА КОМІСІЯ ДИСЦИПЛІН ПРОФЕСІЙНО-ПРАКТИЧНОЇ ПІДГОТОВКИ ЕЛЕКТРОЕНЕРГЕТИЧНИХ СПЕЦІАЛЬНОСТЕЙ',
-			path: '/educational-units/tsyklovi-komisii/CycCommDiscProfPracTrainElecEnergySpec',
+			path: '/educational-units/tsyklovi-komisii/ElecEnergySpec',
 			icon: <GiPowerGenerator />,
 		},
 		{
 			name: 'ЦИКЛОВА КОМІСІЯ ЕЛЕКТРОМЕХАНІЧНИХ ДИСЦИПЛІН',
-			path: '/educational-units/tsyklovi-komisii/Cyclicalcommissionofelectromechanicaldiscipline',
+			path: '/educational-units/tsyklovi-komisii/CCElectromechanical',
 			icon: <MdOutlineElectricBolt />,
 		},
 		{
 			name: 'ЦИКЛОВА КОМІСІЯ ЗАГАЛЬНОТЕХНІЧНИХ ДИСЦИПЛІН ТА ГАЛУЗЕВОГО МАШИНОБУДУВАННЯ',
-			path: '/educational-units/tsyklovi-komisii/CCofGTDandIME',
+			path: '/educational-units/tsyklovi-komisii/GTDandIME',
 			icon: <GiMechanicGarage />,
 		},
 		{
 			name: 'ЦИКЛОВА КОМІСІЯ ДИСЦИПЛІН АВТОМОБІЛЬНОГО ТРАНСПОРТУ',
-			path: '/educational-units/tsyklovi-komisii/CyclicalCommissionofRoadTransportDisciplines',
+			path: '/educational-units/tsyklovi-komisii/RoadTransport',
 			icon: <FaCar />,
 		},
 	];

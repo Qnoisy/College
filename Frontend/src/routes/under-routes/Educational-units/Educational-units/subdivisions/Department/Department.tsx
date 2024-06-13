@@ -12,7 +12,7 @@ export const Department = () => {
 	const tsyklovikomisiiLinks = [
 		{
 			name: "ВІДДІЛЕННЯ БІЗНЕС-ОСВІТИ ТА КОМП'ЮТЕРНИХ ТЕХНОЛОГІЙ",
-			path: '/educational-units/department/DEPARTMENTOFBUSINESSEDUCATIONANDKT',
+			path: '/educational-units/department/BussEducandKT',
 			icon: <TbBusinessplan />,
 		},
 		{

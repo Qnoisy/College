@@ -5,8 +5,8 @@ import { Button } from '../../../../../../../components/Button';
 import DemoBlock from '../../../../../../../components/sample/DemoBlock/DemoBlock';
 import Title from '../../../../../../../components/sample/Title/Title';
 
-export const DEPARTMENTOFBUSINESSEDUCATIONANDKT = () => {
-	const DEPARTMENTOFBUSINESSEDUCATIONANDKTLinks = [
+export const BussEducandKT = () => {
+	const BussEducandKTLinks = [
 		{
 			name: 'Економіка підприємства',
 			path: '/entry-company/ops-fakhovyi-molodshyi-bakalavr/ek',
@@ -23,7 +23,7 @@ export const DEPARTMENTOFBUSINESSEDUCATIONANDKT = () => {
 			icon: <IoIosLaptop />,
 		},
 	];
-	const DEPARTMENTOFBUSINESSEDUCATIONANDKTRoutes = [
+	const BussEducandKTRoutes = [
 		{
 			name: 'Економіка підприємства',
 			path: '/entry-company/ops-fakhovyi-molodshyi-bakalavr/ek',
@@ -40,7 +40,7 @@ export const DEPARTMENTOFBUSINESSEDUCATIONANDKT = () => {
 			icon: <IoIosLaptop />,
 		},
 	];
-	const departmentContent = (
+	const BussEducandKTContent = (
 		<div>
 			<Title text="Бізнес-освіти та комп'ютерних технологій" />
 			<Button
@@ -60,9 +60,9 @@ export const DEPARTMENTOFBUSINESSEDUCATIONANDKT = () => {
 	return (
 		<Page title="Бізнес-освіти та комп'ютерних технологій - ЧПФК">
 			<DemoBlock
-				additionalLinks={DEPARTMENTOFBUSINESSEDUCATIONANDKTLinks}
-				content={departmentContent}
-				routes={DEPARTMENTOFBUSINESSEDUCATIONANDKTRoutes}
+				additionalLinks={BussEducandKTLinks}
+				content={BussEducandKTContent}
+				routes={BussEducandKTRoutes}
 			/>
 		</Page>
 	);
