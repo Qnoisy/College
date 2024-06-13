@@ -1,17 +1,17 @@
-import Page from '../../../Page/Page'
-import DropUpMenu from '../../../components/DropUpMenu/DropUpMenu'
-import DemoBlock from '../../../components/sample/DemoBlock/DemoBlock'
-import Title from '../../../components/sample/Title/Title'
+import Page from '../../../Page/Page';
+import DropUpMenu from '../../../components/DropUpMenu/DropUpMenu';
+import DemoBlock from '../../../components/sample/DemoBlock/DemoBlock';
+import Title from '../../../components/sample/Title/Title';
 
 export const Entrycompany = () => {
 	const entrycompanyRoutes = [
-		
 		{
 			name: 'ОПС Фаховий Молодший Бакалавр',
 			path: '/entry-company/ops-fakhovyi-molodshyi-bakalavr',
 		},
-		{ 
-			name: 'Вступна кампанія', path: '/entry-company/vstup' 
+		{
+			name: 'Вступна кампанія',
+			path: '/entry-company/vstup',
 		},
 		{
 			name: 'Старшокласникам',
@@ -153,7 +153,6 @@ export const Entrycompany = () => {
 			url: 'https://vstup.edbo.gov.ua/offer/1132757/',
 		},
 	];
-
 
 	const entrycompanyContent = (
 		<div>

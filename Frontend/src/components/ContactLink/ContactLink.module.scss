@@ -4,6 +4,7 @@
 	font-size: 0.9rem;
 	cursor: pointer;
 	gap: 0.6rem;
+
 	@include color;
 	@media (hover: hover) {
 		&:hover {

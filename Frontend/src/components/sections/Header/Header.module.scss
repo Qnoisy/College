@@ -3,7 +3,6 @@
 	display: flex;
 	justify-content: space-between;
 	gap: 1rem;
-	font-family: $ffbtn-text;
 	@media (max-width: 539.98px) {
 		justify-content: flex-end;
 	}
@@ -14,6 +13,8 @@
 }
 .link__style {
 	@include color;
+	font-family: $fftext;
+	font-weight: 600;
 	@media (hover: hover) {
 		&:hover {
 			@include color-hover;
@@ -23,6 +24,9 @@
 		&:active {
 			@include color-hover;
 		}
+	}
+	@media (max-width: 1151.98px) {
+		font-weight: 600;
 	}
 }
 .header__links {

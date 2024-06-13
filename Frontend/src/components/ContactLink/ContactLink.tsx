@@ -17,7 +17,12 @@ const ContactLink: React.FC<ContactLinkProps> = ({
 	className,
 }) => {
 	return (
-		<a href={url} className={classNames(styles.header__link, className, 'row')}>
+		<a
+			href={url}
+			target={'_blank'}
+			rel='noreferrer'
+			className={classNames(styles.header__link, className, 'row')}
+		>
 			{Icon && <Icon className={styles.header__icon} />}
 			<span>{text}</span>
 		</a>

@@ -47,17 +47,14 @@ export const Advantages = () => {
 								<GiMaterialsScience />
 							</div>
 							<div className={styles.advantages__li_text}>
-								Потужний науково- професійний склад
+								Потужний науково - професійний склад
 							</div>
 						</li>
 						<li className={styles.advantages__li}>
 							<div className={styles.advantages__li_img}>
 								<FaEarthAmericas />
 							</div>
-							<div className={styles.advantages__li_text}>
-								8000+ студентів, з яких 4000+ іноземних громадян із 70+ країн
-								світу
-							</div>
+							<div className={styles.advantages__li_text}>1000+ студентів</div>
 						</li>
 						<li className={styles.advantages__li}>
 							<div className={styles.advantages__li_img}>

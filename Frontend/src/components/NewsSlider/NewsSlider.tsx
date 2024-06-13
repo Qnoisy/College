@@ -1,3 +1,4 @@
+import classNames from 'classnames';
 import { forwardRef, useRef } from 'react';
 import { AiFillCaretLeft, AiFillCaretRight } from 'react-icons/ai';
 import Slider from 'react-slick';
@@ -17,10 +18,11 @@ interface NewsSliderProps {
 	newsItems: SliderProps[];
 	target?: boolean;
 	objectFit?: 'cover' | 'contain';
+	className?: string;
 }
 
 const NewsSlider = forwardRef<Slider, NewsSliderProps>(
-	({ newsItems, target = false, objectFit = 'cover' }, ref) => {
+	({ newsItems, target = false, objectFit = 'cover', className }, ref) => {
 		const settings = {
 			dots: false,
 			infinite: true,
@@ -53,7 +55,7 @@ const NewsSlider = forwardRef<Slider, NewsSliderProps>(
 						<a
 							href={item.path}
 							key={index}
-							className={styles.newsSlider__slide}
+							className={classNames(styles.newsSlider__slide, className)}
 							target={target ? '_blank' : '_self'}
 							rel='noopener noreferrer'
 						>

@@ -45,8 +45,7 @@
 }
 .advantages__li_img {
 	@include df-centr;
-	@include bg-color;
-	font-size: 3.2rem;
+	font-size: 4rem;
 	flex: 0 0 auto;
 	width: 4.25rem;
 	height: 4.25rem;
@@ -54,7 +53,7 @@
 }
 .advantages__li_text {
 	font-weight: 600;
-	font-size: 1.3rem;
+	font-size: 1.5rem;
 	width: 300px;
 }
 .advantages__block {
