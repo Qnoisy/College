@@ -1,9 +1,8 @@
 import { combineReducers } from 'redux';
-import { fetchNews } from '../actionsCreater/news';
-import {} from './index';
+import { newsReducer } from './newsReducer';
 
 export const rootReducer = combineReducers({
-	news: fetchNews,
+	news: newsReducer,
 });
 
 export type RootState = ReturnType<typeof rootReducer>;

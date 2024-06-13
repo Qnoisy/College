@@ -14,9 +14,9 @@ export const newsReducer = (
 ): NewsState => {
 	switch (action.type) {
 		case NewsActionTypes.FETCH_NEWS:
-			return { ...state, loading: true };
+			return { ...state, loading: true, error: null };
 		case NewsActionTypes.FETCH_NEWS_SUCCESS:
-			return { ...state, loading: false, news: action.payload };
+			return { ...state, loading: false, error: null, news: action.payload };
 		case NewsActionTypes.FETCH_NEWS_ERROR:
 			return { ...state, loading: false, error: action.payload };
 		case NewsActionTypes.SET_NEWS_PAGE:

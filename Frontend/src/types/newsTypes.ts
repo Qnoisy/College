@@ -1,7 +1,7 @@
 import { NewsItem } from './dataInterface';
 
 export interface NewsState {
-	news: NewsItem | [];
+	news: NewsItem[];
 	loading: boolean;
 	error: string | null;
 	page: number;
@@ -18,7 +18,7 @@ interface FetchNewsAction {
 }
 interface FetchNewsSuccessAction {
 	type: NewsActionTypes.FETCH_NEWS_SUCCESS;
-	payload: NewsItem;
+	payload: NewsItem[];
 }
 interface FetchNewsErrorAction {
 	type: NewsActionTypes.FETCH_NEWS_ERROR;
