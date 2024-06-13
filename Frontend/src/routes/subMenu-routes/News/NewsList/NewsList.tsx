@@ -1,6 +1,7 @@
 import classNames from 'classnames';
 import React, { useEffect, useState } from 'react';
-import { NewsItem } from '../../../../types/dataInterface';
+
+import { NewsItem, category } from '../../../../types/dataInterface';
 import { Pagination } from '../Pagination';
 import styles from './NewsList.module.scss';
 
@@ -8,40 +9,64 @@ interface NewsListProps {
 	newsItems: NewsItem[];
 }
 
-const categories = ['Всі статті', 'Актуально', 'Анонси', 'Події'];
-
 const NewsList: React.FC<NewsListProps> = ({ newsItems }) => {
 	const [currentPage, setCurrentPage] = useState<number>(1);
-	const [newsPerPage] = useState<number>(6); // Обмеження в 6 новин
-	const [filter, setFilter] = useState<string>('Всі статті');
+	const [newsPerPage] = useState<number>(6);
+	const [filter, setFilter] = useState<category>(category.ALLARTICLES);
 	const [filteredNews, setFilteredNews] = useState<NewsItem[]>([]);
+	const [totalItems, setTotalItems] = useState<number>(0); // State to store the total number of filtered items
 
 	useEffect(() => {
-		const newFilteredNews = newsItems.filter(
-			news => filter === 'Всі статті' || news.category === filter
+		// Convert and filter news based on selected category
+		const convertedAndFilteredNews = newsItems
+			.map(item => ({
+				...item,
+				category: convertCategory(item.category),
+			}))
+			.filter(
+				news => filter === category.ALLARTICLES || news.category === filter
+			);
+
+		setTotalItems(convertedAndFilteredNews.length); // Update the totalItems state
+
+		// Determine the slice of news to display based on current page
+		const indexOfLastNews = currentPage * newsPerPage;
+		const indexOfFirstNews = indexOfLastNews - newsPerPage;
+		const currentNews = convertedAndFilteredNews.slice(
+			indexOfFirstNews,
+			indexOfLastNews
 		);
-		setFilteredNews(newFilteredNews);
+
+		setFilteredNews(currentNews);
+	}, [currentPage, newsItems, filter, newsPerPage]);
+
+	// Effect to reset to the first page when the filter changes
+	useEffect(() => {
 		setCurrentPage(1);
-	}, [filter, newsItems]);
+	}, [filter]);
 
-	const indexOfLastNews: number = currentPage * newsPerPage;
-	const indexOfFirstNews: number = indexOfLastNews - newsPerPage;
-	const currentNews: NewsItem[] = filteredNews.slice(
-		indexOfFirstNews,
-		indexOfLastNews
-	);
-
-	const paginate = (pageNumber: number) => setCurrentPage(pageNumber);
+	function convertCategory(oldCategory: string): category {
+		switch (oldCategory) {
+			case 'category.ACTUAL':
+				return category.ACTUAL;
+			case 'category.ANNOUNCE':
+				return category.ANNOUNCE;
+			case 'category.EVENTS':
+				return category.EVENTS;
+			default:
+				return category.ALLARTICLES;
+		}
+	}
 
 	return (
 		<div className={styles.newsList}>
 			<div className={styles.categories}>
-				{categories.map(cat => (
+				{Object.values(category).map(cat => (
 					<button
 						key={cat}
 						onClick={() => setFilter(cat)}
 						className={classNames(styles.button, {
-							[styles.buttonActive]: filter === cat,
+							[styles.active]: filter === cat,
 						})}
 					>
 						{cat}
@@ -49,8 +74,8 @@ const NewsList: React.FC<NewsListProps> = ({ newsItems }) => {
 				))}
 			</div>
 			<div className={styles.newsContainer}>
-				{currentNews.map(news => (
-					<div key={news.title} className={styles.newsItem}>
+				{filteredNews.map(news => (
+					<div key={news.title} className={classNames(styles.newsItem)}>
 						<img
 							src={news.imageUrl}
 							alt={news.title}
@@ -63,9 +88,9 @@ const NewsList: React.FC<NewsListProps> = ({ newsItems }) => {
 			</div>
 			<Pagination
 				itemsPerPage={newsPerPage}
-				totalItems={filteredNews.length}
+				totalItems={totalItems}
 				currentPage={currentPage}
-				paginate={paginate}
+				paginate={setCurrentPage}
 			/>
 		</div>
 	);

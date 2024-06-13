@@ -1,8 +1,8 @@
 export enum category {
 	ALLARTICLES = 'Всі статті',
 	ACTUAL = 'Актуально',
-	ANNOUNCE = 'Анонси',
-	EVENTS = 'Події',
+	ANNOUNCE = 'Анонс',
+	EVENTS = 'Івенти',
 }
 
 export interface NewsItem {

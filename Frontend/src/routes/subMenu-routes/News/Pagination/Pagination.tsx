@@ -14,10 +14,13 @@ export const Pagination: React.FC<PaginationProps> = ({
 	currentPage,
 	paginate,
 }) => {
-	const pageNumbers = [];
-	for (let i = 1; i <= Math.ceil(totalItems / itemsPerPage); i++) {
-		pageNumbers.push(i);
-	}
+	const pageNumbers = React.useMemo(() => {
+		const numbers = [];
+		for (let i = 1; i <= Math.ceil(totalItems / itemsPerPage); i++) {
+			numbers.push(i);
+		}
+		return numbers;
+	}, [totalItems, itemsPerPage]);
 
 	return (
 		<nav className={styles.pagination}>
