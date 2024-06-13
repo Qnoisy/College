@@ -1,4 +1,10 @@
 import { IsubRoutes } from '../types/CommonInterface';
+const catCollege = [
+	{ name: 'Про нас', link: '/college/pro-nas' },
+	{ name: 'Загальна Інформація', link: '/college/zagaln-informacia' },
+	{ name: 'Публічна Інформація', link: '/college/publichna-informatsiia' },
+];
+
 export const subRoutes: IsubRoutes[] = [
 	{
 		name: 'Головна',
@@ -7,11 +13,6 @@ export const subRoutes: IsubRoutes[] = [
 	{
 		name: 'Новини',
 		link: '/news',
-		kategories: [
-			{ name: 'test1', link: '/test1' },
-			{ name: 'test2', link: '/test2' },
-			{ name: 'test3', link: '/test3' },
-		],
 	},
 	{
 		name: 'Коледж',
@@ -241,4 +242,5 @@ export const allRoutes = [
 	...headerRoutes,
 	...BigMenuRoutes,
 	...underItems,
+	...catCollege,
 ];

@@ -15,10 +15,19 @@ import { Education } from '../routes/subMenu-routes/Education';
 import { News } from '../routes/subMenu-routes/News';
 import { Quality } from '../routes/subMenu-routes/Quality';
 import { Contacts } from '../routes/subMenu-routes/Сontacts';
-import { Educationalunits } from '../routes/under-routes/Educational-units';
-import { Department } from '../routes/under-routes/Educational-units/subdivisions/Department';
-import { MainSub } from '../routes/under-routes/Educational-units/subdivisions/MainSub';
-import { Tsyklovikomisii } from '../routes/under-routes/Educational-units/subdivisions/Tsyklovi-komisii';
+
+import { MainSub } from '../routes/subMenu-routes/College/subdivisions/MainSub';
+import { Educationalunits } from '../routes/under-routes/Educational-units/Educational-units';
+import { Department } from '../routes/under-routes/Educational-units/Educational-units/subdivisions/Department';
+
+import { Tsyklovikomisii } from '../routes/under-routes/Educational-units/Educational-units/subdivisions/Tsyklovi-komisii/Tsyklovi-komisii';
+import { CCElectromechanical } from '../routes/under-routes/Educational-units/Educational-units/subdivisions/Tsyklovi-komisii/Tsyklovi-komisii/CCElectromechanical';
+import { DisciplinesofGenera } from '../routes/under-routes/Educational-units/Educational-units/subdivisions/Tsyklovi-komisii/Tsyklovi-komisii/Disciplines of Genera';
+import { ElecEnergySpec } from '../routes/under-routes/Educational-units/Educational-units/subdivisions/Tsyklovi-komisii/Tsyklovi-komisii/Elec Energy Spec';
+import { GTDandIME } from '../routes/under-routes/Educational-units/Educational-units/subdivisions/Tsyklovi-komisii/Tsyklovi-komisii/GTD and IME';
+import { Philologicalandhumanitarian } from '../routes/under-routes/Educational-units/Educational-units/subdivisions/Tsyklovi-komisii/Tsyklovi-komisii/Philological and humanitarian';
+import { RoadTransport } from '../routes/under-routes/Educational-units/Educational-units/subdivisions/Tsyklovi-komisii/Tsyklovi-komisii/RoadTransport';
+import { SoftwareandSocEco } from '../routes/under-routes/Educational-units/Educational-units/subdivisions/Tsyklovi-komisii/Tsyklovi-komisii/Software and Soc-Eco';
 import { Entrycompany } from '../routes/under-routes/Entry-company';
 import { Opsfakhovyimolodshyibakalavr } from '../routes/under-routes/Entry-company/subdivisions/Ops-fakhovyi-molodshyi-bakalavr';
 import { EA } from '../routes/under-routes/Entry-company/subdivisions/Ops-fakhovyi-molodshyi-bakalavr/ea';
@@ -108,11 +117,11 @@ const Wrapper = () => {
 						path='/educational-units/department'
 						element={<Department />}
 					/>
-					<Route path='/educational-units/mainsub' element={<MainSub />} />
 					<Route
 						path='/educational-units/tsyklovi-komisii'
 						element={<Tsyklovikomisii />}
-					/>
+					></Route>
+					<Route path='/educational-units/mainsub' element={<MainSub />} />
 					<Route path='/research-activities/dni-nauky' element={<Dninauky />} />
 					<Route
 						path='/research-activities/nauka-v-koledzhi'
@@ -188,6 +197,34 @@ const Wrapper = () => {
 					<Route
 						path='/entry-company/starshoklasnykam/choose-profesion'
 						element={<Chooseprofesion />}
+					/>
+					<Route
+						path='/educational-units/tsyklovi-komisii/DisciplinesofGenera'
+						element={<DisciplinesofGenera />}
+					/>
+					<Route
+						path='/educational-units/tsyklovi-komisii/CCElectromechanical'
+						element={<CCElectromechanical />}
+					/>
+					<Route
+						path='/educational-units/tsyklovi-komisii/ElecEnergySpec'
+						element={<ElecEnergySpec />}
+					/>
+					<Route
+						path='/educational-units/tsyklovi-komisii/GTDandIME'
+						element={<GTDandIME />}
+					/>
+					<Route
+						path='/educational-units/tsyklovi-komisii/Philologicalandhumanitarian'
+						element={<Philologicalandhumanitarian />}
+					/>
+					<Route
+						path='/educational-units/tsyklovi-komisii/RoadTransport'
+						element={<RoadTransport />}
+					/>
+					<Route
+						path='/educational-units/tsyklovi-komisii/SoftwareandSoc-Eco'
+						element={<SoftwareandSocEco />}
 					/>
 					<Route
 						path='/login'

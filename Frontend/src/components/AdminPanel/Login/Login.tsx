@@ -22,11 +22,11 @@ const Login = ({ onLogin }: LoginProps) => {
 				body: JSON.stringify({ username, password }),
 			});
 
-			const responseBody = await response.text(); // Используйте .text() вместо .json()
-			console.log(responseBody); // Логирование ответа для отладки
+			const responseBody = await response.text();
+			console.log(responseBody);
 
 			if (response.ok) {
-				const data = JSON.parse(responseBody); // Парсинг текста как JSON вручную
+				const data = JSON.parse(responseBody);
 				localStorage.setItem('token', data.token);
 				onLogin();
 				navigate('/admin');

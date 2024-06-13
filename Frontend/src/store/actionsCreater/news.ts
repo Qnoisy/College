@@ -10,12 +10,10 @@ export const fetchNews = (page = 1, limit = 10) => {
 			const response = await axios.get('http://localhost:3000/posts', {
 				params: { _page: page, _limit: limit },
 			});
-			setTimeout(() => {
-				dispatch({
-					type: NewsActionTypes.FETCH_NEWS_SUCCESS,
-					payload: response.data,
-				});
-			}, 1000);
+			dispatch({
+				type: NewsActionTypes.FETCH_NEWS_SUCCESS,
+				payload: response.data,
+			});
 		} catch (error) {
 			dispatch({
 				type: NewsActionTypes.FETCH_NEWS_ERROR,
