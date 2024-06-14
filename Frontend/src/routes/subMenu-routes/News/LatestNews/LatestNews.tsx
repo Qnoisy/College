@@ -1,5 +1,6 @@
 import React from 'react';
-import { NewsItem } from '../../../../types/dataInterface';
+
+import { NewsItem } from '../../../../types/newsTypes';
 import styles from './LatestNews.module.scss'; // Припускаємо, що стилі аналогічні до NewsList
 
 interface LatestNewsProps {

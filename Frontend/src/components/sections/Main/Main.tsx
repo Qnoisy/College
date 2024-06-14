@@ -8,13 +8,12 @@ import { NewsSlider } from '../../NewsSlider';
 import styles from './Main.module.scss';
 
 export const Main = () => {
-	const { news, loading, error, limit, page } = useTypedSelector(
-		state => state.news
-	);
+	const { news } = useTypedSelector(state => state.news);
 	const { fetchNews } = useAction();
 	useEffect(() => {
-		fetchNews(page, limit);
-	}, [page]);
+		fetchNews();
+		console.log(news);
+	}, []);
 	return (
 		<Page title='Головна - ЧПФК'>
 			<main className={styles.main}>

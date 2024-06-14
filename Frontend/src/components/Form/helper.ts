@@ -6,15 +6,15 @@ const regx = {
 };
 
 const firstName = Yup.string()
-	.matches(regx.name, 'Latin letters, from 2 to 20 characters')
+	.matches(regx.name, 'Латинские буквы, от 2 до 20 символов')
 	.required('Введіть ваше ім’я');
 
 const lastName = Yup.string()
-	.matches(regx.name, 'Latin letters, from 2 to 20 characters')
+	.matches(regx.name, 'Латинские буквы, от 2 до 20 символов')
 	.required('Введіть ваше прізвище');
 
 const email = Yup.string()
-	.matches(regx.email, 'format example@gmail.com')
+	.matches(regx.email, 'Формат example@gmail.com')
 	.required('Введіть вашу електронну адресу');
 
 export const schemas = {

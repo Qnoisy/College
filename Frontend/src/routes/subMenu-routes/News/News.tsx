@@ -6,14 +6,12 @@ import styles from './News.module.scss';
 import NewsList from './NewsList/NewsList';
 
 export const News = () => {
-	const { news, loading, error, limit, page } = useTypedSelector(
-		state => state.news
-	);
+	const { news, loading } = useTypedSelector(state => state.news);
 	const { fetchNews } = useAction();
 
 	useEffect(() => {
-		fetchNews(page, limit);
-	}, [page]);
+		fetchNews();
+	}, []);
 	return (
 		<div className={styles.news}>
 			{loading && (

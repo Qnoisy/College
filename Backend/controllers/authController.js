@@ -1,12 +1,17 @@
 const jwt = require('jsonwebtoken');
 
 const generateToken = user => {
-	const payload = { username: user.username, id: user.id };
+	const payload = {
+		username: user.username,
+		id: user.id,
+	};
 	const secret = process.env.JWT_SECRET;
 	const options = { expiresIn: '1h' };
+
 	return jwt.sign(payload, secret, options);
 };
 
+// Функция для обработки входа в систему
 exports.login = (req, res) => {
 	const { username, password } = req.body;
 	if (username === 'admin' && password === 'password') {
@@ -18,6 +23,7 @@ exports.login = (req, res) => {
 	}
 };
 
+// Функция для проверки токена
 exports.verifyToken = (req, res, next) => {
 	const token = req.headers.authorization?.split(' ')[1];
 	if (!token) {

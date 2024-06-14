@@ -1,7 +1,7 @@
 import classNames from 'classnames';
 import React, { useEffect, useState } from 'react';
 
-import { NewsItem, category } from '../../../../types/dataInterface';
+import { NewsItem, category } from '../../../../types/newsTypes';
 import { Pagination } from '../Pagination';
 import styles from './NewsList.module.scss';
 

@@ -1,8 +1,8 @@
 import { useDispatch } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import NewsActionCreators from '../store/actionsCreater';
+import actionCreators from '../store/actionsCreater'; // Обновите путь к файлу действий
 
 export const useAction = () => {
 	const dispatch = useDispatch();
-	return bindActionCreators(NewsActionCreators, dispatch);
+	return bindActionCreators(actionCreators, dispatch);
 };
