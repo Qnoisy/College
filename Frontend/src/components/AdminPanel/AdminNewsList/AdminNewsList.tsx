@@ -1,23 +1,28 @@
 import classNames from 'classnames';
 import React, { useEffect, useState } from 'react';
 
-import { NewsItem, category } from '../../../../types/newsTypes';
-import { Pagination } from '../Pagination';
-import styles from './NewsList.module.scss';
+import { Pagination } from '../../../routes/subMenu-routes/News/Pagination';
+import { NewsItem, category } from '../../../types/newsTypes';
+import styles from './AdminNewsList.module.scss';
 
-interface NewsListProps {
+interface AdminNewsListProps {
 	newsItems: NewsItem[];
+	onUpdate: (newsItem: NewsItem) => void;
+	onDelete: (id: number) => void;
 }
 
-const NewsList: React.FC<NewsListProps> = ({ newsItems }) => {
+const AdminNewsList: React.FC<AdminNewsListProps> = ({
+	newsItems,
+	onUpdate,
+	onDelete,
+}) => {
 	const [currentPage, setCurrentPage] = useState<number>(1);
 	const [newsPerPage] = useState<number>(6);
 	const [filter, setFilter] = useState<category>(category.ALLARTICLES);
 	const [filteredNews, setFilteredNews] = useState<NewsItem[]>([]);
-	const [totalItems, setTotalItems] = useState<number>(0); // State to store the total number of filtered items
+	const [totalItems, setTotalItems] = useState<number>(0);
 
 	useEffect(() => {
-		// Convert and filter news based on selected category
 		const convertedAndFilteredNews = newsItems
 			.map(item => ({
 				...item,
@@ -27,9 +32,8 @@ const NewsList: React.FC<NewsListProps> = ({ newsItems }) => {
 				news => filter === category.ALLARTICLES || news.category === filter
 			);
 
-		setTotalItems(convertedAndFilteredNews.length); // Update the totalItems state
+		setTotalItems(convertedAndFilteredNews.length);
 
-		// Determine the slice of news to display based on current page
 		const indexOfLastNews = currentPage * newsPerPage;
 		const indexOfFirstNews = indexOfLastNews - newsPerPage;
 		const currentNews = convertedAndFilteredNews.slice(
@@ -40,7 +44,6 @@ const NewsList: React.FC<NewsListProps> = ({ newsItems }) => {
 		setFilteredNews(currentNews);
 	}, [currentPage, newsItems, filter, newsPerPage]);
 
-	// Effect to reset to the first page when the filter changes
 	useEffect(() => {
 		setCurrentPage(1);
 	}, [filter]);
@@ -75,7 +78,7 @@ const NewsList: React.FC<NewsListProps> = ({ newsItems }) => {
 			</div>
 			<div className={styles.newsContainer}>
 				{filteredNews.map(news => (
-					<div key={news.title} className={classNames(styles.newsItem)}>
+					<div key={news.id} className={classNames(styles.newsItem)}>
 						<img
 							src={`http://localhost:3001/assets/${news.imageUrl}`}
 							alt={news.title}
@@ -83,6 +86,8 @@ const NewsList: React.FC<NewsListProps> = ({ newsItems }) => {
 						/>
 						<h3>{news.title}</h3>
 						<p>{news.description}</p>
+						<button onClick={() => onUpdate(news)}>Update</button>
+						<button onClick={() => onDelete(news.id)}>Delete</button>
 					</div>
 				))}
 			</div>
@@ -96,4 +101,4 @@ const NewsList: React.FC<NewsListProps> = ({ newsItems }) => {
 	);
 };
 
-export default NewsList;
+export default AdminNewsList;

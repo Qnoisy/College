@@ -12,6 +12,7 @@ export interface NewsItem {
 	path: string;
 	category: category;
 	id: number;
+	images: string[];
 }
 
 export interface NewsState {

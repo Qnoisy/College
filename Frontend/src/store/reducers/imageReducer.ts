@@ -1,8 +1,10 @@
-import {
-	ImageAction,
-	ImageActionTypes,
-	ImageState,
-} from '../../types/imageTypes';
+import { ImageAction, ImageActionTypes } from '../../types/imageTypes';
+
+interface ImageState {
+	imageUrls: string[];
+	loading: boolean;
+	error: string | null;
+}
 
 const initialState: ImageState = {
 	imageUrls: [],

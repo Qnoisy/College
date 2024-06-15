@@ -19,10 +19,20 @@ interface NewsSliderProps {
 	target?: boolean;
 	objectFit?: 'cover' | 'contain';
 	className?: string;
+	useAssetsPath?: boolean;
 }
 
 const NewsSlider = forwardRef<Slider, NewsSliderProps>(
-	({ newsItems, target = false, objectFit = 'cover', className }, ref) => {
+	(
+		{
+			newsItems,
+			target = false,
+			objectFit = 'cover',
+			className,
+			useAssetsPath = false,
+		},
+		ref
+	) => {
 		const settings = {
 			dots: false,
 			infinite: true,
@@ -60,7 +70,11 @@ const NewsSlider = forwardRef<Slider, NewsSliderProps>(
 							rel='noopener noreferrer'
 						>
 							<img
-								src={item.imageUrl}
+								src={
+									useAssetsPath
+										? `http://localhost:3001/assets/${item.imageUrl}`
+										: item.imageUrl
+								}
 								alt={item.title}
 								style={{ objectFit: objectFit }}
 							/>

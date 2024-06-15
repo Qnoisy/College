@@ -5,10 +5,8 @@ import { NewsAction, NewsActionTypes, NewsItem } from '../../types/newsTypes';
 export const fetchNews = () => {
 	return async (dispatch: Dispatch<NewsAction>) => {
 		try {
-			dispatch({
-				type: NewsActionTypes.FETCH_NEWS,
-			});
-			const response = await axios.get('http://localhost:3001/news');
+			dispatch({ type: NewsActionTypes.FETCH_NEWS });
+			const response = await axios.get('http://localhost:3001/api/news');
 			dispatch({
 				type: NewsActionTypes.FETCH_NEWS_SUCCESS,
 				payload: response.data,
@@ -21,13 +19,20 @@ export const fetchNews = () => {
 		}
 	};
 };
-export const addNews = (newList: NewsItem) => {
+
+export const addNews = (formData: FormData) => {
 	return async (dispatch: Dispatch<NewsAction>) => {
 		try {
-			dispatch({
-				type: NewsActionTypes.ADD_NEWS,
-			});
-			const response = await axios.post('http://localhost:3001/news', newList);
+			dispatch({ type: NewsActionTypes.ADD_NEWS });
+			const response = await axios.post(
+				'http://localhost:3001/api/news',
+				formData,
+				{
+					headers: {
+						'Content-Type': 'multipart/form-data',
+					},
+				}
+			);
 			dispatch({
 				type: NewsActionTypes.ADD_NEWS_SUCCESS,
 				payload: response.data,
@@ -40,12 +45,13 @@ export const addNews = (newList: NewsItem) => {
 		}
 	};
 };
+
 export const updateNews = (newsItem: NewsItem) => {
 	return async (dispatch: Dispatch<NewsAction>) => {
 		try {
 			dispatch({ type: NewsActionTypes.UPDATE_NEWS });
 			const response = await axios.put(
-				`http://localhost:3001/news/${newsItem.id}`,
+				`http://localhost:3001/api/news/${newsItem.id}`,
 				newsItem
 			);
 			dispatch({
@@ -60,15 +66,13 @@ export const updateNews = (newsItem: NewsItem) => {
 		}
 	};
 };
+
 export const deleteNews = (id: number) => {
 	return async (dispatch: Dispatch<NewsAction>) => {
 		try {
 			dispatch({ type: NewsActionTypes.DELETE_NEWS });
-			await axios.delete(`http://localhost:3001/news/${id}`);
-			dispatch({
-				type: NewsActionTypes.DELETE_NEWS_SUCCESS,
-				payload: id,
-			});
+			await axios.delete(`http://localhost:3001/api/news/${id}`);
+			dispatch({ type: NewsActionTypes.DELETE_NEWS_SUCCESS, payload: id });
 		} catch (error) {
 			dispatch({
 				type: NewsActionTypes.DELETE_NEWS_ERROR,

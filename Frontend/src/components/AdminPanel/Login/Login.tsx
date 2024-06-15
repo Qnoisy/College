@@ -2,6 +2,7 @@ import { ErrorMessage, Field, Form, Formik } from 'formik';
 import { useEffect, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
 import * as Yup from 'yup';
+import { useAuth } from '../../../hooks/useAuth';
 import styles from './Login.module.scss';
 
 interface LoginProps {
@@ -12,6 +13,7 @@ const Login = ({ onLogin }: LoginProps) => {
 	const navigate = useNavigate();
 	const usernameRef = useRef<HTMLInputElement>(null);
 	const passwordRef = useRef<HTMLInputElement>(null);
+	const { login } = useAuth();
 
 	useEffect(() => {
 		const handleKeyDown = (event: KeyboardEvent) => {
@@ -58,6 +60,7 @@ const Login = ({ onLogin }: LoginProps) => {
 			if (response.ok) {
 				const data = JSON.parse(responseBody); // Парсинг текста как JSON вручную
 				localStorage.setItem('token', data.token);
+				login(data.token); // Обновление состояния аутентификации
 				onLogin();
 				navigate('/admin');
 			} else {

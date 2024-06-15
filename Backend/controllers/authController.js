@@ -14,12 +14,17 @@ const generateToken = user => {
 // Функция для обработки входа в систему
 exports.login = (req, res) => {
 	const { username, password } = req.body;
-	if (username === 'admin' && password === 'password') {
-		const user = { username, id: 1 };
-		const token = generateToken(user);
-		res.json({ token });
-	} else {
-		res.status(401).send('Authentication failed');
+	try {
+		if (username === 'admin' && password === 'password') {
+			const user = { username, id: 1 };
+			const token = generateToken(user);
+			res.json({ token });
+		} else {
+			res.status(401).send('Authentication failed');
+		}
+	} catch (error) {
+		console.error('Error during login:', error);
+		res.status(500).send('Internal server error');
 	}
 };
 
@@ -34,6 +39,7 @@ exports.verifyToken = (req, res, next) => {
 		req.user = decoded;
 		next();
 	} catch (err) {
+		console.error('Invalid token:', err);
 		return res.status(401).send('Invalid Token');
 	}
 };

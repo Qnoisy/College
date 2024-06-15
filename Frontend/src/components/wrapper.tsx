@@ -52,7 +52,8 @@ import { Supportandtrust } from '../routes/under-routes/Support-and-trust';
 import { Praktychnyipsykholoh } from '../routes/under-routes/Support-and-trust/subdivisions/Praktychnyi-psykholoh';
 import { Sotsialnopsykholohichnapidtrymka } from '../routes/under-routes/Support-and-trust/subdivisions/Sotsialno-psykholohichna-pidtrymka';
 import { Sotsialnyipedahoh } from '../routes/under-routes/Support-and-trust/subdivisions/Sotsialnyi-pedahoh';
-import { AdminPanel } from './AdminPanel';
+
+import AdminPanel from './AdminPanel/AdminPanel';
 import Login from './AdminPanel/Login/Login';
 import Breadcrumbs from './Breadcrumbs/Breadcrumbs';
 import { Container } from './Container';

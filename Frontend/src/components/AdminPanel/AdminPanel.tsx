@@ -1,34 +1,41 @@
-import { useEffect } from 'react';
-import cart from '../../assets/1.jpg';
-
+import React, { useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 import { useAction } from '../../hooks/useAction';
-import { useTypedSelector } from '../../hooks/useTypeSelector';
-import NewsList from '../../routes/subMenu-routes/News/NewsList/NewsList';
-import { NewsItem, category } from '../../types/newsTypes';
+import { RootState } from '../../store';
+import { NewsItem } from '../../types/newsTypes';
+import AddNewsForm from './AddNewsForm/AddNewsForm';
+import AdminNewsList from './AdminNewsList/AdminNewsList';
 import styles from './AdminPanel.module.scss';
-import ImageUpload from './ImageUpload/ImageUpload';
-// interface AdminPanelProps {}
 
-export const AdminPanel = () => {
-	const { news } = useTypedSelector(state => state.news);
-	const { fetchNews } = useAction();
-	const newCard: NewsItem = {
-		title: 'Новина 3',
-		description: 'начинается этой весной',
-		imageUrl: '/assets/1.jpg',
-		path: '/news',
-		category: category.EVENTS,
-		id: +new Date(),
-	};
+const AdminPanel: React.FC = () => {
+	const dispatch = useDispatch();
+	const news = useSelector((state: RootState) => state.news.news);
+
+	const { fetchNews, updateNews, deleteNews } = useAction();
+
 	useEffect(() => {
 		fetchNews();
-	}, []);
-	console.log(news);
+	}, [dispatch]);
+
+	const handleUpdateNews = (newsItem: NewsItem) => {
+		updateNews(newsItem);
+	};
+
+	const handleDeleteNews = (id: number) => {
+		deleteNews(id);
+	};
+
 	return (
 		<div className={styles.adminPanel}>
-			<ImageUpload />
-			<img src={cart} alt='' />
-			<NewsList newsItems={news} />
+			<h1>Admin Panel</h1>
+			<AddNewsForm />
+			<AdminNewsList
+				newsItems={news}
+				onUpdate={handleUpdateNews}
+				onDelete={handleDeleteNews}
+			/>
 		</div>
 	);
 };
+
+export default AdminPanel;
