@@ -1,6 +1,6 @@
 import { useDispatch } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import actionCreators from '../store/actionsCreater'; // Обновите путь к файлу действий
+import actionCreators from '../store/actionsCreater';
 
 export const useAction = () => {
 	const dispatch = useDispatch();

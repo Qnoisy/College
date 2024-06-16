@@ -1,6 +1,6 @@
 import { nanoid } from 'nanoid';
-import React, { useEffect, useState } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
+import React, { useCallback, useEffect, useState } from 'react';
+import { useSelector } from 'react-redux';
 
 import { useAction } from '../../hooks/useAction';
 import { RootState } from '../../store';
@@ -10,17 +10,20 @@ import styles from './AdminPanel.module.scss';
 import NewsForm from './NewsForm/NewsForm';
 
 const AdminPanel: React.FC = () => {
-	const dispatch = useDispatch();
 	const news = useSelector((state: RootState) => state.news.news);
 	const { fetchNews, addNews, updateNews, deleteNews } = useAction();
 	const [selectedNews, setSelectedNews] = useState<NewsItem | null>(null);
 	const [isEditMode, setIsEditMode] = useState(false);
 
-	useEffect(() => {
+	const fetchNewsCallback = useCallback(() => {
 		fetchNews();
-	}, [dispatch]);
+	}, [fetchNews]);
 
-	const handleAddNews = (values: any, { resetForm }: any) => {
+	useEffect(() => {
+		fetchNewsCallback();
+	}, [fetchNewsCallback]);
+
+	const handleAddNews = async (values: any, { resetForm }: any) => {
 		const formData = new FormData();
 		formData.append('title', values.title);
 		formData.append('description', values.description);
@@ -34,26 +37,28 @@ const AdminPanel: React.FC = () => {
 			formData.append('image', values.image);
 		}
 
-		addNews(formData);
-		resetForm(); // Reset the form after submission
+		await addNews(formData);
+		resetForm();
+		fetchNewsCallback();
 	};
 
-	const handleUpdateNews = (values: any, { resetForm }: any) => {
+	const handleUpdateNews = async (values: any, { resetForm }: any) => {
 		const updatedNews: NewsItem = {
 			...selectedNews!,
 			title: values.title,
 			description: values.description,
 			category: values.category,
-			path: `/news/${values.title}+${selectedNews!.id}`, // Генерація шляху
-			imageUrl: selectedNews?.imageUrl || '', // Переконатися, що imageUrl завжди строка
+			path: `/news/${values.title}+${selectedNews!.id}`,
+			imageUrl: selectedNews?.imageUrl || '',
 		};
 		if (values.image) {
 			updatedNews.imageUrl = URL.createObjectURL(values.image);
 		}
-		updateNews(updatedNews);
+		await updateNews(updatedNews);
 		setSelectedNews(null);
 		setIsEditMode(false);
 		resetForm();
+		fetchNewsCallback();
 	};
 
 	const handleEditClick = (news: NewsItem) => {

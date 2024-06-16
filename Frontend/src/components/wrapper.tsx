@@ -12,7 +12,6 @@ import { College } from '../routes/subMenu-routes/College';
 
 import { Pronas } from '../routes/subMenu-routes/College/subdivisions/Pro-nas';
 import { Education } from '../routes/subMenu-routes/Education';
-import { News } from '../routes/subMenu-routes/News';
 import { Quality } from '../routes/subMenu-routes/Quality';
 import { Contacts } from '../routes/subMenu-routes/Сontacts';
 
@@ -53,6 +52,7 @@ import { Praktychnyipsykholoh } from '../routes/under-routes/Support-and-trust/s
 import { Sotsialnopsykholohichnapidtrymka } from '../routes/under-routes/Support-and-trust/subdivisions/Sotsialno-psykholohichna-pidtrymka';
 import { Sotsialnyipedahoh } from '../routes/under-routes/Support-and-trust/subdivisions/Sotsialnyi-pedahoh';
 
+import NewsList from '../routes/subMenu-routes/News/NewsList/NewsList';
 import AdminPanel from './AdminPanel/AdminPanel';
 import Login from './AdminPanel/Login/Login';
 import Breadcrumbs from './Breadcrumbs/Breadcrumbs';
@@ -96,7 +96,7 @@ const Wrapper = () => {
 					<Route path='/accreditation' element={<Accreditation />} />
 					<Route path='/schedule' element={<Schedule />} />
 					<Route path='/library' element={<Library />} />
-					<Route path='/news' element={<News />} />
+					<Route path='/news' element={<NewsList />} />
 					<Route path='/college' element={<College />} />
 					<Route path='/education' element={<Education />} />
 					<Route path='/quality' element={<Quality />} />

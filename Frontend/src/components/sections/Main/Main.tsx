@@ -12,7 +12,6 @@ export const Main = () => {
 	const { fetchNews } = useAction();
 	useEffect(() => {
 		fetchNews();
-		console.log(news);
 	}, []);
 	return (
 		<Page title='Головна - ЧПФК'>

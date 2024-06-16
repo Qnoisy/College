@@ -45,17 +45,19 @@ const addNews = async (req, res) => {
 };
 
 const updateNews = async (req, res) => {
-	const { title, description, category, path } = req.body;
+	const { title, description, category, path: newsPath } = req.body;
 	let imageUrl = req.body.imageUrl || 'no-image.png';
 
 	try {
-		// Отримання старих даних новини
 		const oldNews = await knex('news').where({ id: req.params.id }).first();
 
-		// Видалення старої картинки, якщо завантажено нову
-		if (req.file && oldNews.imageUrl && oldNews.imageUrl !== 'no-image.png') {
+		if (req.file) {
 			const oldImagePath = path.join(__dirname, '../assets', oldNews.imageUrl);
-			if (fs.existsSync(oldImagePath)) {
+			if (
+				oldNews.imageUrl &&
+				oldNews.imageUrl !== 'no-image.png' &&
+				fs.existsSync(oldImagePath)
+			) {
 				fs.unlinkSync(oldImagePath);
 			}
 			imageUrl = req.file.filename;
@@ -66,9 +68,10 @@ const updateNews = async (req, res) => {
 			description,
 			imageUrl,
 			category,
-			path,
+			path: newsPath,
 		});
-		res.json({ message: 'Новость обновлена' });
+
+		res.json({ message: 'Новость обновлена', imageUrl });
 	} catch (error) {
 		console.error('Error updating news:', error);
 		res.status(500).json({ error: 'Ошибка при обновлении новости' });

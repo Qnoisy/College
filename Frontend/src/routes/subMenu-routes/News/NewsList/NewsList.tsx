@@ -2,24 +2,28 @@ import classNames from 'classnames';
 import React, { useEffect, useState } from 'react';
 
 import { Link } from 'react-router-dom';
+import { SyncLoader } from 'react-spinners';
+import { useAction } from '../../../../hooks/useAction';
+import { useTypedSelector } from '../../../../hooks/useTypeSelector';
 import { NewsItem, category } from '../../../../types/newsTypes';
 import { Pagination } from '../Pagination';
 import styles from './NewsList.module.scss';
 
-interface NewsListProps {
-	newsItems: NewsItem[];
-}
-
-const NewsList: React.FC<NewsListProps> = ({ newsItems }) => {
+const NewsList: React.FC = () => {
+	const { news, loading } = useTypedSelector(state => state.news);
+	const { fetchNews } = useAction();
 	const [currentPage, setCurrentPage] = useState<number>(1);
 	const [newsPerPage] = useState<number>(6);
 	const [filter, setFilter] = useState<category>(category.ALLARTICLES);
 	const [filteredNews, setFilteredNews] = useState<NewsItem[]>([]);
-	const [totalItems, setTotalItems] = useState<number>(0); // State to store the total number of filtered items
+	const [totalItems, setTotalItems] = useState<number>(0);
 
 	useEffect(() => {
-		// Convert and filter news based on selected category
-		const convertedAndFilteredNews = newsItems
+		fetchNews();
+	}, []);
+
+	useEffect(() => {
+		const convertedAndFilteredNews = news
 			.map(item => ({
 				...item,
 				category: convertCategory(item.category),
@@ -28,9 +32,7 @@ const NewsList: React.FC<NewsListProps> = ({ newsItems }) => {
 				news => filter === category.ALLARTICLES || news.category === filter
 			);
 
-		setTotalItems(convertedAndFilteredNews.length); // Update the totalItems state
-
-		// Determine the slice of news to display based on current page
+		setTotalItems(convertedAndFilteredNews.length);
 		const indexOfLastNews = currentPage * newsPerPage;
 		const indexOfFirstNews = indexOfLastNews - newsPerPage;
 		const currentNews = convertedAndFilteredNews.slice(
@@ -39,9 +41,8 @@ const NewsList: React.FC<NewsListProps> = ({ newsItems }) => {
 		);
 
 		setFilteredNews(currentNews);
-	}, [currentPage, newsItems, filter, newsPerPage]);
+	}, [currentPage, news, filter, newsPerPage]);
 
-	// Effect to reset to the first page when the filter changes
 	useEffect(() => {
 		setCurrentPage(1);
 	}, [filter]);
@@ -61,6 +62,14 @@ const NewsList: React.FC<NewsListProps> = ({ newsItems }) => {
 
 	return (
 		<div className={styles.newsList}>
+			{loading && (
+				<SyncLoader
+					className={styles.loader}
+					size={12}
+					color='gray'
+					loading={true}
+				/>
+			)}
 			<div className={styles.categories}>
 				{Object.values(category).map(cat => (
 					<button
