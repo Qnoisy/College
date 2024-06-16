@@ -11,10 +11,17 @@ const Breadcrumbs = () => {
 		return null;
 	}
 
+	//? Треба доробити
+	const process = (name: any) => {
+		//!	console.log(name);
+		return name;
+	};
+	//?
+
 	const breadcrumbLinks = pathnames.map((value, index) => {
 		const routePath = `/${pathnames.slice(0, index + 1).join('/')}`;
 		const route = allRoutes.find(r => r.link === routePath);
-		const name = route ? route.name : decodeURIComponent(value);
+		const name = route ? process(route.name) : decodeURIComponent(value);
 		const isLast = index === pathnames.length - 1;
 		return { name, routePath, isLast };
 	});

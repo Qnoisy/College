@@ -1,6 +1,6 @@
 import classNames from 'classnames';
 import React, { useEffect, useState } from 'react';
-
+import { TbArrowsCross, TbBallpen } from 'react-icons/tb';
 import { Pagination } from '../../../routes/subMenu-routes/News/Pagination';
 import { NewsItem, category } from '../../../types/newsTypes';
 import styles from './AdminNewsList.module.scss';
@@ -86,17 +86,31 @@ const AdminNewsList: React.FC<AdminNewsListProps> = ({
 						/>
 						<h3>{news.title}</h3>
 						<p>{news.description}</p>
-						<button onClick={() => onUpdate(news)}>Update</button>
-						<button onClick={() => onDelete(news.id)}>Delete</button>
+						<div className={styles.newsButtons}>
+							<button
+								className={styles.newsUpdate}
+								onClick={() => onUpdate(news)}
+							>
+								<TbBallpen className={styles.btn} />
+							</button>
+							<button
+								className={styles.newsDelete}
+								onClick={() => onDelete(news.id)}
+							>
+								<TbArrowsCross className={styles.btn} />
+							</button>
+						</div>
 					</div>
 				))}
 			</div>
-			<Pagination
-				itemsPerPage={newsPerPage}
-				totalItems={totalItems}
-				currentPage={currentPage}
-				paginate={setCurrentPage}
-			/>
+			<div className={styles.pagination}>
+				<Pagination
+					itemsPerPage={newsPerPage}
+					totalItems={totalItems}
+					currentPage={currentPage}
+					paginate={setCurrentPage}
+				/>
+			</div>
 		</div>
 	);
 };

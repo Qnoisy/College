@@ -1,15 +1,26 @@
 import classNames from 'classnames';
-import { ButtonHTMLAttributes, ReactNode } from 'react';
+import { ReactNode } from 'react';
 import './Button.scss';
 
-interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
+interface ButtonProps {
 	children: ReactNode;
-	className?: string; // Опциональный className для дополнительного стилизации
+	onClick?: () => void;
+	className?: string;
+	type?: 'button' | 'submit' | 'reset';
 }
 
-export const Button = ({ children, className, ...props }: ButtonProps) => {
+export const Button = ({
+	children,
+	onClick,
+	className,
+	type = 'button',
+}: ButtonProps) => {
 	return (
-		<button className={classNames('button', 'style', className)} {...props}>
+		<button
+			className={classNames('button', 'style', className)}
+			onClick={onClick}
+			type={type}
+		>
 			{children}
 		</button>
 	);

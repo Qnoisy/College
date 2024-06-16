@@ -29,3 +29,15 @@ export const initialValues = {
 	lastName: '',
 	email: '',
 };
+export const validationSchema = Yup.object().shape({
+	title: Yup.string()
+		.matches(regx.name, 'Латинскі букви, від 2 до 20 символів')
+		.required('Введіть заголовок'),
+	description: Yup.string().required('Введіть опис'),
+	category: Yup.string().required('Выберіть категорі.'),
+	image: Yup.mixed().notRequired(),
+});
+export const validationSchemaLogin = Yup.object({
+	username: Yup.string().required('Введіть ваше ім’я користувача'),
+	password: Yup.string().required('Введіть ваш пароль'),
+});

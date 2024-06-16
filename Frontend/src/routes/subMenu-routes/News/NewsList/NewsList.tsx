@@ -1,6 +1,7 @@
 import classNames from 'classnames';
 import React, { useEffect, useState } from 'react';
 
+import { Link } from 'react-router-dom';
 import { NewsItem, category } from '../../../../types/newsTypes';
 import { Pagination } from '../Pagination';
 import styles from './NewsList.module.scss';
@@ -75,15 +76,17 @@ const NewsList: React.FC<NewsListProps> = ({ newsItems }) => {
 			</div>
 			<div className={styles.newsContainer}>
 				{filteredNews.map(news => (
-					<div key={news.title} className={classNames(styles.newsItem)}>
-						<img
-							src={`http://localhost:3001/assets/${news.imageUrl}`}
-							alt={news.title}
-							className={styles.newsItem__img}
-						/>
-						<h3>{news.title}</h3>
-						<p>{news.description}</p>
-					</div>
+					<Link to={news.path}>
+						<div key={news.title} className={classNames(styles.newsItem)}>
+							<img
+								src={`http://localhost:3001/assets/${news.imageUrl}`}
+								alt={news.title}
+								className={styles.newsItem__img}
+							/>
+							<h3>{news.title}</h3>
+							<p>{news.description}</p>
+						</div>
+					</Link>
 				))}
 			</div>
 			<Pagination

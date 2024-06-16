@@ -2,11 +2,14 @@
 .Login {
 	display: flex;
 	flex-direction: column;
-	align-items: center;
-
+	text-align: center;
+	width: 50%;
+	margin: 0 auto;
 	div {
+		@include df-centr;
+		flex-direction: column;
 		margin-bottom: 10px;
-
+		text-align: center;
 		input {
 			padding: 5px;
 			border-radius: 4px;
@@ -18,20 +21,21 @@
 		margin-right: 10px;
 		width: 100px;
 	}
-
-	button {
-		padding: 10px 20px;
-		border-radius: 4px;
-		border: none;
-		@include bg-color;
-		cursor: pointer;
-
-		&:hover {
-			@include bg-color-third;
-		}
-	}
 	.error {
 		color: red;
 		font-size: 12px;
+	}
+}
+.btn {
+	align-self: center;
+	display: block;
+	padding: 10px 20px;
+	border-radius: 4px;
+	border: none;
+	@include bg-color;
+	cursor: pointer;
+
+	&:hover {
+		@include bg-color-third;
 	}
 }

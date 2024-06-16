@@ -34,7 +34,7 @@ export const BurgerContent = ({ isOpen, handler }: BurgerContentProps) => {
 						<ul className={styles.burgerContent__block_list}>{routes}</ul>
 						<div className={styles.contacts__links}>
 							<ContactLink
-								url='https://mail.google.com/mail/u/0/#inbox?compose=CllgCJlJVjvPsftnLMnXzgslkGVptXmSLMVKJdWzzXBFmNCsnCVlHSxHVXrXxgfZZtNjHdlDhWg'
+								url='https://mail.google.com/mail/?view=cm&fs=1&to=info@chpt.edu.ua'
 								icon={AiOutlineMail}
 								text='info@chpt.edu.ua'
 								className={styles.contacts__link}

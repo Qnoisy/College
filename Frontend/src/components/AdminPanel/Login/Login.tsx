@@ -1,8 +1,10 @@
-import { ErrorMessage, Field, Form, Formik } from 'formik';
+import { Form, Formik } from 'formik';
 import { useEffect, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
-import * as Yup from 'yup';
 import { useAuth } from '../../../hooks/useAuth';
+import { Button } from '../../Button';
+import { Input } from '../../Form/Input';
+import { validationSchemaLogin } from '../../Form/helper';
 import styles from './Login.module.scss';
 
 interface LoginProps {
@@ -36,11 +38,6 @@ const Login = ({ onLogin }: LoginProps) => {
 		};
 	}, []);
 
-	const validationSchema = Yup.object({
-		username: Yup.string().required('Введіть ваше ім’я користувача'),
-		password: Yup.string().required('Введіть ваш пароль'),
-	});
-
 	const handleSubmit = async (values: {
 		username: string;
 		password: string;
@@ -54,13 +51,13 @@ const Login = ({ onLogin }: LoginProps) => {
 				body: JSON.stringify(values),
 			});
 
-			const responseBody = await response.text(); // Используйте .text() вместо .json()
-			console.log(responseBody); // Логирование ответа для отладки
+			const responseBody = await response.text();
+			console.log(responseBody);
 
 			if (response.ok) {
-				const data = JSON.parse(responseBody); // Парсинг текста как JSON вручную
+				const data = JSON.parse(responseBody);
 				localStorage.setItem('token', data.token);
-				login(data.token); // Обновление состояния аутентификации
+				login(data.token);
 				onLogin();
 				navigate('/admin');
 			} else {
@@ -74,33 +71,29 @@ const Login = ({ onLogin }: LoginProps) => {
 	return (
 		<Formik
 			initialValues={{ username: '', password: '' }}
-			validationSchema={validationSchema}
+			validationSchema={validationSchemaLogin}
 			onSubmit={handleSubmit}
+			className={styles.Login}
 		>
 			<Form className={styles.Login}>
-				<div>
-					<label className={styles.label} htmlFor='username'>
-						Логін:
-					</label>
-					<Field name='username' type='text' innerRef={usernameRef} />
-					<ErrorMessage
-						name='username'
-						component='div'
-						className={styles.error}
-					/>
-				</div>
-				<div>
-					<label className={styles.label} htmlFor='password'>
-						Пароль:
-					</label>
-					<Field name='password' type='password' innerRef={passwordRef} />
-					<ErrorMessage
-						name='password'
-						component='div'
-						className={styles.error}
-					/>
-				</div>
-				<button type='submit'>Login</button>
+				<Input
+					id='username'
+					label='Логін'
+					name='username'
+					placeholder='Логін'
+					innerRef={usernameRef}
+				/>
+				<Input
+					id='password'
+					label='Пароль'
+					name='password'
+					type='password'
+					placeholder='Пароль'
+					innerRef={passwordRef}
+				/>
+				<Button type='submit' className={styles.btn}>
+					Login
+				</Button>
 			</Form>
 		</Formik>
 	);

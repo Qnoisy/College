@@ -1,18 +1,35 @@
-import { ErrorMessage as Erorr, Field } from 'formik';
+import { ErrorMessage, Field } from 'formik';
+import React from 'react';
 import styles from './Input.module.scss';
+
 interface InputProps {
-	id: any;
-	label: any;
-	name: any;
-	placeholder: any;
+	id: string;
+	label: string;
+	name: string;
+	type?: string;
+	placeholder: string;
+	innerRef?: React.Ref<HTMLInputElement>;
 }
 
-export const Input = ({ id, label, name, placeholder }: InputProps) => {
+export const Input = ({
+	id,
+	label,
+	name,
+	type = 'text',
+	placeholder,
+	innerRef,
+}: InputProps) => {
 	return (
 		<div className={styles.input_container}>
 			<label htmlFor={id}>{label}</label>
-			<Field name={name} id={id} placeholder={placeholder} />
-			<Erorr name={name}>{error => <span>{error}</span>}</Erorr>
+			<Field
+				name={name}
+				id={id}
+				type={type}
+				placeholder={placeholder}
+				innerRef={innerRef}
+			/>
+			<ErrorMessage name={name} className={styles.error} component='div' />
 		</div>
 	);
 };

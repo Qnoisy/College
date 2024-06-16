@@ -10,8 +10,8 @@
 .style {
 	@include btn-color;
 	position: relative;
-	padding: 1rem;
-	border-radius: 1rem;
+	padding: 0.5rem 1rem;
+	border-radius: 0.5rem;
 	max-width: 300px;
 	@media (hover: hover) {
 		&:hover {
