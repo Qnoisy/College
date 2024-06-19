@@ -105,6 +105,9 @@ const Wrapper = () => {
 					<Route path='/educational-units' element={<Educationalunits />} />
 					<Route path='/research-activities' element={<Researchactivities />} />
 					<Route path='/support-and-trust' element={<Supportandtrust />} />
+					{/* <Route path='/accreditation/licence' element={} />
+					<Route path='/accreditation/certification' element={} />
+					<Route path='/accreditation/self-esteem' element={} /> */}
 					<Route
 						path='/entry-company/ops-fakhovyi-molodshyi-bakalavr'
 						element={<Opsfakhovyimolodshyibakalavr />}

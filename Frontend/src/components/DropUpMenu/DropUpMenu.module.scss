@@ -1,8 +1,9 @@
 @import '../../common/generall.scss';
 
-.dropdown {
+.dropUpMenu {
 	position: relative;
 	display: block;
+	margin-bottom: 0.5rem;
 }
 
 .button {
@@ -42,15 +43,15 @@
 		}
 	}
 }
-.dropUpMenu__active {
-	@include color;
-	transition: all 0.2s;
-	transform: rotate(180deg);
-	:active {
-		transform: rotate(-180deg);
-		transition: all 0.2s;
-	}
+
+.icon {
+	transition: transform 0.2s;
 }
+
+.dropUpMenu__active {
+	transform: rotate(180deg);
+}
+
 .dropUpMenu__row {
 	display: flex;
 	justify-content: space-between;

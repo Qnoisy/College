@@ -1,18 +1,31 @@
+@import '../../../common/generall';
 .schedule {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center; /* Центрування тексту всередині елементів */
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	text-align: center; /* Центрування тексту всередині елементів */
 }
 
 .schedule__img {
-    text-align: center;
-    margin: 0 auto; /* Центрування зображення */
+	text-align: center;
+	margin: 0 auto; /* Центрування зображення */
 }
 
 .schedule__downloadButton {
-    text-align: center;
-    margin: 0 auto; /* Центрування кнопки */
+	text-align: center;
+	margin: 0 auto; /* Центрування кнопки */
 }
 
+.schedule__block {
+	@include df-centr;
+	flex-direction: column;
+}
+.schedule__btn {
+	@include df-centr;
+	gap: 0.5rem;
+}
+.schedule__btn_content {
+	font-size: 1.7rem;
+	padding-bottom: 0.2rem;
+}
