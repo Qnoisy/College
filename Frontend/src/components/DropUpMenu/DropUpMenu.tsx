@@ -1,6 +1,6 @@
-// DropdownMenu.tsx
+// DropUpMenu.tsx
 import classNames from 'classnames';
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useState } from 'react';
 import { IoIosArrowUp } from 'react-icons/io';
 import styles from './DropUpMenu.module.scss';
 
@@ -11,29 +11,19 @@ interface DropdownMenuProps {
 
 const DropUpMenu: React.FC<DropdownMenuProps> = ({ links, name }) => {
 	const [isOpen, setIsOpen] = useState(false);
-	const toggleDropdown = () => setIsOpen(!isOpen);
-	const ref = useRef<HTMLDivElement>(null);
-
-	useEffect(() => {
-		function handleClickOutside(event: MouseEvent) {
-			if (ref.current && !ref.current.contains(event.target as Node)) {
-				setIsOpen(false);
-			}
-		}
-
-		document.addEventListener('mousedown', handleClickOutside);
-		return () => {
-			document.removeEventListener('mousedown', handleClickOutside);
-		};
-	}, [ref]);
 
 	return (
-		<div className={styles.dropUpMenu} ref={ref}>
-			<button onClick={toggleDropdown} className={styles.button}>
+		<div className={styles.dropUpMenu}>
+			<button
+				onClick={() => setIsOpen(isOpen => !isOpen)}
+				className={styles.button}
+			>
 				<div className={styles.dropUpMenu__row}>
 					{name}
 					<IoIosArrowUp
-						className={classNames({ [styles.dropUpMenu__active]: isOpen })}
+						className={classNames(styles.icon, {
+							[styles.dropUpMenu__active]: isOpen,
+						})}
 					/>
 				</div>
 			</button>
@@ -43,8 +33,9 @@ const DropUpMenu: React.FC<DropdownMenuProps> = ({ links, name }) => {
 						<a
 							key={index}
 							href={link.url}
-							rel='noopener'
 							className={styles.link}
+							target='_blank'
+							rel='noreferrer'
 						>
 							{link.text}
 						</a>

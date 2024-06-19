@@ -1,37 +1,42 @@
-import { FiLock } from 'react-icons/fi';
 import Page from '../../../Page/Page';
+import DropUpMenu from '../../../components/DropUpMenu/DropUpMenu';
 import DemoBlock from '../../../components/sample/DemoBlock/DemoBlock';
-import DropdownMenu from '../../../components/sample/DropdownMenu/DropdownMenu';
 import Subtitle from '../../../components/sample/Subtitle/Subtitle';
 import Title from '../../../components/sample/Title/Title';
 import UnorderedList from '../../../components/sample/UnorderedList/UnorderedList';
 
 export const Accreditation = () => {
 	const accreditationRoutes = [
-		{ name: 'Ліцензії', path: '/accreditation/overview' },
-		{ name: 'Сертифікати про акредитацію', path: '/accreditation/documents' },
-		{ name: 'Відомості про самооцінювання', path: '/accreditation/contacts' },
-	];
-
-	const accreditationLinks = [
+		{ name: 'Ліцензії', path: '/accreditation/licence' },
 		{
-			name: 'Форми документів',
-			path: '/accreditation/forms',
-			icon: <FiLock />, // Иконка для документов
+			name: 'Сертифікати про акредитацію',
+			path: '/accreditation/certification',
 		},
 		{
-			name: 'Політика конфіденційності',
-			path: '/accreditation/privacy',
-			icon: <FiLock />, // Иконка для конфиденциальности
+			name: 'Відомості про самооцінювання',
+			path: '/accreditation/self-esteem',
+		},
+	];
+
+	const list = [
+		{
+			text: 'Акредитація 2022',
+			url: 'https://uk.wikipedia.org/wiki',
+		},
+	];
+	const list1 = [
+		{
+			text: 'Акредитація 2023',
+			url: 'https://uk.wikipedia.org/wiki',
 		},
 	];
 
 	const accreditationContent = (
 		<div>
 			<Title text='Сектор акредитації та ліцензування' />
+			<DropUpMenu links={list} name={'2022-2023'} />
+			<DropUpMenu links={list1} name={'2023-2024'} />
 			<hr className='hr-style' />
-			<DropdownMenu title='2022-2023' items={accreditationLinks} />
-			<DropdownMenu title='2023-2024' items={accreditationLinks} />
 			<strong className={'strong-style'}>Мета роботи відділу - </strong>полягає
 			у проведенні ряду заходів, пов'язаних із плануванням та організацією
 			процесів ліцензування та акредитації різних напрямків підготовки
@@ -55,11 +60,7 @@ export const Accreditation = () => {
 
 	return (
 		<Page title='Сектор акредитації та ліцензування - ЧПФК'>
-			<DemoBlock
-				routes={accreditationRoutes}
-				content={accreditationContent}
-				additionalLinks={accreditationLinks}
-			/>
+			<DemoBlock routes={accreditationRoutes} content={accreditationContent} />
 		</Page>
 	);
 };

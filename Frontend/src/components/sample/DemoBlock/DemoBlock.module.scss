@@ -95,6 +95,7 @@
 .demo-block__nav-item,
 .demo-block__link {
 	@include df-centr;
+	// font-size: 1.3rem;
 	width: 100%;
 	height: 100%;
 	justify-content: flex-start;
@@ -119,4 +120,5 @@
 }
 .demo-block__link-text {
 	@include df-centr;
+	font-size: 1.2rem;
 }
