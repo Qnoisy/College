@@ -2,14 +2,15 @@ $fftext: 'Raleway', sans-serif;
 // $ffbtn-text: 'Kanit', sans-serif;
 $ffbtn-text: 'arial', sans-serif;
 $ffsecondtext: 'Raleway', sans-serif;
+$ffRoboto: 'Roboto', sans-serif;
 html[data-theme='light'] {
 	--button-text-color: #ffffff;
 	--button-text-color-hover: #1c407e;
-	--button-background-color: #1c407e;
+	--button-background-color: #2c5d9c;
 	--button-background-color-hover: #ffffff;
 	--button-border-color: #1c407e;
 
-	--background-color: #1c407e;
+	--background-color: #2c5d9c;
 	--second-background-color: #ffffff;
 	--third-background-color: #64b5f6;
 
@@ -149,6 +150,13 @@ html[data-theme='dark'] {
 .offPadding {
 	padding: 0;
 }
+.icon-gap {
+	font-size: 1.2rem;
+	margin-right: 1rem;
+}
+.text-align {
+	text-align: center;
+}
 *::-webkit-scrollbar {
 	width: 7px;
 	background-color: transparent !important;
@@ -166,4 +174,8 @@ html[data-theme='dark'] {
 	&:hover {
 		background: #555; // цвет при наведении
 	}
+}
+p {
+	text-indent: 2em;
+	margin-top: 0;
 }

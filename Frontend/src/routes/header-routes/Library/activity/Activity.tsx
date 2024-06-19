@@ -1,8 +1,7 @@
-import Page from '../../../../Page/Page'
-import DropUpMenu from '../../../../components/DropUpMenu/DropUpMenu'
-import Block from '../../../../components/sample/Block/Block'
-import Title from '../../../../components/sample/Title/Title'
-
+import Page from '../../../../Page/Page';
+import DropUpMenu from '../../../../components/DropUpMenu/DropUpMenu';
+import Block from '../../../../components/sample/Block/Block';
+import Title from '../../../../components/sample/Title/Title';
 
 export const Activity = () => {
 	const list = [
@@ -33,16 +32,14 @@ export const Activity = () => {
 		{
 			text: 'Тематична виховна година «Толерантність – як запорука людяності»',
 			url: 'https://drive.google.com/file/d/1dewtHEQVXktjPZuup6tyhJIxOGADXfgl/view',
-		}
+		},
 	];
-
 
 	const activityContent = (
 		<div>
 			<Title text='Діяльність бібліотеки' />
 			<hr className='hr-style' />
 			<DropUpMenu links={list} name={'2023-2024'} />
-			<div> </div>
 			<hr className='hr-style' />
 		</div>
 	);

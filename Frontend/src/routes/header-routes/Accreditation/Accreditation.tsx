@@ -1,3 +1,6 @@
+import { CgPlayListSearch } from 'react-icons/cg';
+import { MdOutlineFeaturedPlayList } from 'react-icons/md';
+import { RiFileListLine } from 'react-icons/ri';
 import Page from '../../../Page/Page';
 import DropUpMenu from '../../../components/DropUpMenu/DropUpMenu';
 import DemoBlock from '../../../components/sample/DemoBlock/DemoBlock';
@@ -7,17 +10,22 @@ import UnorderedList from '../../../components/sample/UnorderedList/UnorderedLis
 
 export const Accreditation = () => {
 	const accreditationRoutes = [
-		{ name: 'Ліцензії', path: '/accreditation/licence' },
+		{
+			name: 'Ліцензії',
+			path: '/accreditation/licence',
+			icon: <MdOutlineFeaturedPlayList />,
+		},
 		{
 			name: 'Сертифікати про акредитацію',
 			path: '/accreditation/certification',
+			icon: <RiFileListLine />,
 		},
 		{
 			name: 'Відомості про самооцінювання',
 			path: '/accreditation/self-esteem',
+			icon: <CgPlayListSearch />,
 		},
 	];
-
 	const list = [
 		{
 			text: 'Акредитація 2022',
@@ -60,7 +68,11 @@ export const Accreditation = () => {
 
 	return (
 		<Page title='Сектор акредитації та ліцензування - ЧПФК'>
-			<DemoBlock routes={accreditationRoutes} content={accreditationContent} />
+			<DemoBlock
+				routes={accreditationRoutes}
+				content={accreditationContent}
+				additionalLinks={accreditationRoutes}
+			/>
 		</Page>
 	);
 };

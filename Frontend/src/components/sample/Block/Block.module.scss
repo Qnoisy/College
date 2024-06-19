@@ -1,8 +1,10 @@
 @import '../../../common/generall';
 
 .block {
+	font-family: $ffRoboto;
 	display: flex;
 	flex-direction: column;
+	line-height: 1.7;
 	height: 100%;
 	&__icon {
 		margin-right: 0.5rem;

@@ -3,6 +3,7 @@ import { Button } from '../../../../../../components/Button';
 import Block from '../../../../../../components/sample/Block/Block';
 import Subtitle from '../../../../../../components/sample/Subtitle/Subtitle';
 import Title from '../../../../../../components/sample/Title/Title';
+import styles from './choose-profesion.module.scss';
 
 export const Chooseprofesion = () => {
 	const chooseprofesionContent = (
@@ -62,17 +63,19 @@ export const Chooseprofesion = () => {
 				сили. Успіхів вам на цьому шляху!
 			</p>
 			<p>З найкращими побажаннями,</p>
-			<Button
-				onClick={() => {
-					window.open(
-						'https://onlinetestpad.com/ua/testresult/837528-test-na-proforientaciyu?res=dj752javbmhnw',
-						'_blank'
-					);
-				}}
-			>
-				Тест на визначення професії
-			</Button>
 			<hr className='hr-style' />
+			<div className={styles['choose-profesion']}>
+				<Button
+					onClick={() => {
+						window.open(
+							'https://onlinetestpad.com/ua/testresult/837528-test-na-proforientaciyu?res=dj752javbmhnw',
+							'_blank'
+						);
+					}}
+				>
+					Тест на визначення професії
+				</Button>
+			</div>
 		</div>
 	);
 

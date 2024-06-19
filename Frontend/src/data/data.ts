@@ -27,9 +27,14 @@ export const subRoutes: IsubRoutes[] = [
 		name: 'Освіта',
 		link: '/education',
 		kategories: [
-			{ name: 'test1', link: '/test1' },
-			{ name: 'test2', link: '/test2' },
-			{ name: 'test3', link: '/test3' },
+			{
+				name: 'Організація освітнього процесу',
+				link: '/education/organization',
+			},
+			{
+				name: 'Неформальна освіта',
+				link: '/education/nefor',
+			},
 		],
 	},
 	{
@@ -151,66 +156,72 @@ export const underItems = [
 		name: 'Провідні бібліотеки світу',
 		link: '/library/resources/leadingLibraries',
 	},
+	{
+		name: 'Сертифікати про акредитацію',
+		link: '/accreditation/certification',
+	},
+	{
+		name: 'Відомості про самооцінювання',
+		link: '/accreditation/self-esteem',
+	},
+	{
+		name: 'Ліцензії',
+		link: '/accreditation/licence',
+	},
+	{
+		name: 'Вибери професію',
+		link: '/entry-company/starshoklasnykam/choose-profesion',
+	},
+	{
+		name: 'Організація освітнього процесу',
+		link: '/education/organization',
+	},
+	{
+		name: 'Неформальна освіта',
+		link: '/education/nefor',
+	},
+	{
+		name: 'Монтаж, обслуговування та ремонт електротехнічних установок в агропромисловому комплексі',
+		link: '/entry-company/ops-fakhovyi-molodshyi-bakalavr/es',
+	},
+	{
+		name: 'Монтаж і експлуатація електроустаткування підприємств і цивільних споруд',
+		link: '/entry-company/ops-fakhovyi-molodshyi-bakalavr/ep',
+	},
+	{
+		name: 'Обслуговування верстатів з програмним управлінням і робототехнічних комплексів',
+		link: '/entry-company/ops-fakhovyi-molodshyi-bakalavr/ov',
+	},
+	{
+		name: 'Економіка підприємства',
+		link: '/entry-company/ops-fakhovyi-molodshyi-bakalavr/ek',
+	},
+	{
+		name: 'Технологія обробки матеріалів на верстатах і автоматичних лініях',
+		link: '/entry-company/ops-fakhovyi-molodshyi-bakalavr/om',
+	},
+	{
+		name: 'Розробка програмного забезпечення',
+		link: '/entry-company/ops-fakhovyi-molodshyi-bakalavr/ps',
+	},
+	{
+		name: 'Обслуговування та ремонт електроустаткування автомобілів і тракторів',
+		link: '/entry-company/ops-fakhovyi-molodshyi-bakalavr/ea',
+	},
+	{
+		name: 'Обслуговування та ремонт автомобілів і двигунів',
+		link: '/entry-company/ops-fakhovyi-molodshyi-bakalavr/ra',
+	},
+	{
+		name: 'Оціночна діяльність',
+		link: '/entry-company/ops-fakhovyi-molodshyi-bakalavr/od',
+	},
+	{
+		name: 'Обслуговування та ремонт обладнання підприємств хімічної і нафтогазопереробної промисловості',
+		link: '/entry-company/ops-fakhovyi-molodshyi-bakalavr/zm',
+	},
 ];
 
-// export const newsItems: NewsItem[] = [
-// 	{
-// 		title: 'Новость 1',
-// 		description: 'Описание новости 1',
-// 		imageUrl:
-// 			'https://images.unsplash.com/photo-1584395630827-860eee694d7b?ixlib=rb-1.2.1&auto=format&fit=crop&w=700&q=80',
-// 		path: '/news',
-// 		category: category.ACTUAL,
-// 	},
-// 	{
-// 		title: 'Новость 2',
-// 		description: 'Описание новости 2',
-// 		imageUrl:
-// 			'https://images.unsplash.com/photo-1573497491208-6b1acb260507?ixlib=rb-1.2.1&auto=format&fit=crop&w=700&q=80',
-// 		path: '/news',
-// 		category: category.ACTUAL,
-// 	},
-// 	{
-// 		title: 'Технологии',
-// 		description: 'Прорыв в области искусственного интеллекта',
-// 		imageUrl:
-// 			'https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-1.2.1&auto=format&fit=crop&w=700&q=80',
-// 		path: '/news',
-// 		category: category.ACTUAL,
-// 	},
-// 	{
-// 		title: 'Природа',
-// 		description: 'Сохранение зеленых зон в городских условиях',
-// 		imageUrl:
-// 			'https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?ixlib=rb-1.2.1&auto=format&fit=crop&w=700&q=80',
-// 		path: '/news',
-// 		category: category.ACTUAL,
-// 	},
-// 	{
-// 		title: 'Спорт',
-// 		description: 'Местные спортивные мероприятия возобновляются этим летом',
-// 		imageUrl:
-// 			'https://images.unsplash.com/photo-1521412644187-c49fa049e84d?ixlib=rb-1.2.1&auto=format&fit=crop&w=700&q=80',
-// 		path: '/news',
-// 		category: category.ANNOUNCE,
-// 	},
-// 	{
-// 		title: 'Культура',
-// 		description: 'Фестиваль уличного искусства начинается этой весной',
-// 		imageUrl:
-// 			'https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0?ixlib=rb-1.2.1&auto=format&fit=crop&w=700&q=80',
-// 		path: '/news',
-// 		category: category.ANNOUNCE,
-// 	},
-// 	{
-// 		title: 'Культураа',
-// 		description: 'Фестиваль уличного искусства начинается этой весной',
-// 		imageUrl:
-// 			'https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0?ixlib=rb-1.2.1&auto=format&fit=crop&w=700&q=80',
-// 		path: '/news',
-// 		category: category.ANNOUNCE,
-// 	},
-// ];
 export const usefulLinks = [
 	{
 		imageUrl: '/img/useful links/chnu.png',

@@ -31,7 +31,7 @@ export const Advantages = () => {
 								<FaHistory />
 							</div>
 							<div className={styles.advantages__li_text}>
-								200+ років високої якості освіти
+								100+ років високої якості освіти
 							</div>
 						</li>
 						<li className={styles.advantages__li}>
@@ -54,7 +54,7 @@ export const Advantages = () => {
 							<div className={styles.advantages__li_img}>
 								<FaEarthAmericas />
 							</div>
-							<div className={styles.advantages__li_text}>1000+ студентів</div>
+							<div className={styles.advantages__li_text}>500+ студентів</div>
 						</li>
 						<li className={styles.advantages__li}>
 							<div className={styles.advantages__li_img}>

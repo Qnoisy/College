@@ -10,34 +10,44 @@ export const AboutCollege = () => {
 			<img className={styles.aboutCollege__img} src='img/chpt.jpg' alt='' />
 			<div className={styles.aboutCollege__content}>
 				<h1 className={styles.aboutCollege__title}>Про коледж</h1>
-				<h2 className={styles.aboutCollege__h2}>
-					Черкаський політехнічний фаховий коледж
-					<p>Надаємо якісні освітні послуги з 1922р</p>
-				</h2>
 				<div className={styles.aboutCollege__text}>
-					Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam id quas
-					doloremque quod repellat expedita delectus, aliquid quos a velit
-					perspiciatis reprehenderit inventore fuga doloribus labore cumque,
-					aspernatur deleniti magnam et assumenda! Iste, voluptatum dolore magni
-					dolorum vero facere quasi perspiciatis illum explicabo aperiam omnis
-					quos quae iusto hic vitae sit. Provident hic rem, autem praesentium
-					nesciunt molestiae architecto atque! Doloremque nihil adipisci odio
-					earum dolore. Assumenda ipsam eligendi corporis dignissimos eveniet
-					quia, ut officiis nesciunt ab iste harum ipsa mollitia corrupti
-					laboriosam doloremque odit deleniti quidem, repellendus, ratione
-					nostrum neque animi iure? Voluptatibus fugiat ullam, dignissimos error
-					sequi perspiciatis? Lorem ipsum dolor sit amet consectetur adipisicing
-					elit. Ullam id quas doloremque quod repellat expedita delectus,
-					aliquid quos a velit perspiciatis reprehenderit inventore fuga
-					doloribus labore cumque, aspernatur deleniti magnam et assumenda!
-					Iste, voluptatum dolore magni dolorum vero facere quasi perspiciatis
-					illum explicabo aperiam omnis quos quae iusto hic vitae sit. Provident
-					hic rem, autem praesentium nesciunt molestiae architecto atque!
-					Doloremque nihil adipisci odio earum dolore. Assumenda ipsam eligendi
-					corporis dignissimos eveniet quia, ut officiis nesciunt ab iste harum
-					ipsa mollitia corrupti laboriosam doloremque odit deleniti quidem,
-					repellendus, ratione nostrum neque animi iure? Voluptatibus fugiat
-					ullam, dignissimos error sequi perspiciatis?
+					<p>
+						Черкаський політехнічний фаховий коледж – один з небагатьох закладів
+						фахової передвищої освіти Черкаської області з підготовки молодших
+						фахових бакалаврів технічного профілю – створено у 1922 році. До
+						Сьогодні Черкаський політехнічний фаховий коледж – заклад фахової
+						передвищої освіти, підпорядкований Міністерству освіти і науки
+						України, відповідно до законів України «Про освіту», «Про вищу
+						освіту», "Про фахову передвищу освіту", на підставі Статуту
+						,затверджено наказом Міністерства освіти і науки України від
+						14.05.2021, № 526, проводить підготовку фахових молодших бакалаврів
+						з 7 спеціальностей за 10 освітньо-професійними програмами з
+						загальним ліцензованим обсягом підготовки 540 осіб. господарства, а
+						з 1975 року – Міністерству вищої і середньої спеціальної освіти; до
+						05.01.1989 року технікум носив назву «Черкаський технікум
+						електрифікації і сільськогосподарського будівництва», в зв’язку з
+						перепрофілюванням його перейменовано на Черкаський політехнічний
+						технікум, який у 2021 році змінив назву на Черкаський політехнічний
+						фаховий коледж.
+					</p>
+					<p>
+						В 2022 році виповнилося 100 років з дня заснування закладу освіти.
+						За роки існування підготовлено близько 25000 спеціалістів, які на
+						сьогодні працюють в багатьох регіонах України та за кордоном:
+						техніків-електриків, будівельників, технологів машинобудування,
+						механіків, електромеханіків, гідротехніків, економістів і
+						програмістів.
+					</p>
+					<p>
+						Сьогодні Черкаський політехнічний фаховий коледж – заклад фахової
+						передвищої освіти, підпорядкований Міністерству освіти і науки
+						України, відповідно до законів України «Про освіту», «Про вищу
+						освіту», "Про фахову передвищу освіту", на підставі Статуту
+						,затверджено наказом Міністерства освіти і науки України від
+						14.05.2021, № 526, проводить підготовку фахових молодших бакалаврів
+						з 7 спеціальностей за 10 освітньо-професійними програмами з
+						загальним ліцензованим обсягом підготовки 540 осіб.
+					</p>
 				</div>
 				<div className={styles.aboutCollege__btn}>
 					<Button>Детальніше</Button>

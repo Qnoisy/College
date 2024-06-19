@@ -1,6 +1,7 @@
 @import '../../../common/generall';
 
 .demo-block {
+	font-family: $ffRoboto;
 	display: flex;
 	flex-direction: column;
 	height: 100%;
@@ -26,7 +27,7 @@
 }
 .demo-block__text-content-text {
 	text-align: justify;
-	line-height: 1.4;
+	line-height: 1.7;
 }
 .demo-block__navigation {
 	flex: 1;
@@ -39,7 +40,7 @@
 	// @include bg-color;
 	@include color-second;
 	position: relative;
-	margin-bottom: 0.3rem;
+	margin-bottom: 0.5rem;
 	padding-left: 0.8rem;
 	@media (hover: hover) {
 		&:hover {
@@ -54,16 +55,16 @@
 	&:hover:before {
 		@include color-hover-second;
 	}
-	&:before {
-		content: '◦';
-		@include color-second;
-		display: block;
-		position: absolute;
-		top: 0;
-		width: 5px;
-		height: 5px;
-		left: 0rem;
-	}
+	// &:before {
+	// 	content: '◦';
+	// 	@include color-second;
+	// 	display: block;
+	// 	position: absolute;
+	// 	top: 0;
+	// 	width: 5px;
+	// 	height: 5px;
+	// 	left: 0rem;
+	// }
 }
 
 .demo-block__icon {
@@ -102,9 +103,10 @@
 }
 
 .demo-block__link {
+	@include df-centr;
 	@include btn-color;
 	padding: 0.5rem;
-	min-height: 110px;
+	min-height: 80px;
 	margin-bottom: 0.5rem;
 	border-radius: 1rem;
 	@media (hover: hover) {
@@ -120,5 +122,6 @@
 }
 .demo-block__link-text {
 	@include df-centr;
-	font-size: 1.2rem;
+	text-align: center;
+	font-size: 1rem;
 }

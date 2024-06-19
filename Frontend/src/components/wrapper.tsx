@@ -19,6 +19,12 @@ import { MainSub } from '../routes/subMenu-routes/College/subdivisions/MainSub';
 import { Educationalunits } from '../routes/under-routes/Educational-units/Educational-units';
 import { Department } from '../routes/under-routes/Educational-units/Educational-units/subdivisions/Department';
 
+import { Certification } from '../routes/header-routes/Accreditation/subdivisions/certification';
+import { Licence } from '../routes/header-routes/Accreditation/subdivisions/licence';
+import { Selfesteem } from '../routes/header-routes/Accreditation/subdivisions/self-esteem';
+import { Nefor } from '../routes/subMenu-routes/Education/nefor';
+import { Organization } from '../routes/subMenu-routes/Education/organization';
+import NewsList from '../routes/subMenu-routes/News/NewsList/NewsList';
 import { Tsyklovikomisii } from '../routes/under-routes/Educational-units/Educational-units/subdivisions/Tsyklovi-komisii/Tsyklovi-komisii';
 import { CCElectromechanical } from '../routes/under-routes/Educational-units/Educational-units/subdivisions/Tsyklovi-komisii/Tsyklovi-komisii/CCElectromechanical';
 import { DisciplinesofGenera } from '../routes/under-routes/Educational-units/Educational-units/subdivisions/Tsyklovi-komisii/Tsyklovi-komisii/Disciplines of Genera';
@@ -51,8 +57,6 @@ import { Supportandtrust } from '../routes/under-routes/Support-and-trust';
 import { Praktychnyipsykholoh } from '../routes/under-routes/Support-and-trust/subdivisions/Praktychnyi-psykholoh';
 import { Sotsialnopsykholohichnapidtrymka } from '../routes/under-routes/Support-and-trust/subdivisions/Sotsialno-psykholohichna-pidtrymka';
 import { Sotsialnyipedahoh } from '../routes/under-routes/Support-and-trust/subdivisions/Sotsialnyi-pedahoh';
-
-import NewsList from '../routes/subMenu-routes/News/NewsList/NewsList';
 import AdminPanel from './AdminPanel/AdminPanel';
 import Login from './AdminPanel/Login/Login';
 import Breadcrumbs from './Breadcrumbs/Breadcrumbs';
@@ -105,9 +109,12 @@ const Wrapper = () => {
 					<Route path='/educational-units' element={<Educationalunits />} />
 					<Route path='/research-activities' element={<Researchactivities />} />
 					<Route path='/support-and-trust' element={<Supportandtrust />} />
-					{/* <Route path='/accreditation/licence' element={} />
-					<Route path='/accreditation/certification' element={} />
-					<Route path='/accreditation/self-esteem' element={} /> */}
+					<Route path='/accreditation/licence' element={<Licence />} />
+					<Route
+						path='/accreditation/certification'
+						element={<Certification />}
+					/>
+					<Route path='/accreditation/self-esteem' element={<Selfesteem />} />
 					<Route
 						path='/entry-company/ops-fakhovyi-molodshyi-bakalavr'
 						element={<Opsfakhovyimolodshyibakalavr />}
@@ -230,6 +237,8 @@ const Wrapper = () => {
 						path='/educational-units/tsyklovi-komisii/SoftwareandSoc-Eco'
 						element={<SoftwareandSocEco />}
 					/>
+					<Route path='/education/nefor' element={<Nefor />} />
+					<Route path='/education/organization' element={<Organization />} />
 					<Route
 						path='/login'
 						element={

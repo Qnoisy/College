@@ -84,8 +84,8 @@ const NewsList: React.FC = () => {
 				))}
 			</div>
 			<div className={styles.newsContainer}>
-				{filteredNews.map(news => (
-					<Link to={news.path}>
+				{filteredNews.map((news, index) => (
+					<Link to={news.path} key={index}>
 						<div key={news.title} className={classNames(styles.newsItem)}>
 							<img
 								src={`http://localhost:3001/assets/${news.imageUrl}`}

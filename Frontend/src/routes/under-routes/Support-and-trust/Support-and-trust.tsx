@@ -1,3 +1,5 @@
+import { HiOutlineUsers, HiUsers } from 'react-icons/hi2';
+import { TiInfoLargeOutline } from 'react-icons/ti';
 import Page from '../../../Page/Page';
 import DemoBlock from '../../../components/sample/DemoBlock/DemoBlock';
 import Title from '../../../components/sample/Title/Title';
@@ -8,14 +10,17 @@ export const Supportandtrust = () => {
 		{
 			name: 'Соціальний педагог',
 			path: '/support-and-trust/sotsialnyi-pedahoh',
+			icon: <HiOutlineUsers />,
 		},
 		{
 			name: 'Практичний психолог',
 			path: '/support-and-trust/praktychnyi-psykholoh',
+			icon: <HiUsers />,
 		},
 		{
 			name: 'Загальна інформація',
 			path: '/support-and-trust/sotsialno-psykholohichna-pidtrymka',
+			icon: <TiInfoLargeOutline />,
 		},
 	];
 
@@ -63,6 +68,7 @@ export const Supportandtrust = () => {
 			<DemoBlock
 				routes={supportandtrustRoutes}
 				content={supportandtrustContent}
+				additionalLinks={supportandtrustRoutes}
 			/>
 		</Page>
 	);

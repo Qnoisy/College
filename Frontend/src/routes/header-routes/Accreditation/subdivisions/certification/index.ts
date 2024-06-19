@@ -1,1 +1,1 @@
-export * from './Starshoklasnykam';
+export * from './certification';

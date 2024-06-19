@@ -1,5 +1,5 @@
 import classNames from 'classnames';
-import { ReactNode } from 'react';
+import React, { ReactNode } from 'react';
 import './Button.scss';
 
 interface ButtonProps {
@@ -9,12 +9,14 @@ interface ButtonProps {
 	type?: 'button' | 'submit' | 'reset';
 }
 
-export const Button = ({
+const ButtonComponent = ({
 	children,
 	onClick,
 	className,
 	type = 'button',
 }: ButtonProps) => {
+	console.log('btn');
+
 	return (
 		<button
 			className={classNames('button', 'style', className)}
@@ -25,3 +27,5 @@ export const Button = ({
 		</button>
 	);
 };
+
+export const Button = React.memo(ButtonComponent);

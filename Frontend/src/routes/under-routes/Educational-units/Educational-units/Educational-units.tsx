@@ -1,3 +1,4 @@
+import { HiMiniUserGroup, HiOutlineInboxStack } from 'react-icons/hi2';
 import Page from '../../../../Page/Page';
 import DemoBlock from '../../../../components/sample/DemoBlock/DemoBlock';
 import Title from '../../../../components/sample/Title/Title';
@@ -7,10 +8,12 @@ export const Educationalunits = () => {
 		{
 			name: 'Циклові комісії',
 			path: '/educational-units/tsyklovi-komisii',
+			icon: <HiMiniUserGroup />,
 		},
 		{
 			name: 'Відділення',
 			path: '/educational-units/department',
+			icon: <HiOutlineInboxStack />,
 		},
 	];
 
@@ -39,6 +42,7 @@ export const Educationalunits = () => {
 			<DemoBlock
 				routes={educationalunitsRoutes}
 				content={educationalunitsContent}
+				additionalLinks={educationalunitsRoutes}
 			/>
 		</Page>
 	);

@@ -1,3 +1,4 @@
+import { ImProfile } from 'react-icons/im';
 import Page from '../../../../../Page/Page';
 import DemoBlock from '../../../../../components/sample/DemoBlock/DemoBlock';
 import Title from '../../../../../components/sample/Title/Title';
@@ -8,6 +9,7 @@ export const Starshoklasnykam = () => {
 		{
 			name: 'Вибери професію',
 			path: '/entry-company/starshoklasnykam/choose-profesion',
+			icon: <ImProfile />,
 		},
 	];
 	const starshoklasnykamContent = (
@@ -40,6 +42,7 @@ export const Starshoklasnykam = () => {
 			<DemoBlock
 				content={starshoklasnykamContent}
 				routes={StarshoklasnykamRoutes}
+				additionalLinks={StarshoklasnykamRoutes}
 			/>
 		</Page>
 	);

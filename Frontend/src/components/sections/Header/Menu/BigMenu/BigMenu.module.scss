@@ -24,9 +24,7 @@
 			@include color-hover;
 		}
 	}
-	p {
-		@include color;
-	}
+	@include color;
 	@media (max-width: 1151.98px) {
 		font-size: 0.9rem;
 	}

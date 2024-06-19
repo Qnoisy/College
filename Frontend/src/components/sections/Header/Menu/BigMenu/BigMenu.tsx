@@ -17,7 +17,7 @@ export const BigMenu = () => {
 			<Link to={item.link} key={index}>
 				<li className={styles.bigMenu__item}>
 					{BigMenuReactIcons[index]}
-					<p>{item.name}</p>
+					<div>{item.name}</div>
 				</li>
 			</Link>
 		);

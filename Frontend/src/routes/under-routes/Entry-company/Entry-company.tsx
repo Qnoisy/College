@@ -1,6 +1,11 @@
+import { BsFillTelephoneFill } from 'react-icons/bs';
+import { FaMapMarkerAlt, FaSchool, FaTable } from 'react-icons/fa';
+import { HiAcademicCap } from 'react-icons/hi2';
+import { IoMailOutline } from 'react-icons/io5';
 import Page from '../../../Page/Page';
 import DropUpMenu from '../../../components/DropUpMenu/DropUpMenu';
 import DemoBlock from '../../../components/sample/DemoBlock/DemoBlock';
+import Subtitle from '../../../components/sample/Subtitle/Subtitle';
 import Title from '../../../components/sample/Title/Title';
 
 export const Entrycompany = () => {
@@ -8,17 +13,19 @@ export const Entrycompany = () => {
 		{
 			name: 'ОПС Фаховий Молодший Бакалавр',
 			path: '/entry-company/ops-fakhovyi-molodshyi-bakalavr',
+			icon: <FaTable />,
 		},
 		{
 			name: 'Вступна кампанія',
 			path: '/entry-company/vstup',
+			icon: <HiAcademicCap />,
 		},
 		{
 			name: 'Старшокласникам',
 			path: '/entry-company/starshoklasnykam',
+			icon: <FaSchool />,
 		},
 	];
-
 	const list = [
 		{
 			text: 'Правила прийому до черкаського політехнічного фахового коледжу для здобуття освітньо-професійного ступеня фахового молодшого бакалаρα у 2024 році',
@@ -158,22 +165,54 @@ export const Entrycompany = () => {
 		<div>
 			<Title text='Приймальна комісія' />
 			<hr className='hr-style' />
+			<div className='text-align'>
+				<Subtitle text={'Графік роботи :'} />
+				<Subtitle text={'Понеділок – п’ятниця 09.00 – 18.00'} />
+				<Subtitle text={'Субота 09.00 – 13.00'} />
+				<Subtitle text={'Перерва з 13.00 до 14.00'} />
+			</div>
+			<hr className='hr-style' />
 			<DropUpMenu links={list} name={'Правила прийому'} />
-			<div> </div>
 			<DropUpMenu links={list1} name={'Документи приймальної комісії'} />
-			<div> </div>
 			<DropUpMenu links={list2} name={'Електронний кабінет вступника'} />
-			<div> </div>
 			<DropUpMenu links={list3} name={'Списки зарахованих'} />
-			<div> </div>
 			<DropUpMenu links={list4} name={'Рейтингові списки'} />
+			<hr className='hr-style' />
+			<p>
+				<div className='row'>
+					<FaMapMarkerAlt className='icon-gap' />
+					<Subtitle text='АДРЕСА: 18001, м. Черкаси, вул. Надпільна, 226. Приміщення четвертого корпусу Черкаського політехнічного фахового коледжу, 1 корпус, 1 поверх. кабінет 109' />
+				</div>
+			</p>
+			<p>
+				<div className='row'>
+					<IoMailOutline className='icon-gap' />
+					<Subtitle
+						text='Електронна адреса : info@chpt.edu.ua
+'
+					/>
+				</div>
+			</p>
+			<p>
+				<div className='row'>
+					<BsFillTelephoneFill className='icon-gap' />
+					<Subtitle
+						text='Контактні телефони : +38(098)8307608,
++38(063)4584192, 38(047)2360729, 38(047)2360725'
+					/>
+				</div>
+			</p>
 			<hr className='hr-style' />
 		</div>
 	);
 
 	return (
 		<Page title='Приймальна комісія - ЧПФК'>
-			<DemoBlock routes={entrycompanyRoutes} content={entrycompanyContent} />
+			<DemoBlock
+				routes={entrycompanyRoutes}
+				content={entrycompanyContent}
+				additionalLinks={entrycompanyRoutes}
+			/>
 		</Page>
 	);
 };

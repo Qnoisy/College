@@ -17,49 +17,6 @@ export const Opsfakhovyimolodshyibakalavr = () => {
 		{
 			name: 'Монтаж, обслуговування та ремонт електротехнічних установок в агропромисловому комплексі',
 			path: '/entry-company/ops-fakhovyi-molodshyi-bakalavr/es',
-		},
-		{
-			name: 'Монтаж і експлуатація електроустаткування підприємств і цивільних споруд',
-			path: '/entry-company/ops-fakhovyi-molodshyi-bakalavr/ep',
-		},
-		{
-			name: 'Обслуговування верстатів з програмним управлінням і робототехнічних комплексів',
-			path: '/entry-company/ops-fakhovyi-molodshyi-bakalavr/ov',
-		},
-		{
-			name: 'Економіка підприємства',
-			path: '/entry-company/ops-fakhovyi-molodshyi-bakalavr/ek',
-		},
-		{
-			name: 'Технологія обробки матеріалів на верстатах і автоматичних лініях',
-			path: '/entry-company/ops-fakhovyi-molodshyi-bakalavr/om',
-		},
-		{
-			name: 'Розробка програмного забезпечення',
-			path: '/entry-company/ops-fakhovyi-molodshyi-bakalavr/ps',
-		},
-		{
-			name: 'Обслуговування та ремонт електроустаткування автомобілів і тракторів',
-			path: '/entry-company/ops-fakhovyi-molodshyi-bakalavr/ea',
-		},
-		{
-			name: 'Обслуговування та ремонт автомобілів і двигунів',
-			path: '/entry-company/ops-fakhovyi-molodshyi-bakalavr/ra',
-		},
-		{
-			name: 'Оціночна діяльність',
-			path: '/entry-company/ops-fakhovyi-molodshyi-bakalavr/od',
-		},
-		{
-			name: 'Обслуговування та ремонт обладнання підприємств хімічної і нафтогазопереробної промисловості',
-			path: '/entry-company/ops-fakhovyi-molodshyi-bakalavr/zm',
-		},
-	];
-
-	const opsfakhovyimolodshyibakalavrLinks = [
-		{
-			name: 'Монтаж, обслуговування та ремонт електротехнічних установок в агропромисловому комплексі',
-			path: '/entry-company/ops-fakhovyi-molodshyi-bakalavr/es',
 			icon: <GiFarmer />,
 		},
 		{
@@ -161,7 +118,7 @@ export const Opsfakhovyimolodshyibakalavr = () => {
 			<DemoBlock
 				content={opsfakhovyimolodshyibakalavrContent}
 				routes={opsfakhovyimolodshyibakalavrRoutes}
-				additionalLinks={opsfakhovyimolodshyibakalavrLinks}
+				additionalLinks={opsfakhovyimolodshyibakalavrRoutes}
 			/>
 		</Page>
 	);

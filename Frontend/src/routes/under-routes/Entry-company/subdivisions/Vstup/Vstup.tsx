@@ -1,7 +1,7 @@
-import Page from '../../../../../Page/Page'
-import DropUpMenu from '../../../../../components/DropUpMenu/DropUpMenu'
-import Block from '../../../../../components/sample/Block/Block'
-import Title from '../../../../../components/sample/Title/Title'
+import Page from '../../../../../Page/Page';
+import DropUpMenu from '../../../../../components/DropUpMenu/DropUpMenu';
+import Block from '../../../../../components/sample/Block/Block';
+import Title from '../../../../../components/sample/Title/Title';
 
 export const Vstup = () => {
 	const list = [
@@ -23,7 +23,6 @@ export const Vstup = () => {
 			<Title text='Вступна кампанія' />
 			<hr className='hr-style' />
 			<DropUpMenu links={list} name={'ВСТУП 2024'} />
-			<div> </div>
 			<hr className='hr-style' />
 		</div>
 	);

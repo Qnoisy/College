@@ -21,25 +21,25 @@ const Block: React.FC<BlockProps> = ({
 	additionalLinks = [],
 }) => {
 	return (
-		<div className={classNames(styles['demo-block'])}>
-			<div className={classNames(styles['demo-block__main-content'])}>
+		<div className={classNames(styles['block'])}>
+			<div className={classNames(styles['block__main-content'])}>
 				{content && (
-					<div className={classNames(styles['demo-block__text-content'])}>
+					<div className={classNames(styles['block__text-content'])}>
 						{content}
 					</div>
 				)}
 			</div>
 			{additionalLinks.length > 0 && (
-				<div className={classNames(styles['demo-block__links'])}>
+				<div className={classNames(styles['block__links'])}>
 					{additionalLinks.map(link => (
 						<Link
 							key={link.path}
 							to={link.path}
-							className={classNames(styles['demo-block__link'])}
+							className={classNames(styles['block__link'])}
 						>
-							<div className={classNames(styles['demo-block__link-text'])}>
+							<div className={classNames(styles['block__link-text'])}>
 								{link.icon && (
-									<span className={classNames(styles['demo-block__icon'])}>
+									<span className={classNames(styles['block__icon'])}>
 										{link.icon}
 									</span>
 								)}

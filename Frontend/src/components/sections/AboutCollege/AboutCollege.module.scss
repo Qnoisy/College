@@ -18,9 +18,10 @@
 
 // Стилизация скроллбара для .aboutCollege__text
 .aboutCollege__text {
-	height: 9.375rem;
+	height: 16rem;
 	overflow-y: auto;
-	font-size: 0.8rem;
+	line-height: 1.5;
+	font-size: 1rem;
 	margin-bottom: 2rem;
 }
 .aboutCollege__title {
@@ -28,12 +29,8 @@
 	font-weight: 700;
 	margin-bottom: 1rem;
 }
-.aboutCollege__h2 {
-	font-size: 1.1rem;
-	margin-bottom: 2rem;
-}
 .aboutCollege__btn {
 	width: 100%;
 	display: flex;
-	justify-content: flex-end;
+	justify-content: center;
 }
