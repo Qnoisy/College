@@ -1,6 +1,23 @@
 @import '../../../common/generall';
 .copyright {
+	position: relative;
 	@include color;
 	text-align: center;
 	font-size: 0.8rem;
+}
+.copyright__egg {
+	color: rgb(41, 36, 36);
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	@media (hover: hover) {
+		&:hover {
+			@include color;
+		}
+	}
+	@media (hover: none) {
+		&:active {
+			@include color;
+		}
+	}
 }

@@ -1,4 +1,21 @@
 @import '../../common/generall';
+
+// @media (max-width: 1151.98px) {
+
+// }
+// @media (max-width: 959.98px) {
+
+// }
+// @media (max-width:767.98px) {
+
+// }
+// @media (max-width:539.98px) {
+
+// }
+// @media (max-width:400.98px) {
+
+// }
+
 .newsSlider {
 	position: relative;
 	.slick-slider {
@@ -16,6 +33,9 @@
 	}
 	a {
 		padding: 1rem;
+		@media (max-width: 767.98px) {
+			padding: 0.5rem;
+		}
 	}
 	.newsSlider__slide {
 		@include bg-color-second;
@@ -46,13 +66,15 @@
 		position: absolute;
 		width: 100%;
 	}
-
 	.arrows__left {
 		position: absolute;
 		z-index: 2;
 		top: 50%;
 		left: -4.5rem;
 		transform: translate(0, -50%);
+		@media (max-width: 959.98px) {
+			left: -2rem;
+		}
 	}
 
 	.arrows__right {
@@ -61,12 +83,18 @@
 		top: 50%;
 		right: -4.5rem;
 		transform: translate(0, -50%);
+		@media (max-width: 959.98px) {
+			right: -2rem;
+		}
 	}
 
 	.arrowIcon {
 		@include color-second;
 		font-size: 3.8rem;
 		cursor: pointer;
+		@media (max-width: 767.98px) {
+			font-size: 2.5rem;
+		}
 		@media (hover: hover) {
 			&:hover {
 				@include color-hover-second;

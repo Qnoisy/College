@@ -40,6 +40,20 @@ const NewsSlider = forwardRef<Slider, NewsSliderProps>(
 			slidesToShow: 3,
 			slidesToScroll: 1,
 			arrows: false,
+			responsive: [
+				{
+					breakpoint: 768,
+					settings: {
+						slidesToShow: 2,
+					},
+				},
+				{
+					breakpoint: 540,
+					settings: {
+						slidesToShow: 1,
+					},
+				},
+			],
 		};
 		const sliderRef = useRef<Slider>(null);
 

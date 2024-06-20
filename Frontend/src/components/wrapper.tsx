@@ -80,6 +80,7 @@ const Wrapper = () => {
 	const handleLogin = () => {
 		setIsAuthenticated(true);
 	};
+	console.log('wrapper');
 
 	return (
 		<div className='wrapper'>

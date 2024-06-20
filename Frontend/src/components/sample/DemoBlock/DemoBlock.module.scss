@@ -1,5 +1,8 @@
 @import '../../../common/generall';
-
+p {
+	text-indent: 2em;
+	margin-top: 0;
+}
 .demo-block {
 	font-family: $ffRoboto;
 	display: flex;

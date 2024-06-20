@@ -28,7 +28,7 @@ export const Entrycompany = () => {
 	];
 	const list = [
 		{
-			text: 'Правила прийому до черкаського політехнічного фахового коледжу для здобуття освітньо-професійного ступеня фахового молодшого бакалаρα у 2024 році',
+			text: 'Правила прийому до черкаського політехнічного фахового коледжу для здобуття освітньо-професійного ступеня фахового молодшого бакалара у 2024 році',
 			url: 'https://drive.google.com/file/d/1-tX6_kKSorvcdhhXvJzcyEyj5VnLfZxD/view?usp=sharing',
 		},
 		{
@@ -178,30 +178,18 @@ export const Entrycompany = () => {
 			<DropUpMenu links={list3} name={'Списки зарахованих'} />
 			<DropUpMenu links={list4} name={'Рейтингові списки'} />
 			<hr className='hr-style' />
-			<p>
-				<div className='row'>
-					<FaMapMarkerAlt className='icon-gap' />
-					<Subtitle text='АДРЕСА: 18001, м. Черкаси, вул. Надпільна, 226. Приміщення четвертого корпусу Черкаського політехнічного фахового коледжу, 1 корпус, 1 поверх. кабінет 109' />
-				</div>
-			</p>
-			<p>
-				<div className='row'>
-					<IoMailOutline className='icon-gap' />
-					<Subtitle
-						text='Електронна адреса : info@chpt.edu.ua
-'
-					/>
-				</div>
-			</p>
-			<p>
-				<div className='row'>
-					<BsFillTelephoneFill className='icon-gap' />
-					<Subtitle
-						text='Контактні телефони : +38(098)8307608,
-+38(063)4584192, 38(047)2360729, 38(047)2360725'
-					/>
-				</div>
-			</p>
+			<div className='row'>
+				<FaMapMarkerAlt className='icon-gap' />
+				<Subtitle text='АДРЕСА: 18001, м. Черкаси, вул. Надпільна, 226. Приміщення четвертого корпусу Черкаського політехнічного фахового коледжу, 1 корпус, 1 поверх. кабінет 109' />
+			</div>
+			<div className='row'>
+				<IoMailOutline className='icon-gap' />
+				<Subtitle text='Електронна адреса : info@chpt.edu.ua' />
+			</div>
+			<div className='row'>
+				<BsFillTelephoneFill className='icon-gap' />
+				<Subtitle text='Контактні телефони : +38(098)8307608, +38(063)4584192, 38(047)2360729, 38(047)2360725' />
+			</div>
 			<hr className='hr-style' />
 		</div>
 	);
