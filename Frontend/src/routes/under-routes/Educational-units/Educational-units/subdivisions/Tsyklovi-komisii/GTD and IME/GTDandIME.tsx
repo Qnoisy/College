@@ -1,7 +1,7 @@
-import Page from '../../../../../../../../Page/Page';
-import DropUpMenu from '../../../../../../../../components/DropUpMenu/DropUpMenu';
-import Block from '../../../../../../../../components/sample/Block/Block';
-import Title from '../../../../../../../../components/sample/Title/Title';
+import Page from '../../../../../../../Page/Page';
+import DropUpMenu from '../../../../../../../components/DropUpMenu/DropUpMenu';
+import Block from '../../../../../../../components/sample/Block/Block';
+import Title from '../../../../../../../components/sample/Title/Title';
 
 export const GTDandIME = () => {
 	const list = [

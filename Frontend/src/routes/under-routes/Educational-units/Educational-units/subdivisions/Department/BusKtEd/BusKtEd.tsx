@@ -5,25 +5,8 @@ import { Button } from '../../../../../../../components/Button';
 import DemoBlock from '../../../../../../../components/sample/DemoBlock/DemoBlock';
 import Title from '../../../../../../../components/sample/Title/Title';
 
-export const DEPARTMENTOFBUSINESSEDUCATIONANDKT = () => {
-	const DEPARTMENTOFBUSINESSEDUCATIONANDKTLinks = [
-		{
-			name: 'Економіка підприємства',
-			path: '/entry-company/ops-fakhovyi-molodshyi-bakalavr/ek',
-			icon: <GiMoneyStack />,
-		},
-		{
-			name: 'Оціночна діяльність',
-			path: '/entry-company/ops-fakhovyi-molodshyi-bakalavr/od',
-			icon: <GiPayMoney />,
-		},
-		{
-			name: 'Розробка програмного забезпечення',
-			path: '/entry-company/ops-fakhovyi-molodshyi-bakalavr/ps',
-			icon: <IoIosLaptop />,
-		},
-	];
-	const DEPARTMENTOFBUSINESSEDUCATIONANDKTRoutes = [
+export const BusKtEd = () => {
+	const BusKtEdRoutes = [
 		{
 			name: 'Економіка підприємства',
 			path: '/entry-company/ops-fakhovyi-molodshyi-bakalavr/ek',
@@ -60,9 +43,9 @@ export const DEPARTMENTOFBUSINESSEDUCATIONANDKT = () => {
 	return (
 		<Page title="Бізнес-освіти та комп'ютерних технологій - ЧПФК">
 			<DemoBlock
-				additionalLinks={DEPARTMENTOFBUSINESSEDUCATIONANDKTLinks}
+				additionalLinks={BusKtEdRoutes}
 				content={departmentContent}
-				routes={DEPARTMENTOFBUSINESSEDUCATIONANDKTRoutes}
+				routes={BusKtEdRoutes}
 			/>
 		</Page>
 	);

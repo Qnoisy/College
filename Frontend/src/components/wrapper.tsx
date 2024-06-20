@@ -25,14 +25,18 @@ import { Selfesteem } from '../routes/header-routes/Accreditation/subdivisions/s
 import { Nefor } from '../routes/subMenu-routes/Education/nefor';
 import { Organization } from '../routes/subMenu-routes/Education/organization';
 import NewsList from '../routes/subMenu-routes/News/NewsList/NewsList';
+import { BusKtEd } from '../routes/under-routes/Educational-units/Educational-units/subdivisions/Department/BusKtEd';
+import { Electricalengineering } from '../routes/under-routes/Educational-units/Educational-units/subdivisions/Department/Electrical engineering';
+import { Electromechanical } from '../routes/under-routes/Educational-units/Educational-units/subdivisions/Department/Electromechanical';
+import { Mechanical } from '../routes/under-routes/Educational-units/Educational-units/subdivisions/Department/Mechanical';
+import { CCElectromechanical } from '../routes/under-routes/Educational-units/Educational-units/subdivisions/Tsyklovi-komisii/CCElectromechanical';
+import { DisciplinesofGenera } from '../routes/under-routes/Educational-units/Educational-units/subdivisions/Tsyklovi-komisii/Disciplines of Genera';
+import { ElecEnergySpec } from '../routes/under-routes/Educational-units/Educational-units/subdivisions/Tsyklovi-komisii/Elec Energy Spec';
+import { GTDandIME } from '../routes/under-routes/Educational-units/Educational-units/subdivisions/Tsyklovi-komisii/GTD and IME';
+import { Philologicalandhumanitarian } from '../routes/under-routes/Educational-units/Educational-units/subdivisions/Tsyklovi-komisii/Philological and humanitarian';
+import { RoadTransport } from '../routes/under-routes/Educational-units/Educational-units/subdivisions/Tsyklovi-komisii/RoadTransport';
+import { SoftwareandSocEco } from '../routes/under-routes/Educational-units/Educational-units/subdivisions/Tsyklovi-komisii/Software and Soc-Eco';
 import { Tsyklovikomisii } from '../routes/under-routes/Educational-units/Educational-units/subdivisions/Tsyklovi-komisii/Tsyklovi-komisii';
-import { CCElectromechanical } from '../routes/under-routes/Educational-units/Educational-units/subdivisions/Tsyklovi-komisii/Tsyklovi-komisii/CCElectromechanical';
-import { DisciplinesofGenera } from '../routes/under-routes/Educational-units/Educational-units/subdivisions/Tsyklovi-komisii/Tsyklovi-komisii/Disciplines of Genera';
-import { ElecEnergySpec } from '../routes/under-routes/Educational-units/Educational-units/subdivisions/Tsyklovi-komisii/Tsyklovi-komisii/Elec Energy Spec';
-import { GTDandIME } from '../routes/under-routes/Educational-units/Educational-units/subdivisions/Tsyklovi-komisii/Tsyklovi-komisii/GTD and IME';
-import { Philologicalandhumanitarian } from '../routes/under-routes/Educational-units/Educational-units/subdivisions/Tsyklovi-komisii/Tsyklovi-komisii/Philological and humanitarian';
-import { RoadTransport } from '../routes/under-routes/Educational-units/Educational-units/subdivisions/Tsyklovi-komisii/Tsyklovi-komisii/RoadTransport';
-import { SoftwareandSocEco } from '../routes/under-routes/Educational-units/Educational-units/subdivisions/Tsyklovi-komisii/Tsyklovi-komisii/Software and Soc-Eco';
 import { Entrycompany } from '../routes/under-routes/Entry-company';
 import { Opsfakhovyimolodshyibakalavr } from '../routes/under-routes/Entry-company/subdivisions/Ops-fakhovyi-molodshyi-bakalavr';
 import { EA } from '../routes/under-routes/Entry-company/subdivisions/Ops-fakhovyi-molodshyi-bakalavr/ea';
@@ -128,6 +132,22 @@ const Wrapper = () => {
 					<Route
 						path='/educational-units/department'
 						element={<Department />}
+					/>
+					<Route
+						path='/educational-units/department/bus-kt-education'
+						element={<BusKtEd />}
+					/>
+					<Route
+						path='/educational-units/department/electromechanical'
+						element={<Electromechanical />}
+					/>
+					<Route
+						path='/educational-units/department/electricalengineering'
+						element={<Electricalengineering />}
+					/>
+					<Route
+						path='/educational-units/department/mechanical'
+						element={<Mechanical />}
 					/>
 					<Route
 						path='/educational-units/tsyklovi-komisii'

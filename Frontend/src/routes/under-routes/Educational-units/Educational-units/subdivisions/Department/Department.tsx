@@ -9,50 +9,29 @@ import DemoBlock from '../../../../../../components/sample/DemoBlock/DemoBlock';
 import Title from '../../../../../../components/sample/Title/Title';
 
 export const Department = () => {
-	const tsyklovikomisiiLinks = [
-		{
-			name: "ВІДДІЛЕННЯ БІЗНЕС-ОСВІТИ ТА КОМП'ЮТЕРНИХ ТЕХНОЛОГІЙ",
-			path: '/educational-units/department/DEPARTMENTOFBUSINESSEDUCATIONANDKT',
-			icon: <TbBusinessplan />,
-		},
-		{
-			name: 'ЕЛЕКТРОМЕХАНІЧНЕ ВІДДІЛЕННЯ',
-			path: '/educational-units/department/Electromechanical',
-			icon: <GiPowerGenerator />,
-		},
-		{
-			name: 'ЕЛЕКТРОТЕХНІЧНЕ ВІДДІЛЕННЯ',
-			path: '/educational-units/department/Electricalengineering',
-			icon: <GiElectricalResistance />,
-		},
-		{
-			name: 'МЕХАНІЧНЕ ВІДДІЛЕННЯ',
-			path: '/educational-units/department/Mechanical',
-			icon: <GiAutoRepair />,
-		},
-	];
 	const tsyklovikomisiiRoutes = [
 		{
 			name: "ВІДДІЛЕННЯ БІЗНЕС-ОСВІТИ ТА КОМП'ЮТЕРНИХ ТЕХНОЛОГІЙ",
-			path: '/educational-units/department/DEPARTMENTOFBUSINESSEDUCATIONANDKT',
+			path: '/educational-units/department/bus-kt-education',
 			icon: <TbBusinessplan />,
 		},
 		{
 			name: 'ЕЛЕКТРОМЕХАНІЧНЕ ВІДДІЛЕННЯ',
-			path: '/educational-units/department/Electromechanical',
+			path: '/educational-units/department/electromechanical',
 			icon: <GiPowerGenerator />,
 		},
 		{
 			name: 'ЕЛЕКТРОТЕХНІЧНЕ ВІДДІЛЕННЯ',
-			path: '/educational-units/department/Electricalengineering',
+			path: '/educational-units/department/electricalengineering',
 			icon: <GiElectricalResistance />,
 		},
 		{
 			name: 'МЕХАНІЧНЕ ВІДДІЛЕННЯ',
-			path: '/educational-units/department/Mechanical',
+			path: '/educational-units/department/mechanical',
 			icon: <GiAutoRepair />,
 		},
 	];
+
 	const departmentContent = (
 		<div>
 			<Title text='Відділення' />
@@ -63,7 +42,7 @@ export const Department = () => {
 	return (
 		<Page title='Відділення - ЧПФК'>
 			<DemoBlock
-				additionalLinks={tsyklovikomisiiLinks}
+				additionalLinks={tsyklovikomisiiRoutes}
 				content={departmentContent}
 				routes={tsyklovikomisiiRoutes}
 			/>
