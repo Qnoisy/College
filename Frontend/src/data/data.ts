@@ -220,6 +220,50 @@ export const underItems = [
 		name: 'Обслуговування та ремонт обладнання підприємств хімічної і нафтогазопереробної промисловості',
 		link: '/entry-company/ops-fakhovyi-molodshyi-bakalavr/zm',
 	},
+	{
+		name: "Відділення бізнес-освіти та комп'ютерних технологій",
+		link: '/educational-units/department/bus-kt-education',
+	},
+	{
+		name: "Електромеханічне відділення",
+		link: '/educational-units/department/electromechanical',
+	},
+	{
+		name: "Електротехнічне відділення",
+		link: '/educational-units/department/electricalengineering',
+	},
+	{
+		name: "Механічне відділення",
+		link: '/educational-units/department/mechanical',
+	},
+	{
+		name: "Циклова комісія дисциплін загальноосвітньої підготовки",
+		link: '/educational-units/tsyklovi-komisii/DisciplinesofGenera',
+	},
+	{
+		name: "Циклова комісія філологічних та гуманітарних дисциплін",
+		link: '/educational-units/tsyklovi-komisii/Philologicalandhumanitarian',
+	},
+	{
+		name: "Циклова комісія програмного забезпечення та соціально-економічних дисциплін",
+		link: '/educational-units/tsyklovi-komisii/SoftwareandSoc-Eco',
+	},
+	{
+		name: "Циклова комісія дисциплін професійно-практичної підготовки електроенергетичних спеціальностей",
+		link: '/educational-units/tsyklovi-komisii/ElecEnergySpec',
+	},
+	{
+		name: "Циклова комісія електромеханічних дисциплін",
+		link: '/educational-units/tsyklovi-komisii/CCElectromechanical',
+	},
+	{
+		name: "Циклова комісія загальнотехнічних дисциплін та галузевого машинобудування",
+		link: '/educational-units/tsyklovi-komisii/GTDandIME',
+	},
+	{
+		name: "Циклова комісія дисциплін автомобільного транспорту",
+		link: '/educational-units/tsyklovi-komisii/RoadTransport',
+	},
 ];
 
 export const usefulLinks = [
