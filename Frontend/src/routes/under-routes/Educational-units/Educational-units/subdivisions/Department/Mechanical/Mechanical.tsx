@@ -6,23 +6,6 @@ import DemoBlock from '../../../../../../../components/sample/DemoBlock/DemoBloc
 import Title from '../../../../../../../components/sample/Title/Title';
 
 export const Mechanical = () => {
-	const MechanicalLinks = [
-		{
-			name: 'Технологія обробки матеріалів на верстатах і автоматичних лініях',
-			path: '/entry-company/ops-fakhovyi-molodshyi-bakalavr/om',
-			icon: <PiFactory />,
-		},
-		{
-			name: 'Обслуговування та ремонт автомобілів і двигунів',
-			path: '/entry-company/ops-fakhovyi-molodshyi-bakalavr/ra',
-			icon: <PiEngineLight />,
-		},
-		{
-			name: 'Обслуговування та ремонт обладнання підприємств хімічної і нафтогазопереробної промисловості',
-			path: '/entry-company/ops-fakhovyi-molodshyi-bakalavr/zm',
-			icon: <BsFuelPumpDiesel />,
-		},
-	];
 	const MechanicalRoutes = [
 		{
 			name: 'Технологія обробки матеріалів на верстатах і автоматичних лініях',
@@ -61,7 +44,7 @@ export const Mechanical = () => {
 	return (
 		<Page title='Механічне - ЧПФК'>
 			<DemoBlock
-				additionalLinks={MechanicalLinks}
+				additionalLinks={MechanicalRoutes}
 				content={MechanicalContent}
 				routes={MechanicalRoutes}
 			/>

@@ -4,18 +4,6 @@ import DemoBlock from '../../../../../../../components/sample/DemoBlock/DemoBloc
 import Title from '../../../../../../../components/sample/Title/Title';
 
 export const Electricalengineering = () => {
-	const ElectricalengineeringlLinks = [
-		{
-			name: 'Монтаж, обслуговування та ремонт електротехнічних установок в агропромисловому комплексі',
-			path: '/entry-company/ops-fakhovyi-molodshyi-bakalavr/es',
-			icon: <GiFarmer />,
-		},
-		{
-			name: 'Монтаж і експлуатація електроустаткування підприємств і цивільних споруд',
-			path: '/entry-company/ops-fakhovyi-molodshyi-bakalavr/ep',
-			icon: <GiElectricalResistance />,
-		},
-	];
 	const ElectricalengineeringRoutes = [
 		{
 			name: 'Монтаж, обслуговування та ремонт електротехнічних установок в агропромисловому комплексі',
@@ -38,7 +26,7 @@ export const Electricalengineering = () => {
 	return (
 		<Page title='Електротехнічне - ЧПФК'>
 			<DemoBlock
-				additionalLinks={ElectricalengineeringlLinks}
+				additionalLinks={ElectricalengineeringRoutes}
 				content={ElectricalengineeringContent}
 				routes={ElectricalengineeringRoutes}
 			/>

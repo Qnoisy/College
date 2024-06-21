@@ -1,16 +1,16 @@
 import * as Yup from 'yup';
 
 const regx = {
-	name: /^[а-яА-Яa-zA-Z]{2,20}$/,
+	name: /^[а-яА-Яa-zA-Z0-9 ]{2,30}$/,
 	email: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9]+$/,
 };
 
 const firstName = Yup.string()
-	.matches(regx.name, 'Латинские буквы, от 2 до 20 символов')
+	.matches(regx.name, 'Літери від 2 до 20')
 	.required('Введіть ваше ім’я');
 
 const lastName = Yup.string()
-	.matches(regx.name, 'Латинские буквы, от 2 до 20 символов')
+	.matches(regx.name, 'Літери від 2 до 20')
 	.required('Введіть ваше прізвище');
 
 const email = Yup.string()
@@ -30,9 +30,7 @@ export const initialValues = {
 	email: '',
 };
 export const validationSchema = Yup.object().shape({
-	title: Yup.string()
-		.matches(regx.name, 'Латинскі букви, від 2 до 20 символів')
-		.required('Введіть заголовок'),
+	title: Yup.string().notRequired(),
 	description: Yup.string().required('Введіть опис'),
 	category: Yup.string().required('Выберіть категорі.'),
 	image: Yup.mixed().notRequired(),

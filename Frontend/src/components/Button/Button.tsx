@@ -15,8 +15,6 @@ const ButtonComponent = ({
 	className,
 	type = 'button',
 }: ButtonProps) => {
-	console.log('btn');
-
 	return (
 		<button
 			className={classNames('button', 'style', className)}

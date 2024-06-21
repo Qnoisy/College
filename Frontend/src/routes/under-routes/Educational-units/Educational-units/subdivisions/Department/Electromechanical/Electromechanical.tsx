@@ -6,18 +6,6 @@ import DemoBlock from '../../../../../../../components/sample/DemoBlock/DemoBloc
 import Title from '../../../../../../../components/sample/Title/Title';
 
 export const Electromechanical = () => {
-	const ElectromechanicalLinks = [
-		{
-			name: 'Обслуговування верстатів з програмним управлінням і робототехнічних комплексів',
-			path: '/entry-company/ops-fakhovyi-molodshyi-bakalavr/ov',
-			icon: <PiRobotLight />,
-		},
-		{
-			name: 'Обслуговування та ремонт електроустаткування автомобілів і тракторів',
-			path: '/entry-company/ops-fakhovyi-molodshyi-bakalavr/ea',
-			icon: <GiMechanicGarage />,
-		},
-	];
 	const ElectromechanicalRoutes = [
 		{
 			name: 'Обслуговування верстатів з програмним управлінням і робототехнічних комплексів',
@@ -48,7 +36,7 @@ export const Electromechanical = () => {
 	return (
 		<Page title='Електромеханічне - ЧПФК'>
 			<DemoBlock
-				additionalLinks={ElectromechanicalLinks}
+				additionalLinks={ElectromechanicalRoutes}
 				content={ElectromechanicalContent}
 				routes={ElectromechanicalRoutes}
 			/>

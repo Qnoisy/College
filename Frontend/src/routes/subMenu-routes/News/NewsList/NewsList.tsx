@@ -12,6 +12,7 @@ import styles from './NewsList.module.scss';
 const NewsList: React.FC = () => {
 	const { news, loading } = useTypedSelector(state => state.news);
 	const { fetchNews } = useAction();
+
 	const [currentPage, setCurrentPage] = useState<number>(1);
 	const [newsPerPage] = useState<number>(6);
 	const [filter, setFilter] = useState<category>(category.ALLARTICLES);
